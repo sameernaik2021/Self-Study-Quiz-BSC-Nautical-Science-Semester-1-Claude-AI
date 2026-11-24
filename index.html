@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IMU Nautical Science – Self-Study Quiz</title>
+<style>
+:root{
+  --bg:#f3f6fb;--card:#ffffff;--text:#1b2434;--muted:#5d6b82;--line:#dde4ef;
+  --primary:#0b5ea8;--primary-d:#084a86;--accent:#13a3a3;
+  --ok:#14804a;--ok-bg:#e3f6ec;--bad:#b3261e;--bad-bg:#fdeaea;--warn:#a86400;--warn-bg:#fff3dc;
+  --shadow:0 2px 10px rgba(16,35,70,.08);--radius:14px;
+}
+:root[data-theme="dark"]{
+  --bg:#0f1624;--card:#18223a;--text:#e8edf7;--muted:#9fb0cc;--line:#2a3856;
+  --primary:#4aa3f0;--primary-d:#2f86d3;--accent:#34c9c9;
+  --ok:#4fd18b;--ok-bg:#12372a;--bad:#ff8c84;--bad-bg:#40191a;--warn:#ffc266;--warn-bg:#3b2d12;
+  --shadow:0 2px 10px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}
+h1,h2,h3{margin:0 0 .5rem;line-height:1.25}
+.topbar{position:sticky;top:0;z-index:20;background:var(--primary);color:#fff;box-shadow:var(--shadow)}
+.topbar-in{max-width:1100px;margin:0 auto;padding:.6rem 1rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.brand{font-weight:700;font-size:1.1rem;margin-right:auto;display:flex;align-items:center;gap:.5rem}
+.brand small{display:block;font-weight:400;font-size:.72rem;opacity:.85}
+.nav{display:flex;gap:.3rem;flex-wrap:wrap}
+.nav button{background:transparent;border:0;color:#fff;padding:.45rem .8rem;border-radius:999px;font-size:.92rem}
+.nav button:hover{background:rgba(255,255,255,.18)}
+.nav button.active{background:#fff;color:var(--primary-d);font-weight:600}
+.icon-btn{background:rgba(255,255,255,.18);border:0;color:#fff;border-radius:999px;padding:.4rem .7rem}
+main{max-width:1100px;margin:0 auto;padding:1.2rem 1rem 3rem}
+.footer{max-width:1100px;margin:0 auto;padding:0 1rem 2rem;color:var(--muted);font-size:.8rem;text-align:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem;box-shadow:var(--shadow);margin-bottom:1rem}
+.grid{display:grid;gap:1rem}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.hero{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:0}
+.hero p{margin:.2rem 0 .8rem;opacity:.95}
+.stat{text-align:center;padding:.9rem .5rem}
+.stat b{display:block;font-size:1.7rem;color:var(--primary)}
+.stat span{color:var(--muted);font-size:.85rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);background:var(--card);padding:.55rem 1rem;border-radius:10px;font-weight:600;text-decoration:none}
+.btn:hover:not(:disabled){border-color:var(--primary)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover:not(:disabled){background:var(--primary-d)}
+.btn.light{background:#fff;color:var(--primary-d);border-color:#fff}
+.btn.danger{color:var(--bad)}
+.btn.small{padding:.3rem .7rem;font-size:.85rem}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.subject-card{display:flex;flex-direction:column;gap:.4rem}
+.subject-card .ico{font-size:1.8rem}
+.bar{height:9px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--primary);border-radius:99px;transition:width .3s}
+.bar.ok>i{background:var(--ok)}.bar.bad>i{background:var(--bad)}.bar.warn>i{background:#e0a100}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{border:1px solid var(--line);background:var(--card);padding:.4rem .8rem;border-radius:999px;font-size:.9rem}
+.chip.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pick{border:2px solid var(--line);background:var(--card);border-radius:12px;padding:.7rem;text-align:left}
+.pick.on{border-color:var(--primary);background:rgba(11,94,168,.08)}
+.pick .ico{font-size:1.4rem;display:block}
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.8rem}
+.field label,.label{font-weight:600;font-size:.92rem}
+select{padding:.55rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.check{display:flex;align-items:center;gap:.5rem}
+.badge{display:inline-block;padding:.12rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600;background:rgba(11,94,168,.12);color:var(--primary)}
+.badge.d0{background:var(--ok-bg);color:var(--ok)}
+.badge.d1{background:var(--warn-bg);color:var(--warn)}
+.badge.d2{background:var(--bad-bg);color:var(--bad)}
+.badge.d3{background:#efe4ff;color:#6a2fb8}
+:root[data-theme="dark"] .badge.d3{background:#2f1f4d;color:#c9a6ff}
+.quiz-head{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-bottom:.7rem}
+.quiz-head .grow{flex:1;min-width:140px}
+.timer{font-weight:700;background:var(--card);border:1px solid var(--line);padding:.3rem .8rem;border-radius:999px}
+.timer.warn{color:var(--bad);border-color:var(--bad)}
+.qtext{font-size:1.2rem;font-weight:600;margin:.6rem 0 1rem}
+.opts{display:grid;gap:.6rem}
+.opt{display:flex;gap:.7rem;align-items:flex-start;text-align:left;width:100%;border:2px solid var(--line);background:var(--card);padding:.75rem .9rem;border-radius:12px}
+.opt:hover:not(:disabled){border-color:var(--primary)}
+.opt .l{flex:0 0 auto;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--line);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.opt.sel{border-color:var(--primary);background:rgba(11,94,168,.08)}
+.opt.sel .l{background:var(--primary);color:#fff}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.right .l{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.opt.wrong .l{background:var(--bad);color:#fff}
+.opt:disabled{opacity:1;cursor:default}
+.explain{margin-top:1rem;padding:.8rem 1rem;border-radius:12px;background:var(--warn-bg);border-left:5px solid #e0a100}
+.explain.ok{background:var(--ok-bg);border-color:var(--ok)}
+.explain.bad{background:var(--bad-bg);border-color:var(--bad)}
+.palette{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.pbtn{width:2.1rem;height:2.1rem;border-radius:8px;border:1px solid var(--line);background:var(--card);font-size:.8rem;font-weight:600}
+.pbtn.ans{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pbtn.mk{outline:3px solid #e0a100}
+.pbtn.cur{box-shadow:0 0 0 3px var(--accent)}
+.star{background:transparent;border:0;font-size:1.4rem;line-height:1;color:var(--muted)}
+.star.on{color:#e0a100}
+.qhead{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+.qhead .star{margin-left:auto}
+.score-ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:0 auto .5rem;background:conic-gradient(var(--primary) var(--p,0%),var(--line) 0)}
+.score-ring div{width:118px;height:118px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center;font-size:1.8rem;font-weight:800}
+.score-ring small{display:block;font-size:.72rem;font-weight:400;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:left;padding:.5rem;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.tablewrap{overflow-x:auto}
+.review-item{border:1px solid var(--line);border-radius:12px;padding:.9rem;margin-bottom:.8rem;background:var(--card)}
+.review-item.ok{border-left:6px solid var(--ok)}
+.review-item.bad{border-left:6px solid var(--bad)}
+.review-item.un{border-left:6px solid #e0a100}
+.ropt{padding:.4rem .7rem;border-radius:8px;margin:.25rem 0;border:1px solid var(--line);font-size:.95rem}
+.ropt.right{background:var(--ok-bg);border-color:var(--ok)}
+.ropt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.tabs{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
+.empty{text-align:center;padding:2rem 1rem;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:1.5rem;transform:translateX(-50%) translateY(30px);background:#1b2434;color:#fff;padding:.6rem 1.1rem;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:50;max-width:90vw}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.sticky-foot{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem;align-items:center}
+.sticky-foot .sp{flex:1}
+@media (max-width:600px){
+  .brand small{display:none}
+  .qtext{font-size:1.08rem}
+  .topbar-in{padding:.5rem .7rem}
+  .nav button{padding:.4rem .6rem;font-size:.85rem}
+}
+@media print{.topbar,.footer,.btn-row,.sticky-foot,.toast{display:none!important}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">⚓ <span>Self-Study Quiz<small>B.Sc. Nautical Science · Semester 1</small></span></div>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <button data-a="nav" data-v="dashboard">Dashboard</button>
+      <button data-a="nav" data-v="setup">Practice Quiz</button>
+      <button data-a="nav" data-v="revision">Revision Centre</button>
+      <button data-a="nav" data-v="history">Performance</button>
+    </nav>
+    <button class="icon-btn" id="themeBtn" data-a="theme" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<main id="app" aria-live="polite"></main>
+<div class="footer">This is a practice question bank prepared from study material. It is not an official IMU Chennai question paper. Check your official syllabus for exact exam coverage.</div>
+<div class="toast" id="toast" role="status"></div>
+<noscript><p style="padding:1rem">Please enable JavaScript to use this quiz.</p></noscript>
+<script>
+window.QUIZ_DATA = window.QUIZ_DATA || {};
+window.QUIZ_DATA.math = {
+  name: "Mathematics",
+  icon: "➗",
+  chapters: ["Basic Mathematics","Fractions, Decimals & Percentages","Ratio & Proportion","Algebra","Geometry & Mensuration","Trigonometry","Logarithms & Exponents","Coordinate Geometry & Angles","Nautical Mathematics","Mixed Application Problems"],
+  q: [
+["What is Mathematics?","The branch of science dealing with numbers, quantities, measurements, shapes and calculations","The study of living things","The study of weather only","The study of languages","In Nautical Science, mathematics is used for speed, distance, time, navigation positions and cargo measurements."],
+["Natural numbers are…","Counting numbers 1, 2, 3, 4…","Numbers including negatives","Only even numbers","Only decimals","Natural numbers start from 1 and continue upward."],
+["Whole numbers are…","Zero and all positive natural numbers","Only negative numbers","Only fractions","Only prime numbers","Whole numbers: 0, 1, 2, 3…"],
+["Integers include…","Positive numbers, negative numbers and zero","Only positive numbers","Only fractions","Only zero","Examples: −5, −1, 0, 3, 7."],
+["A rational number can be written in the form…","p/q where p and q are integers and q ≠ 0","√p only","π only","A non-terminating non-repeating decimal","Examples: 1/2, 3/4, 5/6."],
+["Which of the following is an irrational number?","√2","3/4","0.5","7","Irrational numbers cannot be expressed as a ratio of integers; their decimals neither end nor repeat."],
+["Which of the following is a prime number?","11","9","15","21","A prime has exactly two factors: 1 and itself."],
+["Which of the following is a composite number?","9","2","7","13","A composite number has more than two factors; 9 = 1, 3, 9."],
+["In the number 5,432, the place value of the digit 5 is…","5,000","500","50","5","Place value depends on position: 5 is in the thousands place."],
+["Using BODMAS, the value of 10 + 5 × 2 is…","20","30","25","15","Multiplication first: 5 × 2 = 10; then 10 + 10 = 20."],
+
+["A fraction represents…","A part of a whole","A negative number only","A whole number only","An angle","It is written as a/b where a is the numerator and b the denominator."],
+["Which of the following is a proper fraction?","2/5","7/4","9/5","3/3","In a proper fraction the numerator is smaller than the denominator."],
+["Which of the following is an improper fraction?","7/4","2/5","3/8","1/2","In an improper fraction the numerator is greater than or equal to the denominator."],
+["Which of the following is a mixed fraction?","2½","3/4","7/4","0.5","A mixed fraction has a whole number part and a proper fraction part."],
+["0.75 expressed as a fraction in simplest form is…","3/4","7/5","75/10","1/75","0.75 = 75/100 = 3/4."],
+["3/5 expressed as a decimal is…","0.6","0.35","1.5","0.53","3 ÷ 5 = 0.6."],
+["25% is equal to…","0.25","2.5","0.025","25","Percentage means 'out of 100': 25/100 = 0.25."],
+["20% of 500 is…","100","25","50","20","(20/100) × 500 = 100."],
+["A ship has 200 tonnes of cargo and 25% is unloaded. The cargo unloaded is…","50 tonnes","25 tonnes","75 tonnes","100 tonnes","(25/100) × 200 = 50 tonnes."],
+["A tank holds 800 litres and 10% is used. The water remaining is…","720 litres","80 litres","780 litres","700 litres","Used = 80 L; remaining = 800 − 80 = 720 L."],
+
+["A ratio is…","A comparison of two quantities of the same kind by division","The sum of two quantities","The product of two quantities","A single whole number","Example: 2:3."],
+["The ratio 20:40 simplified is…","1:2","2:1","1:4","4:1","Divide both terms by 20 to get 1:2."],
+["Proportion means…","Equality of two ratios","Difference of two numbers","Product of two numbers","A single ratio","Example: 2:4 = 3:6."],
+["If 2:4 = 5:x, then x equals…","10","8","12","20","Cross-multiplying: 2x = 20, so x = 10."],
+["Dividing 100 in the ratio 2:3 gives…","40 and 60","20 and 80","30 and 70","50 and 50","Total parts = 5; shares are (2/5)×100 = 40 and (3/5)×100 = 60."],
+["Direct proportion means…","An increase in one quantity gives a proportional increase in the other","An increase in one gives a decrease in the other","The quantities never change","The quantities are always equal","At constant speed, more travel time means more distance."],
+["For a fixed distance, increasing the speed reduces the travel time. This is an example of…","Inverse proportion","Direct proportion","No proportion","Ratio of equals","Quantities that change in opposite directions are inversely proportional."],
+["A ship travels 100 NM in 5 hours. At the same speed it will travel in 10 hours…","200 NM","150 NM","100 NM","500 NM","Speed = 20 knots; distance = 20 × 10 = 200 NM."],
+["5 workers finish a job in 12 days. How many days will 10 workers take (equal rates)?","6 days","24 days","12 days","3 days","Inverse proportion: 5 × 12 = 10 × x, so x = 6."],
+["Ratios and proportions are useful in Nautical Science for…","Cargo distribution, fuel calculations and scale drawings","Only cooking calculations","Only spelling tests","Nothing practical","They are used for cargo, fuel, mixtures, scale drawings and ship dimension comparisons."],
+
+["Algebra uses…","Letters and symbols to represent unknown quantities","Only geometric figures","Only whole numbers","Only maps","Example: x + 5 = 10."],
+["A variable is…","A symbol, usually a letter, representing an unknown or changing quantity","A fixed number","A type of angle","A unit of speed","Examples: x, y, z."],
+["A constant is…","A fixed value that does not change","A letter that changes","An unknown quantity","An equation","Examples: 2, 5, 100."],
+["Solve: x + 10 = 25","x = 15","x = 35","x = 10","x = 25","x = 25 − 10 = 15."],
+["Solve: 3x = 21","x = 7","x = 63","x = 18","x = 24","x = 21 ÷ 3 = 7."],
+["Solve: 2x + 5 = 15","x = 5","x = 10","x = 7.5","x = 20","2x = 10, so x = 5."],
+["(a + b)² expands to…","a² + 2ab + b²","a² + b²","a² − 2ab + b²","2a + 2b","This is a standard algebraic identity."],
+["(a − b)² expands to…","a² − 2ab + b²","a² − b²","a² + 2ab + b²","2a − 2b","This is a standard algebraic identity."],
+["Factorising x² + 5x + 6 gives…","(x + 2)(x + 3)","(x + 1)(x + 6)","(x − 2)(x − 3)","(x + 5)(x + 6)","Find two numbers with sum 5 and product 6: 2 and 3."],
+["A quadratic equation is one in which…","The highest power of the variable is 2","The highest power is 1","The highest power is 3","There is no variable","General form: ax² + bx + c = 0 with a ≠ 0."],
+
+["Geometry is the study of…","Shapes, sizes, angles, lines and dimensions","Only numbers","Only equations","Only statistics","Geometry deals with figures and their properties."],
+["The sum of the interior angles of a triangle is…","180°","90°","270°","360°","This holds for every triangle."],
+["A right-angled triangle has…","One angle equal to 90°","All angles equal to 60°","Three right angles","No right angle","The longest side is the hypotenuse."],
+["Pythagoras' theorem states that…","c² = a² + b²","c = a + b","c² = a² − b²","c = a × b","In a right triangle the square of the hypotenuse equals the sum of squares of the other two sides."],
+["The hypotenuse of a right triangle with sides 3 m and 4 m is…","5 m","7 m","12 m","25 m","c² = 9 + 16 = 25, so c = 5 m."],
+["The area of a rectangle is…","Length × Breadth","Length + Breadth","½ × Length × Breadth","2(Length + Breadth)","Area is measured in square units."],
+["The area of a rectangular deck measuring 50 m × 20 m is…","1,000 m²","70 m²","140 m²","500 m²","50 × 20 = 1,000 m²."],
+["The area of a triangle is…","½ × Base × Height","Base × Height","Base + Height","2 × Base × Height","Half the product of base and perpendicular height."],
+["The circumference of a circle of radius r is…","2πr","πr²","πr","4πr","Area is πr²; circumference is 2πr."],
+["The volume of a tank 5 m long, 4 m wide and 3 m high is…","60 m³","12 m³","47 m³","20 m³","V = L × B × H = 5 × 4 × 3 = 60 m³."],
+
+["Trigonometry studies…","The relationships between sides and angles of triangles","Only circles","Only fractions","Only percentages","It is the mathematical foundation for navigation, bearings and positions."],
+["The three basic trigonometric ratios are…","Sine, cosine and tangent","Sum, product and quotient","Area, volume and length","Mean, median and mode","They relate angles to side ratios in a right triangle."],
+["sin θ is defined as…","Opposite / Hypotenuse","Adjacent / Hypotenuse","Opposite / Adjacent","Hypotenuse / Opposite","Remember: sine = opposite over hypotenuse."],
+["cos θ is defined as…","Adjacent / Hypotenuse","Opposite / Hypotenuse","Opposite / Adjacent","Adjacent / Opposite","Cosine = adjacent over hypotenuse."],
+["tan θ is defined as…","Opposite / Adjacent","Adjacent / Hypotenuse","Opposite / Hypotenuse","Hypotenuse / Adjacent","Tangent = opposite over adjacent."],
+["The value of sin 30° is…","1/2","√3/2","1","0","sin 30° = 0.5."],
+["The value of cos 60° is…","1/2","√3/2","0","1","cos 60° = 0.5."],
+["The value of tan 45° is…","1","0","1/2","√3","Opposite equals adjacent at 45°."],
+["The fundamental trigonometric identity is…","sin²θ + cos²θ = 1","sin θ + cos θ = 1","sin θ = cos θ","tan θ = sin θ + cos θ","It holds for every angle θ."],
+["Trigonometry is important in navigation because it helps in…","Calculating angles, directions and distances","Cooking meals","Painting hulls","Writing logbooks only","It supports navigation triangles, celestial navigation and position calculations."],
+
+["An exponent indicates…","How many times a number is multiplied by itself","How many digits a number has","The sum of two numbers","The square root of a number","Example: 2³ = 2 × 2 × 2 = 8."],
+["In 5³, the base is…","5","3","15","125","The base is the number being raised to a power."],
+["A logarithm is…","The inverse operation of exponentiation","The same as multiplication","The same as addition","A type of angle","If aˣ = b, then log_a b = x."],
+["log₁₀ 100 equals…","2","10","100","1","Because 10² = 100."],
+["log₁₀ 1000 equals…","3","1000","10","2","Because 10³ = 1000."],
+["The value of 2⁴ is…","16","8","6","24","2 × 2 × 2 × 2 = 16."],
+["The value of 10⁰ is…","1","0","10","Undefined","Any non-zero number raised to the power zero equals 1."],
+["The value of √144 is…","12","14","72","11","12 × 12 = 144."],
+["The value of ∛27 is…","3","9","27","6","3 × 3 × 3 = 27."],
+["The product law of logarithms states that…","log(ab) = log a + log b","log(ab) = log a × log b","log(ab) = log a − log b","log(ab) = log a ÷ log b","The logarithm of a product equals the sum of logarithms."],
+
+["Coordinate geometry…","Uses coordinates to represent points and study geometric figures","Studies only triangles","Studies only percentages","Studies only logarithms","It links algebra and geometry."],
+["The Cartesian coordinate system uses…","Two perpendicular axes, X (horizontal) and Y (vertical)","One straight line only","Three parallel lines","Only circles","Their intersection is the origin."],
+["The coordinates (3, 4) are…","Numerical values that identify the position of a point","The area of a triangle","The speed of a ship","A type of fraction","The first value is x, the second is y."],
+["The origin has coordinates…","(0, 0)","(1, 1)","(0, 1)","(1, 0)","It is where the X-axis and Y-axis intersect."],
+["In which quadrant is x negative and y positive?","Second quadrant","First quadrant","Third quadrant","Fourth quadrant","First (+,+), Second (−,+), Third (−,−), Fourth (+,−)."],
+["The distance between points (x₁, y₁) and (x₂, y₂) is…","√[(x₂−x₁)² + (y₂−y₁)²]","(x₂−x₁) + (y₂−y₁)","(x₂−x₁)(y₂−y₁)","x₂y₂ − x₁y₁","This formula comes from Pythagoras' theorem."],
+["The distance between (0, 0) and (3, 4) is…","5","7","25","12","√(9 + 16) = √25 = 5."],
+["An angle is formed when…","Two rays meet at a common endpoint","Two parallel lines meet","A circle is cut in half","A line is extended","The common endpoint is the vertex."],
+["A complete revolution equals…","360°","180°","90°","100°","A full turn is 360 degrees."],
+["The relationship between degrees and minutes of arc is…","1° = 60′","1° = 100′","1° = 30′","1° = 360′","One degree equals 60 minutes of arc."],
+
+["One nautical mile equals…","1,852 metres","1,000 metres","1,609 metres","1,500 metres","1 NM = 1,852 m = 1.852 km."],
+["A knot is a unit of speed equal to…","One nautical mile per hour","One kilometre per hour","One metre per second","One mile per minute","1 knot = 1 NM/hour."],
+["The formula for speed is…","Speed = Distance / Time","Speed = Distance × Time","Speed = Time / Distance","Speed = Distance + Time","Distance = Speed × Time and Time = Distance / Speed also follow."],
+["A ship travels 150 NM in 10 hours. Its speed is…","15 knots","1.5 knots","150 knots","10 knots","150 ÷ 10 = 15 knots."],
+["A ship travels at 12 knots for 5 hours. The distance travelled is…","60 NM","17 NM","2.4 NM","120 NM","12 × 5 = 60 NM."],
+["A ship has to travel 240 NM at 12 knots. The time required is…","20 hours","28 hours","2,880 hours","12 hours","240 ÷ 12 = 20 hours."],
+["Latitude is…","The angular distance of a position north or south of the Equator","The angular distance east or west of the Prime Meridian","The depth of the sea","The speed of a ship","It ranges from 0° at the Equator to 90° N or S at the poles."],
+["Longitude is…","The angular distance east or west of the Prime Meridian (0° to 180°)","The angular distance north or south of the Equator","The length of a ship","The height of a wave","It ranges from 0° to 180° East or West."],
+["One minute of latitude is approximately equal to…","1 nautical mile","1 kilometre","1 statute mile","10 nautical miles","This relationship is fundamental to chart work."],
+["20 nautical miles converted into kilometres is…","37.04 km","20 km","18.52 km","3.704 km","20 × 1.852 = 37.04 km."],
+
+["A ship travels 300 NM in 15 hours. Its average speed is…","20 knots","15 knots","30 knots","45 knots","300 ÷ 15 = 20 knots."],
+["A ship at 18 knots travels for 8 hours. The distance covered is…","144 NM","26 NM","2.25 NM","154 NM","18 × 8 = 144 NM."],
+["A ship at 15 knots must travel 450 NM. The journey time is…","30 hours","35 hours","3 hours","67.5 hours","450 ÷ 15 = 30 hours."],
+["25 nautical miles in kilometres is…","46.3 km","25 km","13.5 km","92.6 km","25 × 1.852 = 46.3 km."],
+["100 kilometres in nautical miles is approximately…","54 NM","100 NM","185 NM","18.5 NM","100 ÷ 1.852 ≈ 54 NM."],
+["A rectangular cargo hold is 20 m long, 10 m wide and 5 m high. Its volume is…","1,000 m³","35 m³","200 m³","500 m³","V = 20 × 10 × 5 = 1,000 m³."],
+["A ship has 500 tonnes of cargo and 40% is unloaded. The cargo remaining is…","300 tonnes","200 tonnes","460 tonnes","100 tonnes","Unloaded = 200 t; remaining = 500 − 200 = 300 t."],
+["A ship travels 90 NM in 6 hours, then 120 NM in 8 hours. The average speed for the whole journey is…","15 knots","16 knots","14 knots","17.5 knots","Total 210 NM ÷ total 14 hours = 15 knots."],
+["A tank of capacity 2,000 litres is filled to 75%. It contains…","1,500 litres","750 litres","1,250 litres","2,075 litres","(75/100) × 2,000 = 1,500 litres."],
+["A ship departs at 0800 and travels 180 NM at 15 knots. It arrives at…","2000 hours","1600 hours","1200 hours","2200 hours","Time = 180 ÷ 15 = 12 hours; 0800 + 12 h = 2000 hours."]
+  ]
+};
+
+</script>
+<script>
+window.QUIZ_DATA = window.QUIZ_DATA || {};
+window.QUIZ_DATA.physics = {
+  name: "Physics",
+  icon: "⚛️",
+  chapters: ["Basic Concepts of Physics","Mechanics","Motion & Equations of Motion","Force & Newton's Laws","Work, Energy & Power","Gravity & Gravitation","Pressure & Applications","Fluid Mechanics","Buoyancy & Fluid Laws","Maritime Physics Numericals"],
+  q: [
+["What is Physics?","The study of matter, energy, force, motion and their interactions","The study of living organisms only","The study of chemical reactions only","The study of rocks and minerals","Physics deals with matter, energy, force, motion and their interactions. In Nautical Science it explains how ships float, move and stay stable."],
+["Which of the following is a branch of Physics?","Thermodynamics","Zoology","Botany","Sociology","Major branches include Mechanics, Thermodynamics, Optics, Electromagnetism, Acoustics, Atomic Physics, Nuclear Physics and Fluid Mechanics."],
+["A physical quantity is a property that can be…","Measured and expressed with a number and a unit","Seen but never measured","Described only in words","Measured only in metres","Length, mass, time, speed, force and pressure are physical quantities."],
+["Which of the following is NOT an SI fundamental quantity?","Force","Length","Mass","Temperature","Force is derived (mass × acceleration). The seven SI fundamental quantities are length, mass, time, electric current, temperature, amount of substance and luminous intensity."],
+["Which of the following is a derived quantity?","Pressure","Mass","Time","Length","Pressure = Force / Area, so it is obtained by combining fundamental quantities."],
+["What does 'SI' stand for in SI units?","International System of Units","Standard Indian System","Scientific Industrial System","Simple Integer System","SI is the internationally accepted system of measurement used in science and engineering."],
+["Which of the following is a vector quantity?","Displacement","Mass","Time","Speed","A vector has both magnitude and direction. Force, velocity, displacement, acceleration and momentum are vectors."],
+["The magnitude of a physical quantity means…","Its numerical size, without direction","Its direction only","Its unit only","Its colour","For example, a force of 50 N has a magnitude of 50 newtons."],
+["A unit is best described as…","A standard reference used to measure a physical quantity","A type of measuring instrument","A direction of motion","A mathematical constant","Metre, kilogram, second, newton and pascal are examples of units."],
+["Why is Physics important in Nautical Science?","It explains how ships float, move and remain stable","It is used only for cooking onboard","It has no practical use at sea","It only helps in learning grammar","Physics explains buoyancy, forces, water pressure, gravity, stability and resistance acting on ships."],
+
+["Mechanics is the branch of Physics that deals with…","Bodies under the action of forces and their motion","Light and its properties","Sound waves only","Atomic nuclei","Mechanics studies the behaviour of bodies under forces and their motion, which is important for ship movement and stability."],
+["Which branch of Mechanics studies bodies at rest or in equilibrium?","Statics","Kinematics","Dynamics","Optics","Statics: rest/equilibrium. Kinematics: motion without forces. Dynamics: motion and the forces causing it."],
+["A ship secured alongside a berth is at rest relative to…","The berth","The Sun","A passing aircraft","The Moon","Rest is defined relative to a reference point; the ship does not change position relative to the berth."],
+["A body is said to be in motion when…","Its position changes with time relative to a reference point","Its mass changes","Its colour changes","It is heavy","Motion is a change of position with time relative to a reference point."],
+["Distance is defined as…","The total length of the actual path travelled","The shortest straight-line change in position","The rate of change of velocity","The product of force and time","Distance is a scalar quantity measured in metres."],
+["Displacement is defined as…","The shortest straight-line change in position, with direction","The total path travelled","Speed multiplied by mass","The rate of doing work","Displacement is a vector quantity; its SI unit is the metre."],
+["Which statement about distance and displacement is correct?","Distance is scalar, displacement is a vector","Both are vectors","Both are scalars","Distance is a vector, displacement is a scalar","Distance has magnitude only; displacement has magnitude and direction."],
+["Speed is calculated as…","Distance / Time","Displacement × Time","Force / Area","Mass × Velocity","Speed = Distance / Time, measured in m/s."],
+["Velocity is the rate of change of…","Displacement with respect to time","Distance with respect to mass","Force with respect to area","Energy with respect to height","Velocity = Displacement / Time."],
+["Acceleration is calculated using which formula?","a = (v − u) / t","a = F × m","a = d / t","a = m / V","Acceleration is the rate of change of velocity; its SI unit is m/s²."],
+
+["Uniform motion means an object travels…","Equal distances in equal intervals of time","Unequal distances in equal intervals of time","Only in a circle","Only downwards","Example: a ship travelling at a constant 10 knots under ideal conditions."],
+["A ship increasing its speed while leaving harbour is an example of…","Non-uniform motion","Uniform motion","Rest","Free fall","Its velocity changes, so the motion is non-uniform."],
+["Uniform acceleration means that…","Velocity changes by equal amounts in equal intervals of time","Velocity never changes","Distance is always zero","Mass increases steadily","Equal changes in velocity occur in equal time intervals."],
+["Retardation is…","Negative acceleration","Zero acceleration","Increase in mass","Increase in density","Retardation means velocity decreases, e.g. a ship slowing down when approaching port."],
+["Which is the second equation of uniformly accelerated motion?","s = ut + ½at²","v = u + at","v² = u² + 2as","F = ma","The three equations are v = u + at, s = ut + ½at² and v² = u² + 2as."],
+["A ship increases its velocity from 5 m/s to 15 m/s in 10 s. Its acceleration is…","1 m/s²","0.5 m/s²","2 m/s²","10 m/s²","a = (v − u)/t = (15 − 5)/10 = 1 m/s²."],
+["A body starts from rest and accelerates at 2 m/s² for 5 s. Its final velocity is…","10 m/s","5 m/s","2.5 m/s","25 m/s","v = u + at = 0 + 2 × 5 = 10 m/s."],
+["A vehicle with u = 10 m/s accelerates at 2 m/s² for 5 s. The distance travelled is…","75 m","50 m","25 m","100 m","s = ut + ½at² = 50 + ½ × 2 × 25 = 75 m."],
+["The acceleration of a freely falling body near Earth's surface is approximately…","9.81 m/s²","1.62 m/s²","98.1 m/s²","0.981 m/s²","Free fall is motion under gravity alone, neglecting air resistance; g ≈ 9.81 m/s²."],
+["Terminal velocity is reached when…","The net force on the falling object becomes zero","The object stops falling","The object's mass doubles","Gravity becomes zero","At terminal velocity the weight is balanced by drag and buoyant forces, so speed is constant."],
+
+["What is the SI unit of force?","Newton","Joule","Pascal","Watt","The newton (N) is the SI unit of force."],
+["The pulling force transmitted through a rope or cable is called…","Tension","Impulse","Momentum","Density","Tension is the pulling force in a rope, cable or chain."],
+["Newton's First Law is also known as the…","Law of Inertia","Law of Gravitation","Law of Flotation","Law of Conservation of Energy","An object stays at rest or in uniform motion unless acted on by an unbalanced external force."],
+["Inertia is…","The tendency of a body to resist a change in its state of rest or uniform motion","A type of energy","A unit of force","The weight of a body","Greater mass generally means greater inertia."],
+["Newton's Second Law for constant mass is written as…","F = ma","F = mgh","F = P/A","F = ρgV","Net force equals mass multiplied by acceleration."],
+["A body of mass 10 kg accelerates at 3 m/s². The force is…","30 N","13 N","7 N","3.3 N","F = ma = 10 × 3 = 30 N."],
+["A ship's propeller pushes water backwards and the ship moves forward. This illustrates…","Newton's Third Law","Newton's First Law","Archimedes' Principle","Pascal's Law","For every action there is an equal and opposite reaction."],
+["Momentum is given by…","p = mv","p = ma","p = F/A","p = m/V","Momentum is mass × velocity; SI unit kg m/s."],
+["Impulse is equal to…","The change in momentum","The change in mass","The change in density","The change in pressure","Impulse = F × t, and it equals the change in momentum (unit: N·s)."],
+["Friction is a force that…","Opposes relative motion between surfaces in contact","Always increases speed","Pulls objects towards Earth's centre","Acts only in gases","Water resistance on a ship's hull is a form of fluid friction."],
+
+["Work done by a constant force along the direction of displacement is…","W = F × s","W = F / s","W = m / V","W = P × t","The SI unit of work is the joule (J)."],
+["Work done is zero when…","The force is perpendicular to the displacement","The force is large","The displacement is large","The mass is large","W = Fs cos θ; when θ = 90°, cos θ = 0, and W = 0. It is also zero if there is no displacement."],
+["Energy is defined as…","The capacity of a body or system to do work","The rate of doing work","A pushing force","The amount of matter in a body","The SI unit of energy is the joule."],
+["Kinetic energy is given by…","KE = ½mv²","KE = mgh","KE = Fs","KE = ρgh","Kinetic energy is the energy due to motion."],
+["A body of mass 10 kg moves at 5 m/s. Its kinetic energy is…","125 J","250 J","50 J","25 J","KE = ½ × 10 × 5² = 125 J."],
+["Gravitational potential energy near Earth's surface is…","PE = mgh","PE = ½mv²","PE = F/A","PE = m/V","Potential energy depends on mass, gravity and height."],
+["A 5 kg object is raised to 10 m (g = 9.8 m/s²). Its potential energy is…","490 J","49 J","50 J","980 J","PE = mgh = 5 × 9.8 × 10 = 490 J."],
+["The law of conservation of energy states that…","Energy can neither be created nor destroyed, only transformed","Energy can be created freely","Energy is destroyed by friction completely","Energy exists only as heat","The total energy of an isolated system remains constant."],
+["Power is…","The rate of doing work or transferring energy","Work multiplied by time","Force multiplied by area","Mass divided by volume","P = W/t; SI unit is the watt (W)."],
+["A machine does 1,000 J of work in 10 s. Its power is…","100 W","10,000 W","10 W","1,010 W","P = W/t = 1000/10 = 100 W."],
+
+["Gravity is…","The attractive force between objects having mass","A repulsive force between charges","A force that acts only at sea","A type of friction","On Earth, gravity attracts objects towards the Earth's centre."],
+["Gravitation refers to…","The universal attractive force between any two masses","The force of friction","The upward force of water","The force in a stretched spring only","Gravitation acts between all objects that have mass."],
+["Newton's Law of Universal Gravitation is…","F = G m₁m₂ / r²","F = ma","F = P × A","F = ρgV","The force is proportional to the product of masses and inversely proportional to the square of the distance."],
+["The universal gravitational constant G is approximately…","6.674 × 10⁻¹¹ N m²/kg²","9.81 m/s²","3 × 10⁸ m/s","1.013 × 10⁵ Pa","G = 6.674 × 10⁻¹¹ N m²/kg²."],
+["The acceleration due to gravity near Earth's surface is…","9.81 m/s²","6.674 m/s²","101.3 m/s²","1 m/s²","g ≈ 9.81 m/s²."],
+["Which statement correctly distinguishes mass from weight?","Mass is constant for a body, weight changes with the gravitational field","Weight is constant everywhere, mass changes","Both are measured in newtons","Mass is a vector, weight is a scalar","Mass is measured in kg; weight is a force measured in newtons."],
+["The weight of a body is calculated as…","W = mg","W = m/g","W = g/m","W = m + g","Weight is the gravitational force on an object."],
+["The weight of a 50 kg person on Earth (g = 9.8 m/s²) is…","490 N","50 N","5.1 N","4,900 N","W = mg = 50 × 9.8 = 490 N."],
+["Why is gravity important for ships?","It affects weight, centre of gravity, cargo distribution and stability","It has no effect on ships","It only affects the propeller","It only matters in port","Gravity acts on the ship and cargo and governs stability and the tendency to return upright."],
+["The centre of gravity is…","The point through which the resultant weight of a body acts","The geometric edge of a ship","The point where the propeller is fixed","The lowest point of the keel","Its position is extremely important in ship stability."],
+
+["Pressure is defined as…","Normal force acting per unit area","Force multiplied by area","Mass per unit volume","Work per unit time","P = F/A; SI unit is the pascal (Pa)."],
+["One pascal is equal to…","1 N/m²","1 N·m","1 kg/m³","1 J/s","1 Pa = 1 newton acting uniformly over 1 square metre."],
+["Pressure increases when…","The force increases or the area decreases","The area increases and force decreases","The mass decreases","The time increases","For a given normal force, a smaller area gives a greater pressure."],
+["A force of 200 N acts on an area of 4 m². The pressure is…","50 Pa","800 Pa","204 Pa","0.02 Pa","P = F/A = 200/4 = 50 Pa."],
+["Standard atmospheric pressure at sea level is approximately…","101,325 Pa","9,810 Pa","1,000 Pa","1,000,000 Pa","This is about 1.01325 bar."],
+["Hydrostatic pressure at depth h in a fluid of density ρ is…","P = ρgh","P = ρ/gh","P = ρ + g + h","P = ρv²","It is due to the weight of the fluid above the point."],
+["Why does water pressure increase with depth?","The weight of water above a point increases with depth","Water becomes lighter at depth","Gravity increases at depth","Temperature rises at depth","More water above means more weight pressing down."],
+["Gauge pressure at 10 m depth in freshwater (ρ = 1000 kg/m³, g = 9.81 m/s²) is…","98,100 Pa","9,810 Pa","10,000 Pa","981,000 Pa","P = ρgh = 1000 × 9.81 × 10 = 98,100 Pa = 98.1 kPa."],
+["The relationship between absolute and gauge pressure is…","P_abs = P_atm + P_gauge","P_abs = P_atm − P_gauge","P_abs = P_gauge / P_atm","P_abs = P_gauge × P_atm","Gauge pressure is measured relative to the atmosphere; absolute pressure relative to a perfect vacuum."],
+["A manometer is used to measure…","Fluid pressure using a column of liquid","Temperature of a ship's engine","Speed of a ship","Wind direction","It balances the fluid pressure against a liquid column."],
+
+["Fluid Mechanics deals with…","The behaviour of liquids and gases at rest and in motion","Only solid bodies","Only electric currents","Only light rays","It is very important in Nautical Science because ships operate in water."],
+["A fluid is a substance that…","Continuously deforms under an applied shear stress","Never changes shape","Is always a solid","Has no mass","Liquids and gases are fluids, e.g. water, oil, air and seawater."],
+["Which branch of Fluid Mechanics studies fluids at rest?","Fluid statics","Fluid dynamics","Fluid kinematics","Thermodynamics","Statics: at rest. Kinematics: motion without forces. Dynamics: motion with forces."],
+["Density is calculated as…","ρ = m / V","ρ = V / m","ρ = m × V","ρ = F / A","Density is mass per unit volume; SI unit kg/m³."],
+["The approximate density of seawater is…","1,025 kg/m³","1,000 kg/m³","800 kg/m³","13,600 kg/m³","Freshwater is about 1,000 kg/m³; seawater about 1,025 kg/m³, varying with temperature, salinity and pressure."],
+["Viscosity is…","A fluid's resistance to flow or internal deformation","The weight of a fluid","The pressure of a fluid","The volume of a fluid","Honey has a higher viscosity than water."],
+["The SI unit of surface tension is…","N/m","Pa","kg/m³","J","Surface tension arises from cohesive intermolecular forces at a liquid surface."],
+["Laminar flow is characterised by…","Smooth, orderly layers with little mixing","Irregular eddies and mixing","No movement of fluid","Only upward motion","Laminar flow typically occurs at low Reynolds numbers."],
+["Turbulent flow is characterised by…","Irregular fluctuations, mixing and eddies","Smooth parallel layers","No velocity at all","Constant pressure only","Example: water flowing rapidly and irregularly around obstacles."],
+["Compared with laminar flow, turbulent flow has…","Greater mixing and momentum exchange between layers","Less mixing between layers","Always lower Reynolds number","No fluctuations","Turbulent flow usually occurs at higher Reynolds numbers."],
+
+["Buoyancy is…","The upward force exerted by a fluid on an immersed body","The downward pull of gravity","The resistance of air","The friction of the hull","This force is also called the buoyant force or upthrust."],
+["Archimedes' Principle states that the buoyant force equals…","The weight of the fluid displaced","The weight of the object itself in air only","The volume of the container","The pressure of the atmosphere","F_B = ρgV, where V is the volume of displaced fluid."],
+["Why does a steel ship float even though steel is denser than water?","Its hollow hull displaces a large volume of water","Steel becomes lighter in water","Steel is a non-metal","Seawater has no weight","The ship's average density, including enclosed air spaces, is less than water."],
+["Ship displacement is…","The weight of water displaced by a floating ship","The length of the ship","The speed of the ship","The volume of the engine room","For a floating vessel in equilibrium, displacement equals the vessel's total weight."],
+["For the same ship weight, how does the draught in seawater compare with freshwater?","Smaller in seawater","Larger in seawater","Identical","Zero in seawater","Seawater is denser, so less volume needs to be displaced."],
+["The principle of flotation states that a floating body…","Displaces fluid equal in weight to its own weight","Displaces fluid equal to twice its weight","Displaces no fluid","Sinks until it touches the bottom","Weight of the floating body = weight of fluid displaced."],
+["Pascal's Law states that pressure applied to an enclosed fluid is…","Transmitted equally and undiminished in all directions","Transmitted only downwards","Lost immediately","Transmitted only to the surface","Applications include hydraulic lifts, brakes and steering systems."],
+["Bernoulli's equation for steady, incompressible, non-viscous flow is…","P + ½ρv² + ρgh = constant","P = F/A","F = ma","ρ = m/V","It expresses conservation of mechanical energy per unit volume along a streamline."],
+["The continuity equation for steady incompressible flow is…","A₁v₁ = A₂v₂","P₁V₁ = P₂V₂","F₁d₁ = F₂d₂","m₁g = m₂g","It is based on conservation of mass in fluid flow."],
+["The Reynolds number is given by…","Re = ρvD / μ","Re = mv","Re = F/A","Re = ρgh","It is dimensionless and helps distinguish laminar, transitional and turbulent flow."],
+
+["Which of the following is a component of ship resistance?","Wave-making resistance","Electrical resistance","Magnetic resistance","Thermal resistance","Ship resistance includes frictional, wave-making, form (pressure) and air resistance."],
+["The buoyant force on a floating body equals…","The weight of the fluid it displaces","Zero","The weight of the air around it","The mass of the engine","This is Archimedes' Principle."],
+["A floating object displaces 2 m³ of freshwater (ρ = 1000 kg/m³, g = 9.81 m/s²). The buoyant force is…","19,620 N","9,810 N","2,000 N","1,962 N","F_B = ρgV = 1000 × 9.81 × 2 = 19,620 N."],
+["A ship has a mass of 10,000 tonnes (g = 9.81 m/s²). Its weight is…","98,100,000 N","9,810,000 N","98,100 N","981,000,000 N","W = mg = 10,000,000 kg × 9.81 = 98,100,000 N."],
+["A tank holds 5 m³ of freshwater (ρ = 1000 kg/m³). Its mass is…","5,000 kg","500 kg","50 kg","200 kg","m = ρV = 1000 × 5 = 5,000 kg."],
+["A ship travels at 10 m/s. In km/h this is…","36 km/h","10 km/h","3.6 km/h","60 km/h","1 m/s = 3.6 km/h, so 10 m/s = 36 km/h."],
+["A ship of mass 100,000 kg experiences a net force of 50,000 N. Its acceleration is…","0.5 m/s²","2 m/s²","5 m/s²","0.05 m/s²","a = F/m = 50,000 / 100,000 = 0.5 m/s²."],
+["The gauge pressure at 20 m depth in seawater (ρ = 1025 kg/m³, g = 9.81 m/s²) is…","201.105 kPa","98.1 kPa","20.1 kPa","2,011 kPa","P = ρgh = 1025 × 9.81 × 20 = 201,105 Pa, excluding atmospheric pressure."],
+["A ship displaces 10,000 m³ of seawater (ρ = 1025 kg/m³). The mass of displaced water is…","10,250 tonnes","10,000 tonnes","1,025 tonnes","102,500 tonnes","m = ρV = 1025 × 10,000 = 10,250,000 kg = 10,250 tonnes."],
+["Why does a ship not sink merely because it carries heavy cargo?","It sinks deeper, displaces more water and buoyancy rises until it balances the weight","Cargo has no weight at sea","The hull becomes lighter with cargo","Buoyancy disappears at sea","A new floating equilibrium is established, but only within permitted loading limits, freeboard and stability."]
+  ]
+};
+
+</script>
+<script>
+window.QUIZ_DATA = window.QUIZ_DATA || {};
+window.QUIZ_DATA.cs = {
+  name: "Computer Science",
+  icon: "💻",
+  chapters: ["Introduction to Computers","Hardware & Components","Input & Output Devices","Memory & Storage","Operating Systems & Software","MS Office & Applications","Internet & Networking","Cybersecurity","Maritime Computer Applications","Shortcuts & Practical Knowledge"],
+  q: [
+["What is a computer?","An electronic device that accepts data, processes it, stores it and produces information","A mechanical clock","A type of printer only","A device that only stores paper","A computer performs input, processing, storage and output."],
+["The ability of a computer to perform repetitive tasks without getting tired is called…","Diligence","Versatility","Speed","Storage","Other characteristics include speed, accuracy, storage, automation, versatility and reliability."],
+["Which basic function of a computer coordinates all its operations?","Control","Input","Output","Printing","Computer functions: input, processing, output, storage and control."],
+["Which of the following is a classification based on data handling?","Hybrid computer","Supercomputer","Mainframe computer","Microcomputer","By data handling: analog, digital and hybrid. By size: super, mainframe, mini and micro."],
+["Supercomputers are typically used for…","Weather forecasting and complex scientific calculations","Simple typing tasks","Playing audio only","Printing labels","They perform complex calculations at very high speed."],
+["A microcomputer uses which component as its CPU?","A microprocessor","A vacuum tube","A punch card","A mechanical gear","Desktops, laptops and tablets are microcomputers."],
+["What is the difference between data and information?","Information is processed, meaningful data","Data is always processed, information is raw","They are exactly the same","Data is hardware, information is software","Example: 10, 15, 20, 25 is data; their average 17.5 is information."],
+["What does IPO stand for in computing?","Input, Processing, Output","Internet, Protocol, Output","Instruction, Program, Operation","Index, Page, Order","It describes the basic working principle of a computer."],
+["Who is known as the Father of Computers?","Charles Babbage","Isaac Newton","Albert Einstein","Alexander Graham Bell","He designed the Difference Engine and Analytical Engine."],
+["Which of the following is a disadvantage of computers?","Dependence on electricity","High speed","Accuracy","Large storage capacity","Disadvantages include security threats, hardware failure, data loss, privacy issues and electricity dependence."],
+
+["Computer hardware refers to…","The physical components of a computer","The programs of a computer","The internet","The instructions only","Examples: monitor, keyboard, CPU, RAM, hard disk."],
+["Computer software is…","A collection of programs and instructions","The physical monitor","A power cable","The motherboard","Examples: Windows, MS Word, Chrome."],
+["Which of the following is software?","MS Word","Keyboard","Monitor","RAM","MS Word is an application program; the others are hardware."],
+["The CPU is commonly called…","The brain of the computer","The memory of the computer","The skin of the computer","The wire of the computer","The CPU executes instructions and processes data."],
+["The ALU of the CPU performs…","Arithmetic and logical operations","Printing","Internet browsing","Power supply","Arithmetic: add, subtract, multiply, divide. Logical: AND, OR, NOT, comparisons."],
+["The Control Unit (CU)…","Manages and coordinates the operations of the computer","Stores data permanently","Prints documents","Connects to the internet","It controls instruction execution and data flow."],
+["The motherboard is…","The main printed circuit board that connects the key components","A storage disk","A display","A mouse","It connects CPU, RAM, storage devices and expansion cards."],
+["RAM is…","Volatile primary memory used for data currently in use","Permanent firmware storage","An output device","A network device","Data in RAM is normally lost when power is switched off."],
+["ROM is…","Non-volatile memory that stores firmware","Volatile working memory","An input device","A printer type","ROM retains information without power and is used during start-up."],
+["Which statement is true?","RAM is volatile while ROM is non-volatile","RAM is non-volatile while ROM is volatile","Both are output devices","Both lose data without power","RAM holds temporary working data; ROM holds firmware."],
+
+["Which of the following is an input device?","Scanner","Monitor","Printer","Speaker","Input devices enter data into a computer."],
+["Which of the following is an output device?","Plotter","Keyboard","Mouse","Webcam","Output devices display or produce processed information."],
+["A keyboard is…","An input device used to enter text, numbers and commands","An output device","A storage device","A network device","Keys include alphabet, numeric, function, control and navigation keys."],
+["A mouse is…","A pointing input device that controls the cursor","A printing device","A storage device","A power supply","Main actions: click, double-click, right-click, drag and scroll."],
+["A monitor is…","An output device that displays information visually","An input device","A storage drive","A network cable","Types include CRT, LCD, LED and OLED."],
+["Which of the following is a type of printer?","Inkjet printer","Joystick","Webcam","Trackball","Printer types: inkjet, laser and dot matrix."],
+["A scanner…","Converts physical documents and images into digital form","Prints documents","Plays audio","Stores the operating system","Useful for digitising certificates and ship documents."],
+["A touchscreen is…","A device that lets users interact by touching the display","Only an output device","A kind of memory","A network protocol","Used in smartphones, tablets and some shipboard systems."],
+["A plotter is used to produce…","Large, precise drawings, maps and technical diagrams","Small text only","Audio output","Keyboard inputs","Plotters are useful for engineering drawings and charts."],
+["A soft copy of a document is…","An electronic version, e.g. a PDF file","A printed paper version","A handwritten note","A photocopy","A hard copy is a physical printed version."],
+
+["Computer memory is broadly classified into…","Primary and secondary memory","Input and output memory","Hardware and software memory","Fast and slow printers","Primary is directly accessible by the CPU; secondary is for long-term storage."],
+["Primary memory is…","Memory directly accessible by the CPU, e.g. RAM","Memory used only for backup","An external storage only","A type of printer","Examples: RAM, ROM and cache memory."],
+["Which of the following is secondary memory?","SSD","RAM","ROM","Cache","Secondary memory examples: HDD, SSD, pen drive, memory card, CD and DVD."],
+["Cache memory is…","A small, high-speed memory near the CPU","A large permanent disk","A display device","An input device","It stores frequently used data to speed up processing."],
+["A hard disk drive (HDD) stores data using…","Magnetic storage","Flash memory chips only","Optical lasers only","Paper tape","HDDs use magnetic platters."],
+["A solid state drive (SSD) uses…","Flash memory","Magnetic platters","Paper cards","Vacuum tubes","SSDs have no moving mechanical parts and offer faster access."],
+["A pen drive connects to a computer through…","A USB port","A VGA port only","A power socket","A headphone jack","It is a portable flash storage device."],
+["One byte equals…","8 bits","4 bits","16 bits","1,024 bits","A nibble is 4 bits; 1 KB = 1,024 bytes."],
+["Which of the following is an example of volatile memory?","RAM","ROM","SSD","HDD","Volatile memory loses data when power is removed."],
+["A backup is…","An additional copy of data stored separately for recovery","A deleted file","A virus","A type of monitor","Backups protect against data loss or corruption."],
+
+["An operating system is…","System software that manages hardware and software resources","A type of printer","A web page","A storage chip","Examples: Windows, Linux, macOS, Android, iOS."],
+["Which of the following is a main function of an operating system?","Memory management","Designing websites","Creating spreadsheets","Editing photographs","OS functions include memory, process, file, device and security management."],
+["Which of the following is application software?","MS Word","Windows","Linux","macOS","Application software performs specific user tasks."],
+["A GUI (Graphical User Interface) uses…","Icons, windows, menus and pointers","Only typed commands","Only voice","Only punch cards","GUI makes the computer easy to use visually."],
+["A command-line interface (CLI) is…","A text-based interface where commands are typed","An interface using icons only","An interface using touch only","A printer","Examples: Windows Command Prompt, Linux Terminal."],
+["Cold booting means…","Starting a computer from a powered-off state","Restarting without switching off power","Shutting down the computer","Updating software","Warm booting restarts without completely switching off."],
+["A file is…","A collection of related data stored under a name","A physical cable","A type of monitor","A network device","Examples: document, image, audio, video, spreadsheet files."],
+["A folder is…","A container used to organise files and other folders","A virus","A type of memory chip","An input device","Folders help manage documents systematically."],
+["The file extension .xlsx indicates…","An Excel spreadsheet","A Word document","A PowerPoint presentation","A text file","Extensions: .docx Word, .pptx PowerPoint, .pdf PDF, .txt text."],
+["Antivirus software is used to…","Detect, prevent and remove malicious software","Increase screen size","Speed up printers","Create documents","Examples: Microsoft Defender, Norton, McAfee, Bitdefender."],
+
+["Which of the following is a Microsoft Office application?","Excel","Photoshop","Firefox","Linux","Office includes Word, Excel, PowerPoint, Outlook and Access."],
+["MS Word is used for…","Word processing: creating, editing and formatting documents","Spreadsheet calculations","Slide presentations","Database management","Used for reports, letters, notices and certificates."],
+["Which of the following is a feature of MS Word?","Headers and footers","Cell formulas","Slide transitions","Database queries","Word features include text formatting, tables, spell check and page numbering."],
+["MS Excel is…","A spreadsheet application for calculating and analysing data","A word processor","A presentation tool","A web browser","It uses rows, columns and cells."],
+["Cell A1 in Excel is located at…","The intersection of column A and row 1","The intersection of row A and column 1","The last cell of the sheet","The title bar","A cell is the intersection of a row and a column."],
+["Every Excel formula begins with…","The equal sign (=)","The plus sign (+)","A hash sign (#)","A colon (:)","Example: =A1+B1 adds the values in A1 and B1."],
+["The formula =SUM(A1:A10) calculates…","The total of the values from A1 to A10","The average of A1 to A10","The largest value in A1:A10","The count of cells","SUM adds values; AVERAGE, MAX, MIN and COUNT do other tasks."],
+["MS PowerPoint is used to…","Create and display slide presentations","Calculate formulas","Browse websites","Manage databases only","Features: slides, images, charts, animations, transitions."],
+["MS Access is…","A database management application","A word processor","A presentation program","A web browser","It stores, organises and retrieves structured information."],
+["The file extension .pptx belongs to…","MS PowerPoint","MS Word","MS Excel","Adobe PDF","Word: .docx; Excel: .xlsx; PowerPoint: .pptx."],
+
+["The Internet is…","A worldwide network of interconnected computer networks","A single computer","A type of software only","A printer network only","It supports email, websites, file transfer and video conferences."],
+["A computer network is…","Interconnected computers and devices that share resources","A single standalone PC","A software program","A storage chip","Examples: office, college lab and shipboard networks."],
+["Which network covers a limited geographical area such as a building?","LAN","WAN","The Internet","Satellite network","LAN = Local Area Network."],
+["A college computer laboratory network is an example of…","LAN","WAN","MAN","The Internet","LANs connect devices within a limited area."],
+["The Internet is the best-known example of…","WAN","LAN","PAN","Intranet","WAN = Wide Area Network covering large geographical areas."],
+["A modem performs…","Modulation and demodulation of signals","Printing","Data storage","Screen display","It enables communication over a transmission medium."],
+["A router…","Forwards data packets between networks","Prints documents","Stores files permanently","Scans documents","It commonly connects a local network to the Internet."],
+["An IP address is…","A numerical address identifying a device on an IP network","A website name","A type of virus","A file extension","Two major versions: IPv4 and IPv6."],
+["Which of the following is a web browser?","Mozilla Firefox","Microsoft Word","Windows","Adobe Reader","Other browsers: Chrome, Edge, Safari, Opera."],
+["Which of the following is a search engine?","DuckDuckGo","Safari","Firefox","Opera","Search engines include Google, Bing, Yahoo and DuckDuckGo."],
+
+["Cybersecurity is…","Protecting computers, networks and data from unauthorised access and attacks","Increasing internet speed","Designing hardware","Repairing monitors","It is vital as ships increasingly depend on digital systems."],
+["A computer virus is…","Malicious software that attaches to legitimate files and spreads","A hardware fault","A type of monitor","A secure browser","It can damage files, disrupt operations or steal information."],
+["'Malware' is short for…","Malicious software","Main hardware","Managed warehouse","Memory warning","Types include viruses, worms, trojans, ransomware, spyware and adware."],
+["Phishing is…","Using deceptive emails or websites to trick people into revealing confidential information","A method of fishing at sea","A firewall type","A backup method","Targets passwords, banking details and login credentials."],
+["A firewall…","Monitors and controls incoming and outgoing network traffic by security rules","Prints documents","Increases battery life","Speeds up the CPU","It helps prevent unauthorised network access."],
+["A strong password should be…","Long, difficult to guess and unique","Short and easy to remember","Your name or birth date","Same for all accounts","Avoid personal information and reuse."],
+["Two-factor authentication (2FA) requires…","Two different forms of verification","Two passwords of the same type","Two computers","Two antivirus programs","Example: password plus a one-time code."],
+["Ransomware…","Blocks access to files or systems and demands payment","Speeds up a computer","Backs up data","Is a type of printer","It commonly encrypts data and demands payment for restoration."],
+["Data privacy refers to…","Proper handling and protection of personal and confidential information","Sharing all data publicly","Deleting all files","Buying new hardware","Only authorised individuals should access the information."],
+["Why is cybersecurity important on ships?","Ships rely on interconnected digital systems for navigation, communication and operations","Ships have no computers","Cyber incidents never affect safety","Only office PCs matter","Crew should follow company procedures and avoid connecting unauthorised devices."],
+
+["Computers are used in modern ships for…","Navigation, communication, cargo management and record keeping","Only entertainment","Only cooking","Nothing important","They also support weather monitoring, engine monitoring and safety management."],
+["ECDIS stands for…","Electronic Chart Display and Information System","Electronic Compass Data Input System","Engine Control Display Interface System","Electrical Cargo Data Indicator System","ECDIS displays electronic navigational charts and route information."],
+["GPS is…","A satellite-based navigation system giving position, speed and time","A cargo document","A type of radar","A printer","It is widely used in maritime navigation."],
+["AIS automatically exchanges…","Ship identity, position, course, speed and navigation status","Only weather reports","Only crew lists","Only cargo lists","It assists situational awareness but does not replace lookout or radar."],
+["RADAR stands for…","Radio Detection and Ranging","Radio Direction and Reading","Rapid Data and Recording","Radio Data Analysis Routine","It uses radio waves to detect objects and determine range and bearing."],
+["A VDR (Voyage Data Recorder) is…","A system recording selected ship operation and navigation data, like a black box","A type of anchor","A cargo winch","A galley appliance","It helps investigators understand the circumstances of accidents."],
+["BNWAS alerts the crew if…","The bridge watch officer becomes inactive for a set period","Fuel is low","Cargo shifts","The anchor drags","BNWAS = Bridge Navigational Watch Alarm System."],
+["GMDSS is used for…","Maritime distress alerting and safety communications","Cargo loading","Engine cooling","Painting hulls","GMDSS = Global Maritime Distress and Safety System."],
+["A shipboard computer network…","Connects computers and digital devices onboard to exchange information","Is only used on shore","Replaces the crew","Cannot share files","It supports administrative work, records and communication."],
+["Why must a navigating officer understand the limitations of electronic equipment?","Electronic systems can fail, so independent navigational checks are needed","Electronic equipment is always perfect","Computers replace the lookout completely","Charts are no longer required to be understood","Computers support navigation but do not remove the officer's responsibility."],
+
+["The keyboard shortcut Ctrl + C does…","Copy","Cut","Paste","Close","Ctrl + C copies the selection."],
+["The keyboard shortcut for Paste is…","Ctrl + V","Ctrl + C","Ctrl + X","Ctrl + Z","Copy: Ctrl + C. Cut: Ctrl + X. Paste: Ctrl + V."],
+["The keyboard shortcut for saving a document is…","Ctrl + S","Ctrl + P","Ctrl + N","Ctrl + O","It saves the current file."],
+["The keyboard shortcut for printing is…","Ctrl + P","Ctrl + S","Ctrl + F","Ctrl + H","It opens the print dialogue in most Windows applications."],
+["The keyboard shortcut for Undo is…","Ctrl + Z","Ctrl + Y","Ctrl + U","Ctrl + A","Redo is Ctrl + Y."],
+["PDF stands for…","Portable Document Format","Personal Data File","Printed Document Form","Public Digital Format","It preserves document layout across devices."],
+["Cloud computing is…","Delivery of computing services such as storage and software over the Internet","Computing performed only offline","A type of weather forecast","A printer type","Examples: Google Drive, OneDrive, Dropbox."],
+["A database is…","An organised collection of related data","A random list of files","A type of monitor","A power backup","Examples: student, employee and ship inventory databases."],
+["Artificial Intelligence (AI) refers to…","Computer systems performing tasks that normally require human intelligence","A type of monitor","A storage device","A network cable","Examples: speech recognition, image recognition, language processing."],
+["Computer Science is important for Nautical Science students because…","Modern merchant ships depend heavily on digital technology","Ships do not use computers","It replaces seamanship entirely","It is only theoretical","Skills include word processing, spreadsheets, networking, cybersecurity and electronic navigation systems."]
+  ]
+};
+
+</script>
+<script>
+window.QUIZ_DATA = window.QUIZ_DATA || {};
+window.QUIZ_DATA.ship = {
+  name: "Ship Construction",
+  icon: "🚢",
+  chapters: ["Introduction to Ships","Terminology & Directions","Dimensions & Principal Particulars","Hull & Structural Components","Decks & Superstructure","Bulkheads & Compartments","Equipment & Machinery","Tanks & Structural Features","Strength, Stability & Safety","Construction Methods & Inspection"],
+  q: [
+["What is a ship?","A large watercraft designed to travel on seas and oceans to carry passengers, cargo or perform specialised operations","A small inland rowing craft only","A floating toy","A fixed offshore platform only","Ships are used for cargo, passengers, fishing, naval, offshore and research operations."],
+["Ship construction is…","The process of designing, building and assembling a vessel","Only painting a ship","Only operating a ship","Only loading cargo","It includes hull, keel, frames, bulkheads, decks, machinery and equipment."],
+["Which ship type carries unpackaged bulk cargo such as coal, iron ore and grain?","Bulk carrier","Container ship","Passenger ship","Reefer ship","Container ships carry standard containers; reefer ships carry temperature-controlled cargo."],
+["Which ship type carries wheeled cargo such as cars and trucks?","Ro-Ro ship","Oil tanker","Bulk carrier","LNG carrier","Ro-Ro = Roll-on/Roll-off."],
+["Which statement about a ship and a boat is generally true?","A ship is generally larger and designed for longer voyages","A boat is always larger than a ship","Ships never cross oceans","Boats always carry more cargo","The distinction is not absolute, but ships are generally larger."],
+["The most common material for large commercial ship hulls is…","Steel","Wood","Fibreglass only","Paper","Steel is widely used for its strength, durability and suitability for large structures."],
+["A merchant ship is…","A commercial vessel used to carry cargo or passengers for business","A warship","A private yacht only","A fishing rod","Examples: container ships, tankers, bulk carriers, passenger vessels."],
+["An LNG carrier transports…","Liquefied natural gas","Liquid chemicals only","Wheeled vehicles","Grain","LPG carriers transport liquefied petroleum gas."],
+["The purpose of ship construction is to…","Produce a vessel that can operate safely and efficiently in its intended marine environment","Make the ship as light as possible regardless of safety","Reduce the number of compartments to zero","Avoid steel entirely","Objectives include strength, watertight integrity, stability, buoyancy and safety."],
+["A seaworthy ship must have…","Adequate strength, stability, freeboard and watertight integrity","Only a coat of paint","Only a large crew","Only a large engine","It must also have navigation, lifesaving and firefighting equipment and comply with regulations."],
+
+["The bow of a ship is…","The forward or front end","The rear end","The left side","The right side","The bow shapes the vessel's forward part and influences resistance and seakeeping."],
+["The stern of a ship is…","The after or rear end","The front end","The middle section","The deck edge","It supports propeller and rudder arrangements."],
+["The navigation light on the port side is…","Red","Green","White","Yellow","Port is the left-hand side facing forward."],
+["The navigation light on the starboard side is…","Green","Red","White","Blue","Starboard is the right-hand side facing forward."],
+["Amidships refers to…","The middle portion of the ship","The front end","The rear end","The keel","Approximately halfway between the forward and aft perpendiculars."],
+["'Fore' refers to…","The forward part of the ship, towards the bow","The rear part","The bottom of the ship","The funnel","For example, the forecastle is the raised forward portion of the upper deck."],
+["'Aft' refers to…","The rearward direction, towards the stern","The forward direction","The left side","The right side","The engine room is situated aft on many merchant ships."],
+["The beam of a ship is…","Its maximum breadth","Its length","Its draught","Its height above water","Beam is measured at the widest part of the vessel."],
+["Which of the following is a ship length measurement?","Length Between Perpendiculars (LBP)","Freeboard","Draught","Beam","Length measures include LOA, LBP and registered length."],
+["Draught is…","The vertical distance between the bottom of the keel and the waterline","The height of the ship above water","The width of the ship","The length of the ship","A draught of 10 m means the keel is 10 m below the waterline."],
+
+["Length Overall (LOA) is…","The maximum length from the foremost point of the bow to the aftermost point of the stern","The distance between two perpendiculars","The width of the ship","The depth of the hold","It is the ship's maximum overall length."],
+["Length Between Perpendiculars (LBP) is…","The distance between the forward and after perpendiculars","The distance from keel to deck","The ship's breadth","The ship's draught","It is used in ship design and hydrostatic calculations."],
+["How do LOA and LBP generally compare?","LOA is usually greater than LBP","LBP is always greater than LOA","They are always equal","LOA is the ship's width","LOA includes the extreme forward and aft points."],
+["Moulded breadth excludes…","The thickness of the shell plating","The frames","The decks","The length","It is measured between the moulded lines of the frames."],
+["Moulded depth is…","The vertical distance from the baseline (keel top) to the top of the deck beam at the side","The distance from waterline to keel","The ship's length","The breadth of the hull","It is an important dimension used in ship design."],
+["Freeboard is…","The vertical distance from the waterline to the upper edge of the freeboard deck at the side","The depth of the keel below water","The ship's breadth","The height of the funnel","It provides reserve buoyancy and protection from waves."],
+["The waterline is…","The line where the water surface meets the hull of a floating ship","The line of the keel","The line of the deck edge","The line of the bow only","It changes with loading condition and water density."],
+["The vertical distance from keel/baseline to a specified deck is generally related to…","Moulded depth","Draught","Beam","LOA","Depending on the measurement convention."],
+["Displacement is…","The total weight of water displaced by a floating vessel","The length of the vessel","The speed of the vessel","The number of crew","By Archimedes' principle it equals the weight of the ship and everything onboard when floating."],
+["Deadweight (DWT) includes…","Cargo, fuel, fresh water, ballast, stores, crew and effects","Only the steel weight of the hull","Only the weight of the propeller","Only the weight of the water displaced when empty","DWT is not the same as the ship's lightweight."],
+
+["The hull of a ship is…","The main body or outer structure of the ship","The navigation bridge only","The anchor","The funnel","It provides buoyancy, strength, space and protection from water."],
+["Which of the following is a part of a ship's hull structure?","Frames","Radar","Lifebuoy","Galley stove","Hull parts include keel, shell plating, frames, floors, longitudinals, bulkheads, decks and stiffeners."],
+["The keel is…","The principal longitudinal structural member along the bottom of the ship","A transverse partition","A type of deck","A steering component","It provides longitudinal strength and supports the bottom structure."],
+["Shell plating is…","The steel plates forming the outer surface of the hull","The inner deck lining","A type of bulkhead","A mooring rope","It maintains watertight integrity and contributes to strength."],
+["Frames in a ship are…","Transverse structural members that support the shell plating","Longitudinal members along the keel","Ropes used for mooring","Navigation lights","They help maintain the hull shape and give transverse strength."],
+["Longitudinal stiffeners run…","Along the length of the ship","Across the breadth only","Vertically only","Around the propeller","They support plating and contribute to longitudinal strength."],
+["A floor in ship construction is…","A transverse structural member in the bottom structure","A deck of the accommodation","A type of anchor","A hatch cover","It connects bottom members and supports the bottom plating."],
+["A girder is…","A major structural member supporting loads and distributing stresses","A type of propeller","A navigation instrument","A lifejacket","It may be longitudinal or transverse, e.g. centre girder, side girder."],
+["A double bottom is…","An inner bottom fitted above the outer shell, forming tanks or spaces between","A single plate hull","A type of rudder","A cargo hatch","It protects against bottom damage and can carry ballast, fuel or fresh water."],
+["The bilge is…","The lower curved region where the bottom meets the side shell","The top of the funnel","The bridge wing","The bow","It also refers to the lowest internal area where bilge water collects."],
+
+["A deck is…","A horizontal structural platform extending across a ship","A vertical partition","A type of anchor","A propeller blade","Decks separate levels and contribute to ship strength."],
+["The main deck is…","The principal continuous deck of the ship","The bridge wing","The engine casing only","The bilge","It is commonly used for cargo operations and access."],
+["The upper deck is…","The uppermost complete deck exposed to weather and sea","The lowest deck","A tank top","A cargo hatch","It protects the spaces below."],
+["The forecastle deck is…","A raised deck at the forward end of the ship","A raised deck at the aft end","A deck in the engine room","The deck inside the double bottom","It may house anchoring and mooring equipment such as the windlass."],
+["A poop deck is…","A raised deck at the extreme aft portion of the ship","A raised deck at the bow","A deck on the funnel","A tank deck","It is found on certain vessel designs above the upper deck."],
+["A bridge deck is associated with…","The ship's navigation bridge structure","The double bottom","The keel","The propeller","The bridge is where the ship is navigated and controlled."],
+["A tween deck is…","An intermediate deck between the main deck and the bottom of a hold or between two decks","The uppermost deck","The deck on the funnel","A bridge wing","It provides additional cargo stowage space."],
+["A weather deck is…","A deck exposed to weather and sea","A deck inside the engine room","A deck inside a tank","A deck below the double bottom","It must have arrangements to resist environmental conditions and drain water."],
+["A superstructure is…","A structure above the upper deck extending from side to side or nearly so","A structure in the double bottom","The keel","A mooring rope","Examples: bridge structure and accommodation block."],
+["A deckhouse is…","An enclosed structure on deck that does not extend from side to side","A structure covering the whole breadth","An underwater structure","A cargo tank","It may contain offices, accommodation, workshops or equipment rooms."],
+
+["A bulkhead is…","A vertical partition dividing a ship into compartments","A horizontal deck","A type of anchor","A propeller shaft","It divides spaces, adds strength and helps limit flooding."],
+["Which of the following is a type of bulkhead?","Fire-resisting bulkhead","Keel bulkhead","Propeller bulkhead","Rudder bulkhead","Types: transverse, longitudinal, watertight, non-watertight, fire-resisting and collision bulkheads."],
+["A transverse bulkhead runs…","Across the breadth of the ship","Along the length of the ship","Horizontally across the deck","Only at the keel","It divides the vessel into compartments along its length."],
+["A longitudinal bulkhead runs…","Along the length of the ship","Across the breadth only","Only at the bow","Only at the stern","It divides the vessel into port and starboard sections or longitudinal spaces."],
+["A watertight bulkhead is…","One constructed to prevent the passage of water under specified conditions","One that allows free flow of water","A bulkhead made of rope","A deck covering","It limits flooding and maintains watertight subdivision."],
+["The collision bulkhead is…","A watertight transverse bulkhead fitted near the forward end","A bulkhead at the stern tube","A longitudinal bulkhead in the engine room","A bulkhead in the accommodation","It limits flooding in the event of bow damage."],
+["A compartment is…","An enclosed space separated by bulkheads, decks or other boundaries","An open deck","A type of anchor","A mooring line","Examples: engine room, cargo hold, pump room, ballast tank."],
+["A cargo hold is…","An enclosed space designed to carry cargo","The navigation bridge","The galley","The steering gear room only","Common on bulk carriers and general cargo ships."],
+["The engine room is…","A machinery space containing main propulsion machinery and auxiliaries","A cargo space","The accommodation","The anchor locker","It may contain the main engine, generators, pumps, compressors and purifiers."],
+["Accommodation spaces are…","Areas for the living and welfare of the crew and passengers","Cargo holds","Ballast tanks","Machinery spaces","They include cabins, mess rooms, recreation rooms and galley."],
+
+["A rudder is…","A movable underwater steering surface generally at the stern","A device that produces thrust","An anchor handling machine","A type of bulkhead","It controls direction by changing the water flow around it."],
+["A propeller…","Produces thrust by accelerating water backwards","Steers the ship","Holds the ship at anchor","Divides compartments","Its thrust moves the ship ahead or astern."],
+["A propeller shaft…","Transmits power from the propulsion machinery to the propeller","Lifts the anchor","Steers the rudder","Covers the hatch","It is an important part of the propulsion system."],
+["A stern tube is…","The arrangement through which the propeller shaft passes through the hull","The tube for the anchor chain","A ballast tank","A hatch","It contains bearings and seals that help prevent water ingress."],
+["An anchor is…","A heavy device that holds the ship in position by engaging with the seabed","A device that produces thrust","A steering device","A hatch cover","It is connected to the ship by an anchor chain."],
+["An anchor chain…","Connects the anchor to the ship","Divides the compartments","Powers the propeller","Covers the hatch","It provides the connection needed for anchoring."],
+["A windlass is…","A mechanical device used to raise and lower the anchor and handle the chain","A steering gear","A propeller","A cargo hatch","It is generally located on the forecastle deck."],
+["A mooring winch is used to…","Handle mooring ropes or wires when securing the ship","Raise the anchor only","Produce thrust","Measure draught","It helps control the tension and movement of mooring lines."],
+["A bollard is…","A strong vertical post used to secure mooring ropes","A type of lifejacket","A navigation light","A ballast tank","Bollards are fitted on ships and quays."],
+["A bulwark is…","A vertical protective structure along the exposed edges of a deck","A ballast tank","A rudder part","A propeller blade","It protects crew and helps prevent persons or objects falling overboard."],
+
+["A ballast tank is used to carry…","Ballast water to control stability, draught, trim and list","Only fuel oil","Only fresh water for drinking","Only cargo","Ballast tanks are commonly in the double bottom, sides or other designated areas."],
+["A fuel oil tank is…","A tank designed to store fuel for engines and machinery","A ballast tank","A cargo hold","A hatch","Different fuel storage arrangements may be provided."],
+["A freshwater tank is…","A tank to store freshwater for the crew and operational needs","A tank for fuel oil","A tank for cargo oil only","A bilge","It stores water for drinking and other uses."],
+["Peak tanks are located…","At the extreme forward and aft ends of the ship","In the middle of the engine room","On the funnel","Under the bridge","They are the forepeak and afterpeak tanks."],
+["The forepeak tank is…","A tank at the forward end, generally ahead of the collision bulkhead","A tank at the stern","A tank on the bridge","A tank in the engine room","It is commonly used as a ballast tank."],
+["The afterpeak tank is…","A tank at the aft end of the ship","A tank at the bow","A tank on the main deck","A tank in the accommodation","It may carry ballast and be used for trim adjustment."],
+["A cofferdam is…","An empty separation space between certain tanks or compartments","A type of anchor","A propeller part","A mooring device","It reduces the risk of leakage or contamination between adjacent spaces."],
+["A hatch is…","An opening in a deck giving access to a compartment or cargo hold","A vertical bulkhead","A rope","A keel","Cargo ship hatches are fitted with covers."],
+["A hatch cover…","Protects cargo from seawater and helps maintain weathertight integrity","Produces thrust","Steers the ship","Anchors the ship","It protects the cargo hold from water and weather."],
+["A bilge pump is used to…","Remove accumulated water from the ship's bilges","Raise the anchor","Fill the cargo hold","Power the propeller","It is part of the vessel's pumping and drainage arrangements."],
+
+["Longitudinal strength is…","The ability of the structure to resist bending stresses along the ship's length","The ability to resist forces across the breadth","The ability to resist twisting","The ability to float","Hogging and sagging are two important bending conditions."],
+["Hogging is a condition in which…","The ship bends upwards at the middle relative to its ends","The ship bends downwards at the middle","The ship twists","The ship rolls","It commonly occurs when buoyancy is greater around the middle than the ends."],
+["Sagging is a condition in which…","The ship bends downwards at the middle relative to its ends","The ship bends upwards at the middle","The ship tilts sideways","The ship twists","It commonly occurs when weight is greater around the middle than the ends."],
+["Transverse strength is…","The ability to resist forces acting across the breadth of the ship","The ability to resist bending along the length","The ability to float","The ability to carry fuel","Frames, transverse bulkheads, floors and beams contribute."],
+["Torsional strength is…","The ability to resist twisting forces","The ability to resist bending along the length","The ability to resist fire","The ability to resist corrosion","It is particularly important for large vessels in uneven wave loading."],
+["Ship stability is…","The ability of a vessel to return towards its upright position after being disturbed","The ship's speed","The ship's length","The ship's colour","It must remain within stability limits for safe navigation."],
+["Buoyancy is…","The upward force exerted by a fluid on a body immersed in it","The downward force of gravity","The force of friction","The thrust of the propeller","By Archimedes' principle it equals the weight of fluid displaced."],
+["Watertight integrity is maintained by…","Watertight bulkheads, watertight doors, secured openings and proper seals","Open doors in bulkheads","Removing hatch covers","Painting the hull only","Regular inspection and maintenance are also needed."],
+["The Plimsoll mark indicates…","The maximum permissible loading limit of the ship","The ship's speed","The ship's owner","The ship's cargo type","It is also called the Load Line Mark."],
+["The Load Line Convention helps ensure…","Minimum permissible freeboard and protection against overloading","Maximum ship speed","Minimum crew size","Ship colour standards","It provides reserve buoyancy and improves safety at sea."],
+
+["A shipyard is…","A facility where ships are built, repaired, converted and maintained","A ship's galley","A type of anchor","A cargo hold","Activities include steel cutting, welding, hull construction, painting and sea trials."],
+["Shipbuilding is…","Constructing a ship according to approved designs and specifications","Only repairing a ship","Only scrapping a ship","Only loading cargo","It includes fabrication, assembly, equipment installation and testing."],
+["Modern steel ship construction mainly uses…","Welding","Riveting","Nailing","Gluing","Welding permanently joins steel plates and structural members."],
+["Riveting is…","A mechanical joining process widely used in traditional shipbuilding","The main modern joining process","A type of painting","A type of corrosion","Modern steel ship construction mainly uses welding."],
+["Corrosion on ships is prevented by…","Protective coatings, cathodic protection and sacrificial anodes","Leaving steel bare","Adding more salt water","Removing all paint","Regular inspections are also important."],
+["Dry docking is…","Placing a ship in a dry dock to inspect, repair and maintain its underwater hull","Loading cargo in port","Anchoring at sea","Refuelling at sea","Activities include hull cleaning, painting, propeller and rudder inspection."],
+["A sea trial is…","A series of tests conducted at sea to verify a ship's performance","A court case","A cargo inspection in port","A crew medical test","Tests include speed, steering, manoeuvring and machinery performance."],
+["Which of the following is a classification society?","Lloyd's Register","Indian Navy","UN Security Council","World Health Organization","Others: DNV, ABS, Bureau Veritas, Indian Register of Shipping."],
+["Which of the following is an IMO convention affecting ship construction and safety?","SOLAS","NATO treaty","Kyoto Protocol","Geneva Convention on Postal Services","IMO conventions include SOLAS, MARPOL, Load Line and Tonnage conventions."],
+["Why is Ship Construction important for a Nautical Science student?","A Deck Officer must understand the structure and design of the vessel he or she works on","It is unrelated to a Deck Officer's job","It is only needed by shipyard workers","It replaces navigation studies","It helps in understanding compartments, watertight integrity, loading conditions and stability."]
+  ]
+};
+
+</script>
+<script>
+window.QUIZ_DATA = window.QUIZ_DATA || {};
+window.QUIZ_DATA.english = {
+  name: "Maritime English",
+  icon: "📡",
+  chapters: ["Fundamentals of Maritime English","Basic Maritime Vocabulary","Maritime Terms & Definitions","Standard Marine Communication Phrases","Safety & Emergency Vocabulary","Grammar & Language Skills","Speaking & Listening Skills","Writing & Formal Communication","Abbreviations & Vocabulary","Practical Shipboard Communication"],
+  q: [
+["What is Maritime English?","A specialised form of English used in the shipping and maritime industry","English used only in schools","A language spoken only by captains","A computer language","It covers maritime vocabulary, shipboard communication, safety instructions, radio communication and reports."],
+["What is the working language of international shipping?","English","French","Latin","Hindi","English is the internationally recognised working language of shipping."],
+["Why is Maritime English important for seafarers?","It helps avoid misunderstandings and supports safe communication","It is only for entertainment","It is only needed ashore","It replaces navigation skills","Poor communication can lead to accidents and operational problems."],
+["Communication is…","The exchange of information, ideas and instructions between two or more people","Only writing letters","Only speaking loudly","Only using radios","Main elements: sender, message, channel, receiver and feedback."],
+["Hand signals and facial expressions are examples of…","Non-verbal communication","Verbal communication","Written communication","Visual charts only","They are useful when noise or distance makes speech difficult."],
+["Giving instructions to the bridge team is an example of…","Verbal communication","Non-verbal communication","Written communication","Visual communication","Verbal communication uses spoken words."],
+["Eye contact, posture and gestures are forms of…","Non-verbal communication","Written communication","Radio communication","Visual diagrams","Non-verbal communication exchanges information without spoken words."],
+["The deck logbook is an example of…","Written communication","Verbal communication","Non-verbal communication","Gesture communication","Written communication should be clear, accurate and professional."],
+["Which of the following is one of the seven C's of effective communication?","Courteous","Confusing","Casual","Careless","The seven C's: clear, concise, correct, complete, concrete, coherent, courteous."],
+["Which of the following is a communication barrier onboard?","Background noise","Clear pronunciation","Standard phrases","Closed-loop communication","Other barriers: language differences, accents, stress, fatigue and incorrect terminology."],
+
+["The bow of a ship is…","The forward or front end","The rear end","The left side","The right side","The anchor equipment is generally near the bow."],
+["The stern of a ship is…","The rear or after end","The front end","The middle","The deck","The rudder and propeller are generally at the stern."],
+["Port is…","The left-hand side of a ship when facing forward","The right-hand side","The front","The rear","The port navigation light is red."],
+["Starboard is…","The right-hand side of a ship when facing forward","The left-hand side","The front","The rear","The starboard navigation light is green."],
+["Amidships refers to…","The middle portion of a ship","The front end","The rear end","The bottom","It is approximately halfway between the forward and aft ends."],
+["'Forward' means…","Towards the bow or front of the ship","Towards the stern","Towards the left side only","Downwards","Example: Move forward towards the forecastle."],
+["'Aft' means…","Towards the stern or rear of the ship","Towards the bow","Upwards","Towards the funnel only","Example: The engine room is situated aft."],
+["A deck is…","A horizontal structural platform on a ship","A vertical partition","A type of rope","A navigation instrument","Decks provide working areas and separate levels."],
+["The bridge is…","The area from which a ship is navigated and controlled","The engine room","The galley","The cargo hold","It contains radar, ECDIS, GPS, steering and communication equipment."],
+["A galley is…","The kitchen onboard a ship","The engine room","The cargo hold","The bridge","Food is prepared there for crew and passengers."],
+
+["Navigation is…","Planning, directing and controlling a ship's movement safely","Cooking food onboard","Painting the hull","Loading cargo only","It involves charts, compass, GPS, radar, ECDIS and passage planning."],
+["Seamanship is…","Knowledge and practical skill to operate, handle and maintain a ship safely","Only the study of weather","Only the study of grammar","Only cargo accounting","It includes mooring, anchoring, rope handling and emergency response."],
+["A voyage is…","A journey by a ship from one port or location to another","A type of rope","A type of anchor","A cargo document","Example: Chennai to Singapore."],
+["A watch is…","A designated period during which a seafarer performs assigned duties","A wrist clock only","A type of lifejacket","A cargo list","Examples: bridge watch, engine room watch, lookout duty."],
+["A watchkeeper is…","A crew member responsible for specific duties during a designated watch","A shore-based manager","A passenger","A ship designer","A bridge watchkeeper helps maintain a proper lookout."],
+["A lookout is…","A person assigned to observe the ship's surroundings and report important things","A type of radar","The ship's cook","A cargo inspector","A lookout watches for vessels, lights, obstacles and weather changes."],
+["Mooring is…","Securing a ship to a jetty, quay or buoy using ropes or wires","Raising the anchor","Starting the engine","Loading cargo","Mooring keeps the ship in position alongside."],
+["Anchoring is…","Lowering an anchor to the seabed to hold a ship in position","Tying up alongside a quay","Steering the ship","Painting the anchor","It is used in suitable anchorages."],
+["Berthing is…","Bringing a ship alongside a berth at a port","Moving a ship away from a berth","Raising the anchor","Fuelling the ship","Unberthing is moving a ship away from its berth."],
+["Unberthing is…","Moving a ship away from its berth","Bringing a ship alongside","Lowering the anchor","Loading cargo","It involves releasing mooring lines and manoeuvring away from the quay."],
+
+["'Stand by' means…","Remain ready for an instruction or action","Stop immediately and leave","Repeat the message","Go to the galley","Example: 'Stand by the forward mooring station.'"],
+["'Proceed' means…","Continue or move forward with the instructed action","Stop all actions","Repeat the message","Say no","Example: 'Proceed to the bridge.'"],
+["'Report' means…","Provide information about a situation or task","Ignore the message","Switch off the radio","Leave the bridge","Example: 'Report the weather conditions.'"],
+["'Acknowledge' means…","Confirm that a message or instruction has been received and understood","Refuse the instruction","Repeat the question","Delete the message","Example: 'Acknowledged. I will check the forward deck.'"],
+["In standard marine radio communication, the preferred phrase to request repetition is…","Say again","Repeat please","What?","Pardon","'Say again' is generally preferred in SMCP radio communication."],
+["'Affirmative' means…","Yes","No","Maybe","Wait","It is used to confirm something positively."],
+["'Negative' means…","No","Yes","Maybe","Repeat","It is used to give a negative response."],
+["'Maintain course' means…","Continue steering on the currently assigned course","Change course immediately","Stop the engine","Drop anchor","It instructs the helmsman to keep the course."],
+["'Keep clear' means…","Remain away from an object, vessel or area to avoid danger","Come closer","Switch on the lights","Repeat the message","It is used to avoid danger or interference."],
+["'Understood' means…","The message or instruction has been received and comprehended","The message was not heard","The message must be repeated","The message is cancelled","SMCP is developed by the IMO to reduce misunderstandings."],
+
+["An emergency onboard is…","An unexpected situation creating danger to the ship, crew, passengers, cargo or environment","A routine inspection","A planned drill","A normal watch change","Examples: fire, collision, grounding, flooding, man overboard."],
+["MAYDAY is…","The internationally recognised distress signal","An urgency signal","A safety signal","A greeting","It indicates grave and imminent danger requiring immediate assistance."],
+["PAN-PAN is…","The urgency signal","The distress signal","The safety signal","A cargo call","It indicates an urgent situation that does not require a distress call."],
+["SECURITE is…","A safety signal announcing important navigational or weather information","The distress signal","The urgency signal","A farewell","Example: a warning about dangerous floating objects or severe weather."],
+["A fire drill is…","A training exercise preparing crew to respond to a fire","A real fire","A cooking class","A cargo operation","It includes raising the alarm and mustering at stations."],
+["An abandon ship drill is…","An exercise practising duties for leaving the vessel safely","A cargo loading exercise","A navigation exercise","An engine test","It includes proceeding to muster stations and wearing lifejackets."],
+["A muster station is…","A designated place where crew and passengers assemble in an emergency","The ship's kitchen","The engine control room only","The cargo hold","It helps officers account for people."],
+["A lifejacket is…","A personal lifesaving appliance that helps a person remain afloat","A type of lifeboat","A type of anchor","A navigation light","It is an important part of lifesaving equipment."],
+["A lifeboat is…","A survival craft designed to carry people away from a vessel in an emergency","A floating ring","A type of lifejacket","A type of anchor","It is equipped with lifesaving equipment and supplies."],
+["A lifebuoy is…","A ring-shaped floating lifesaving appliance thrown to a person in the water","A survival craft","A type of rope","A navigation light","It can be thrown to a person who has fallen overboard."],
+
+["Which word is a noun?","Anchor","Slowly","Heavy","Under","A noun names a person, place, animal, object or idea."],
+["Which word is a pronoun?","He","Ship","Quickly","Navigate","A pronoun is used in place of a noun."],
+["Which word is a verb?","Navigate","Captain","Strong","Carefully","A verb expresses an action, occurrence or state."],
+["In 'strong wind', the word 'strong' is a/an…","Adjective","Noun","Verb","Adverb","An adjective describes a noun."],
+["In 'The ship is moving slowly', the word 'slowly' is a/an…","Adverb","Adjective","Noun","Pronoun","An adverb modifies a verb, adjective or another adverb."],
+["The three main tenses in English are…","Present, past and future","Noun, verb and adjective","Active, passive and neutral","Simple, short and long","Example: sails, sailed, will sail."],
+["Which sentence is in the passive voice?","The equipment is checked by the officer.","The officer checks the equipment.","The officer is checking.","The officer will check.","In passive voice the subject receives the action."],
+["Which word is a preposition?","Under","Quickly","Heavy","Captain","Prepositions show relationships: on, in, at, under, above, between, behind."],
+["Which word is a conjunction?","But","Ship","Slowly","Bridge","Conjunctions connect words, phrases or sentences: and, but, because, although, or."],
+["The symbol ' ; ' is called…","A semicolon","A colon","A comma","An apostrophe","Punctuation marks make sentences clear and understandable."],
+
+["Speaking skill is…","The ability to communicate ideas and instructions verbally in a clear way","The ability to write only","The ability to read only","The ability to draw","It is important for bridge communication, safety meetings and emergency reports."],
+["Listening skill is…","The ability to hear, understand and correctly interpret spoken information","The ability to speak loudly","The ability to write fast","The ability to read charts","Seafarers must understand instructions, announcements and radio messages."],
+["Pronunciation is…","The way a word is spoken","The way a word is spelt","The meaning of a word","The length of a word","Incorrect pronunciation may cause misunderstanding onboard."],
+["Fluency is…","The ability to speak smoothly and naturally without unnecessary pauses","The ability to spell words","The ability to write fast","The ability to read silently","A fluent speaker communicates ideas confidently and clearly."],
+["Public speaking is…","Speaking before an audience to explain information or share ideas","Speaking only to oneself","Writing a report","Reading silently","Examples: introducing yourself or presenting about ships."],
+["During an emergency a seafarer should communicate…","Clearly, calmly, briefly and accurately using standard terminology","Slowly and with long stories","Using slang","Only in writing","Follow the ship's emergency procedures."],
+["An effective conversation is one in which…","All participants understand the message correctly","Only one person speaks","No one listens","Slang is used heavily","It requires clear speaking, active listening and respect."],
+["A group discussion is…","A communication activity in which several people exchange ideas on a topic","A written exam","A solo speech","A radio call","Topics include teamwork, discipline and safety onboard."],
+["An interview is…","A formal conversation to assess knowledge, skills or suitability","A casual chat only","A written letter","A radio call","Cadetship and recruitment often involve interviews."],
+["A good introduction in a maritime interview should include…","Name, education, course, interest in the maritime industry and career goal","Only your nickname","Only your hobbies","Nothing at all","It should be polite, clear and confident."],
+
+["Formal writing is…","A professional style of writing used in official communication","Casual messaging with friends","Writing with slang","Text with emoji","Examples: official letters, reports, emails, logbook entries."],
+["An email is…","An electronic message sent through the internet","A paper letter","A radio call","A handwritten note","It is commonly used between ships, companies and port authorities."],
+["Which is a main part of a formal email?","Subject line","Emoji signature","Nickname greeting","Slang closing","Parts: recipient, subject, greeting, introduction, main message, closing, signature."],
+["A formal leave request usually ends with…","Yours faithfully","See you!","Bye bye","LOL","A formal closing is polite and professional."],
+["A report is…","A formal written document presenting information about an event or situation","A casual chat","A radio call","A song","Examples: accident report, incident report, safety inspection report."],
+["A logbook is…","An official record of important events and activities onboard","A casual diary","A cargo ticket","A crew menu","Examples: deck logbook, engine logbook, official logbook."],
+["A notice is…","A written announcement communicating information to a group","A private letter","A radio call","A cargo list","Example: a notice about a safety training session."],
+["A paragraph is…","A group of related sentences developing one main idea","A single word","A punctuation mark","A title only","It has a topic sentence, supporting sentences and a concluding sentence."],
+["A typical essay contains…","Introduction, main body and conclusion","Only a title","Only a conclusion","Only bullet points","Essay topics include life in the Merchant Navy and safety at sea."],
+["A formal letter is…","An official written communication to an individual or organisation","A text message","A casual postcard","A verbal order","Examples: application, complaint, request and permission letters."],
+
+["IMO stands for…","International Maritime Organization","International Marine Office","Indian Maritime Organization","International Merchant Order","It is a UN agency responsible for maritime safety, security and pollution prevention regulations."],
+["SOLAS stands for…","Safety of Life at Sea","Standards of Life at Sea","Safety of Lights at Sea","Shipping Operations Law and Safety","It sets minimum safety standards for ships."],
+["MARPOL stands for…","International Convention for the Prevention of Pollution from Ships","Marine Port Law","Maritime Radio Policy","Marine Passenger Operation License","It aims to prevent and minimise pollution from ships."],
+["STCW stands for…","Standards of Training, Certification and Watchkeeping for Seafarers","Ship Training and Cargo Watch","Standard Time and Course Weather","Seafarers' Tax and Contract Welfare","It sets international minimum standards for seafarer training and certification."],
+["GMDSS stands for…","Global Maritime Distress and Safety System","Global Marine Data Storage System","General Maritime Direction and Signal System","Global Merchant Docking and Shipping System","It is used for distress alerting and safety communication."],
+["ECDIS stands for…","Electronic Chart Display and Information System","Electronic Compass Direction and Indication System","Engine Control Data Interface System","Electrical Cargo Data and Inventory System","It displays electronic navigational charts and navigational information."],
+["AIS stands for…","Automatic Identification System","Advanced Information Signal","Automatic Inspection System","Aerial Identification Service","It exchanges ship identity, position, course, speed and status."],
+["GPS stands for…","Global Positioning System","General Position Signal","Global Port Service","Gyro Position System","It is a satellite-based navigation system."],
+["VHF stands for…","Very High Frequency","Very Heavy Frequency","Variable High Force","Vessel Hailing Frequency","VHF radio is widely used for short-range maritime communication."],
+["VDR stands for…","Voyage Data Recorder","Vessel Direction Radar","Voice Data Receiver","Visual Display Radar","It is commonly described as the ship's black box."],
+
+["Which is an appropriate report of bad weather to the officer on the bridge?","'Sir, the weather conditions are deteriorating. Strong winds and heavy waves have been observed.'","'Hey, it's a bit windy.'","'Nothing to report.'","'Weather is fine, no need to inform.'","Reports should be clear, polite and informative."],
+["Which is the correct way to report a fire onboard?","'Fire! Fire! Fire! Fire detected in the engine room. Inform the bridge immediately.'","'I think I smelled something.'","'Everything is fine.'","'Please wait, I will check later.'","Follow the vessel's emergency procedures and use designated alarm systems."],
+["When reporting a man overboard, what must be reported accurately?","The side of the ship, e.g. starboard or port","The cargo type","The ship's colour","The crew's names only","Follow the ship's man-overboard procedures immediately."],
+["Communication with the Captain should be…","Respectful, clear and professional","Casual and joking","Loud and hurried only","Silent","Example: 'Good morning, Captain. The inspection of the forward deck has been completed.'"],
+["Which is a polite way to ask an officer to repeat an instruction?","'Sir, I did not clearly understand the instruction. Could you please repeat it?'","'What?'","'Say it again, fast.'","'Never mind.'","In radio communication, 'Say again' is generally used."],
+["Which is a suitable report that a task is completed?","'Sir, the assigned task has been completed successfully.'","'Done, whatever.'","'I guess it's done.'","'Not my problem.'","Reports should be brief and clear."],
+["When communicating with an international crew member you should…","Speak slowly and clearly and avoid unnecessary slang","Use as much slang as possible","Speak very fast","Avoid listening","Also use standard maritime terminology and confirm important instructions."],
+["Closed-loop communication means…","The receiver repeats or acknowledges the instruction and the sender confirms it","The message is sent once and never confirmed","The message is written only","The message is secret","It reduces communication errors."],
+["Teamwork onboard is important because…","Ships operate through coordinated activities and emergencies need cooperation","Each person works completely alone","It has no effect on safety","It is only useful ashore","It improves safety and efficiency in navigation, cargo and maintenance."],
+["Why is Maritime English essential for a B.Sc. Nautical Science student?","A Deck Officer must communicate with people from different countries, including by VHF and in reports","Only for passing grammar exams","Because ships have no radios","It is not used at sea","It develops professional communication, vocabulary and bridge-operation skills."]
+  ]
+};
+
+</script>
+<script>
+(function () {
+'use strict';
+
+/* ---------- Data ---------- */
+var DATA = window.QUIZ_DATA || {};
+var SUBJECTS = ['math', 'physics', 'cs', 'ship', 'english'].filter(function (k) { return DATA[k]; });
+var DIFF = ['Easy', 'Medium', 'Difficult', 'Expert'];
+var DIFF_MAP = [0, 0, 0, 0, 1, 1, 1, 2, 2, 3];
+var NEG = 0.25;
+var BANK = [];
+var BY_ID = {};
+
+SUBJECTS.forEach(function (s) {
+  DATA[s].q.forEach(function (r, i) {
+    var it = { id: s + '-' + (i + 1), s: s, n: i + 1, ch: Math.floor(i / 10), diff: DIFF_MAP[i % 10], q: r[0], opts: [r[1], r[2], r[3], r[4]], ex: r[5] };
+    BANK.push(it);
+    BY_ID[it.id] = it;
+  });
+});
+
+/* ---------- Helpers ---------- */
+function $(sel) { return document.querySelector(sel); }
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+function shuffle(a) {
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function fmt(sec) {
+  sec = Math.max(0, Math.round(sec));
+  var h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+  var mm = (m < 10 ? '0' : '') + m, ss = (s < 10 ? '0' : '') + s;
+  return h > 0 ? h + ':' + mm + ':' + ss : mm + ':' + ss;
+}
+function pct(a, b) { return b > 0 ? Math.round((a / b) * 100) : 0; }
+function todayKey() {
+  var d = new Date();
+  return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+}
+function toast(msg) {
+  var t = $('#toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(function () { t.classList.remove('show'); }, 2600);
+}
+function subjName(s) { return DATA[s] ? DATA[s].name : s; }
+function chapName(s, ch) { return DATA[s] ? DATA[s].chapters[ch] : ''; }
+function barClass(p) { return p >= 75 ? 'ok' : (p >= 50 ? 'warn' : 'bad'); }
+
+/* ---------- Storage ---------- */
+var KEY = 'imuNauticalQuiz.v1';
+function defaults() { return { bm: [], wrong: {}, hist: [], daily: {}, stats: {}, target: 10, theme: 'light' }; }
+function load() {
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) {
+      var o = JSON.parse(raw), d = defaults();
+      for (var k in d) { if (!(k in o)) o[k] = d[k]; }
+      return o;
+    }
+  } catch (e) { /* ignore */ }
+  return defaults();
+}
+var S = load();
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* ignore */ } }
+
+/* ---------- State ---------- */
+var current = 'dashboard';
+var session = null;
+var timerId = null;
+var revTab = 'wrong';
+var cfg = { subject: SUBJECTS[0] || 'all', chapters: [], diffs: [0, 1, 2, 3], count: 10, time: 0, mode: 'practice', order: 'random', neg: false };
+
+/* ---------- Statistics ---------- */
+function chapterStats() {
+  var out = {};
+  BANK.forEach(function (it) {
+    var st = S.stats[it.id];
+    if (!st) return;
+    var k = it.s + ':' + it.ch;
+    var o = out[k] || (out[k] = { s: it.s, ch: it.ch, a: 0, c: 0 });
+    o.a += st.a; o.c += st.c;
+  });
+  return out;
+}
+function subjectStats(s) {
+  var a = 0, c = 0;
+  BANK.forEach(function (it) {
+    if (s && it.s !== s) return;
+    var st = S.stats[it.id];
+    if (st) { a += st.a; c += st.c; }
+  });
+  return { a: a, c: c, p: pct(c, a) };
+}
+function weakList() {
+  var cs = chapterStats();
+  return Object.keys(cs).map(function (k) { return cs[k]; })
+    .filter(function (o) { return o.a >= 3 && o.c / o.a < 0.75; })
+    .sort(function (x, y) { return x.c / x.a - y.c / y.a; });
+}
+function wrongIds() { return Object.keys(S.wrong).filter(function (id) { return BY_ID[id]; }); }
+function bmIds() { return S.bm.filter(function (id) { return BY_ID[id]; }); }
+
+/* ---------- Timer ---------- */
+function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+function timerText() {
+  var sec = Math.floor((Date.now() - session.start) / 1000);
+  if (session.limit) return '⏱ ' + fmt(session.limit - sec) + ' left';
+  return '⏱ ' + fmt(sec);
+}
+function startTimer() {
+  stopTimer();
+  timerId = setInterval(function () {
+    if (!session || session.done) { stopTimer(); return; }
+    var sec = Math.floor((Date.now() - session.start) / 1000);
+    if (session.limit && session.limit - sec <= 0) {
+      toast("Time is up! Your quiz was submitted.");
+      finish();
+      return;
+    }
+    var el = $('#timer');
+    if (el) {
+      el.textContent = timerText();
+      if (session.limit) el.classList.toggle('warn', session.limit - sec <= 60);
+    }
+  }, 1000);
+}
+
+/* ---------- Session ---------- */
+function startSession(items, o) {
+  if (!items.length) { toast('No questions available for this selection.'); return; }
+  var qs = items.map(function (it) {
+    var opts = shuffle(it.opts.map(function (t, i) { return { t: t, ok: i === 0 }; }));
+    return { it: it, opts: opts };
+  });
+  session = {
+    qs: qs,
+    ans: qs.map(function () { return null; }),
+    mark: qs.map(function () { return false; }),
+    locked: qs.map(function () { return false; }),
+    i: 0, start: Date.now(), limit: (o.time || 0) * 60,
+    mode: o.mode || 'practice', neg: !!o.neg, label: o.label || 'Quiz',
+    done: false, rf: 'all', result: null
+  };
+  startTimer();
+  current = 'quiz';
+  render();
+  window.scrollTo(0, 0);
+}
+
+function finish() {
+  if (!session || session.done) return;
+  stopTimer();
+  session.done = true;
+  var elapsed = Math.round((Date.now() - session.start) / 1000);
+  if (session.limit) elapsed = Math.min(elapsed, session.limit);
+  var correct = 0, wrong = 0, un = 0, chap = {};
+  session.qs.forEach(function (q, i) {
+    var a = session.ans[i];
+    var key = q.it.s + ':' + q.it.ch;
+    var c = chap[key] || (chap[key] = { s: q.it.s, ch: q.it.ch, t: 0, c: 0 });
+    c.t++;
+    var st = S.stats[q.it.id] || (S.stats[q.it.id] = { a: 0, c: 0 });
+    if (a === null) { un++; return; }
+    st.a++;
+    if (q.opts[a].ok) { correct++; c.c++; st.c++; delete S.wrong[q.it.id]; }
+    else { wrong++; S.wrong[q.it.id] = (S.wrong[q.it.id] || 0) + 1; }
+  });
+  var total = session.qs.length;
+  var score = correct - (session.neg ? NEG * wrong : 0);
+  score = Math.round(score * 100) / 100;
+  var res = { total: total, correct: correct, wrong: wrong, un: un, score: score, max: total, pct: pct(correct, total), time: elapsed, chap: chap };
+  session.result = res;
+  var dk = todayKey();
+  S.daily[dk] = (S.daily[dk] || 0) + correct + wrong;
+  S.hist.unshift({ date: new Date().toISOString(), label: session.label, mode: session.mode, total: total, correct: correct, wrong: wrong, un: un, score: score, pct: res.pct, time: elapsed });
+  if (S.hist.length > 100) S.hist.length = 100;
+  save();
+  current = 'results';
+  render();
+  window.scrollTo(0, 0);
+}
+
+function perfLabel(p) {
+  if (p >= 90) return 'Excellent';
+  if (p >= 75) return 'Very Good';
+  if (p >= 60) return 'Good';
+  if (p >= 40) return 'Needs Improvement';
+  return 'Keep Practising';
+}
+
+/* ---------- Navigation ---------- */
+function go(v) {
+  if (session && !session.done && v !== 'quiz') {
+    if (!window.confirm('Leave this quiz? Your current progress will be lost.')) return;
+    stopTimer();
+    session = null;
+  }
+  current = v;
+  render();
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Views ---------- */
+function viewDashboard() {
+  var tot = subjectStats(null);
+  var today = S.daily[todayKey()] || 0;
+  var dp = Math.min(100, pct(today, S.target));
+  var w = weakList().slice(0, 5);
+  var h = '';
+  h += '<section class="card hero"><h1>Welcome aboard, Cadet! ⚓</h1><p>Your personal learning and self-assessment system for Semester 1: ' + SUBJECTS.length + ' subjects, ' + BANK.length + ' questions with explanations.</p>';
+  h += '<div class="btn-row"><button class="btn light" data-a="daily">▶ Daily Practice (' + S.target + ')</button><button class="btn light" data-a="nav" data-v="setup">⚙ Custom Quiz</button><button class="btn light" data-a="fullsem">📝 Full Semester Test</button></div></section>';
+  h += '<div class="grid g4" style="margin-bottom:1rem">';
+  h += stat(S.hist.length, 'Quizzes Taken') + stat(tot.a ? tot.p + '%' : '–', 'Overall Accuracy') + stat(tot.a, 'Answers Attempted') + stat(wrongIds().length, 'Incorrect to Revise') + stat(bmIds().length, 'Bookmarked');
+  h += '</div>';
+  h += '<section class="card"><h2>📅 Daily Progress</h2><div class="field" style="max-width:260px"><label>Daily target (questions)</label>' + sel('target', [[5, '5'], [10, '10'], [20, '20'], [30, '30']], S.target) + '</div>';
+  h += '<div class="bar ' + (dp >= 100 ? 'ok' : '') + '"><i style="width:' + dp + '%"></i></div><p class="muted small">Today: ' + today + ' / ' + S.target + ' questions answered' + (dp >= 100 ? ' · 🎉 Target achieved!' : '') + '</p></section>';
+  h += '<h2>📚 My Subjects</h2><div class="grid g3" style="margin-bottom:1rem">';
+  SUBJECTS.forEach(function (s) {
+    var st = subjectStats(s);
+    h += '<div class="card subject-card"><span class="ico">' + DATA[s].icon + '</span><h3>' + esc(DATA[s].name) + '</h3><span class="muted small">100 questions · 10 chapters</span>';
+    h += '<div class="bar ' + (st.a ? barClass(st.p) : '') + '"><i style="width:' + st.p + '%"></i></div><span class="small muted">' + (st.a ? 'Accuracy ' + st.p + '% (' + st.c + '/' + st.a + ')' : 'Not attempted yet') + '</span>';
+    h += '<div class="btn-row"><button class="btn primary small" data-a="quick" data-v="' + s + '">Quick 10</button><button class="btn small" data-a="pickSubject" data-v="' + s + '">Customise</button></div></div>';
+  });
+  h += '</div>';
+  h += '<div class="grid g2"><section class="card"><h2>🎯 Weak Topics</h2>';
+  if (w.length) {
+    w.forEach(function (o) {
+      var p = pct(o.c, o.a);
+      h += '<div style="margin-bottom:.6rem"><div class="small"><b>' + esc(chapName(o.s, o.ch)) + '</b> <span class="muted">· ' + esc(subjName(o.s)) + ' · ' + p + '%</span></div><div class="bar ' + barClass(p) + '"><i style="width:' + p + '%"></i></div></div>';
+    });
+    h += '<button class="btn primary small" data-a="weak">Practise Weak Topics</button>';
+  } else h += '<p class="muted">No weak topics identified yet. Complete a few quizzes and your weak chapters will appear here.</p>';
+  h += '</section><section class="card"><h2>🕘 Recent Quizzes</h2>';
+  if (S.hist.length) {
+    S.hist.slice(0, 5).forEach(function (r) {
+      h += '<div class="small" style="padding:.35rem 0;border-bottom:1px solid var(--line)"><b>' + esc(r.label) + '</b> · ' + r.correct + '/' + r.total + ' (' + r.pct + '%) <span class="muted">· ' + new Date(r.date).toLocaleDateString() + '</span></div>';
+    });
+  } else h += '<p class="muted">Your quiz history will appear here.</p>';
+  h += '</section></div>';
+  return h;
+}
+function stat(v, l) { return '<div class="card stat"><b>' + esc(v) + '</b><span>' + esc(l) + '</span></div>'; }
+function sel(name, opts, cur) {
+  return '<select data-c="' + name + '" aria-label="' + esc(name) + '">' + opts.map(function (o) {
+    return '<option value="' + o[0] + '"' + (String(o[0]) === String(cur) ? ' selected' : '') + '>' + esc(o[1]) + '</option>';
+  }).join('') + '</select>';
+}
+
+function pool() {
+  return BANK.filter(function (it) {
+    if (cfg.subject !== 'all' && it.s !== cfg.subject) return false;
+    if (cfg.subject !== 'all' && cfg.chapters.length && cfg.chapters.indexOf(it.ch) < 0) return false;
+    return cfg.diffs.indexOf(it.diff) >= 0;
+  });
+}
+var MODE_HINT = {
+  practice: 'Practice Mode: instant feedback and explanation after every answer.',
+  selftest: 'Self-Test Mode: answer first, then view answers and explanations after submitting. You can change answers and mark questions for review.',
+  exam: 'Exam Mode: timed simulation with negative marking (−0.25 per wrong answer). Answers are shown after submission.'
+};
+function viewSetup() {
+  var h = '<h1>⚙ Practice Quiz Setup</h1><section class="card"><div class="label" style="margin-bottom:.5rem">1. Subject</div><div class="grid g3">';
+  SUBJECTS.forEach(function (s) {
+    h += '<button class="pick' + (cfg.subject === s ? ' on' : '') + '" data-a="setSubject" data-v="' + s + '"><span class="ico">' + DATA[s].icon + '</span><b>' + esc(DATA[s].name) + '</b></button>';
+  });
+  h += '<button class="pick' + (cfg.subject === 'all' ? ' on' : '') + '" data-a="setSubject" data-v="all"><span class="ico">🎓</span><b>All Subjects (Mixed)</b></button></div></section>';
+  if (cfg.subject !== 'all') {
+    h += '<section class="card"><div class="label" style="margin-bottom:.5rem">2. Chapters</div><div class="chips"><button class="chip' + (cfg.chapters.length === 0 ? ' on' : '') + '" data-a="allChapters">All chapters</button>';
+    DATA[cfg.subject].chapters.forEach(function (c, i) {
+      h += '<button class="chip' + (cfg.chapters.indexOf(i) >= 0 ? ' on' : '') + '" data-a="toggleChapter" data-v="' + i + '">' + (i + 1) + '. ' + esc(c) + '</button>';
+    });
+    h += '</div></section>';
+  }
+  h += '<section class="card"><div class="label" style="margin-bottom:.5rem">3. Difficulty</div><div class="chips">';
+  DIFF.forEach(function (d, i) {
+    h += '<button class="chip' + (cfg.diffs.indexOf(i) >= 0 ? ' on' : '') + '" data-a="toggleDiff" data-v="' + i + '">' + ['🟢', '🟡', '🔴', '⭐'][i] + ' ' + d + '</button>';
+  });
+  h += '</div><p class="muted small" style="margin-bottom:0">Difficulty is graded within each chapter: definitions are Easy, concept questions Medium, calculations and applications Difficult/Expert.</p></section>';
+  h += '<section class="card"><div class="grid g3">';
+  h += '<div class="field"><label>Number of questions</label>' + sel('count', [[5, '5'], [10, '10'], [20, '20'], [25, '25'], [50, '50'], [100, '100'], [0, 'All available']], cfg.count) + '</div>';
+  h += '<div class="field"><label>Time limit</label>' + sel('time', [[0, 'No limit'], [10, '10 minutes'], [15, '15 minutes'], [30, '30 minutes'], [60, '60 minutes']], cfg.time) + '</div>';
+  h += '<div class="field"><label>Mode</label>' + sel('mode', [['practice', 'Practice (instant feedback)'], ['selftest', 'Self-Test (answers after)'], ['exam', 'Exam simulation']], cfg.mode) + '</div>';
+  h += '<div class="field"><label>Question order</label>' + sel('order', [['random', 'Random'], ['seq', 'Sequential']], cfg.order) + '</div>';
+  h += '<div class="field"><label>Negative marking</label><label class="check"><input type="checkbox" data-c="neg"' + (cfg.neg ? ' checked' : '') + '> Enable (−0.25 per wrong answer)</label></div>';
+  h += '</div><p class="muted small" id="modeHint">' + esc(MODE_HINT[cfg.mode]) + '</p></section>';
+  h += '<div class="btn-row"><button class="btn primary" id="startBtn" data-a="startSetup">▶ Start Quiz</button><span class="muted" id="poolInfo"></span></div>';
+  return h;
+}
+function updateSetupInfo() {
+  var n = pool().length;
+  var el = $('#poolInfo');
+  if (el) {
+    var q = cfg.count > 0 ? Math.min(cfg.count, n) : n;
+    el.textContent = n + ' questions match your selection · quiz will have ' + q + ' questions';
+  }
+  var b = $('#startBtn');
+  if (b) b.disabled = n === 0;
+  var hint = $('#modeHint');
+  if (hint) hint.textContent = MODE_HINT[cfg.mode];
+}
+
+function viewQuiz() {
+  var s = session, q = s.qs[s.i], it = q.it;
+  var locked = s.locked[s.i], ans = s.ans[s.i];
+  var answered = s.ans.filter(function (a) { return a !== null; }).length;
+  var h = '<div class="quiz-head"><div class="grow"><b>' + esc(s.label) + '</b> <span class="muted small">· Question ' + (s.i + 1) + ' of ' + s.qs.length + ' · ' + answered + ' answered</span>';
+  h += '<div class="bar"><i style="width:' + pct(answered, s.qs.length) + '%"></i></div></div><span id="timer" class="timer">' + esc(timerText()) + '</span></div>';
+  h += '<section class="card"><div class="qhead"><span class="badge">' + esc(subjName(it.s)) + '</span><span class="badge">Ch ' + (it.ch + 1) + ': ' + esc(chapName(it.s, it.ch)) + '</span><span class="badge d' + it.diff + '">' + DIFF[it.diff] + '</span>';
+  h += '<button class="star' + (S.bm.indexOf(it.id) >= 0 ? ' on' : '') + '" data-a="bm" data-v="' + it.id + '" aria-label="Bookmark question" title="Bookmark question">' + (S.bm.indexOf(it.id) >= 0 ? '★' : '☆') + '</button></div>';
+  h += '<div class="qtext">' + esc(it.q) + '</div><div class="opts">';
+  q.opts.forEach(function (o, j) {
+    var cls = 'opt';
+    if (locked) { if (o.ok) cls += ' right'; else if (j === ans) cls += ' wrong'; }
+    else if (ans === j) cls += ' sel';
+    h += '<button class="' + cls + '" data-a="choose" data-v="' + j + '"' + (locked ? ' disabled' : '') + '><span class="l">' + 'ABCD'.charAt(j) + '</span><span>' + esc(o.t) + '</span></button>';
+  });
+  h += '</div>';
+  if (locked) {
+    var ok = q.opts[ans].ok;
+    var right = q.opts.filter(function (o) { return o.ok; })[0].t;
+    h += '<div class="explain ' + (ok ? 'ok' : 'bad') + '"><b>' + (ok ? '✅ Correct!' : '❌ Incorrect.') + '</b>' + (ok ? '' : ' The correct answer is: <b>' + esc(right) + '</b>.') + '<br>' + esc(it.ex) + '</div>';
+  }
+  h += '<div class="sticky-foot"><button class="btn" data-a="prev"' + (s.i === 0 ? ' disabled' : '') + '>‹ Previous</button>';
+  h += '<button class="btn" data-a="clear"' + (locked || ans === null ? ' disabled' : '') + '>Clear</button>';
+  h += '<button class="btn" data-a="mark">' + (s.mark[s.i] ? '⚑ Unmark' : '⚐ Mark for review') + '</button>';
+  h += '<button class="btn" data-a="next"' + (s.i === s.qs.length - 1 ? ' disabled' : '') + '>' + (ans === null ? 'Skip ›' : 'Next ›') + '</button>';
+  h += '<span class="sp"></span><button class="btn primary" data-a="submit">Submit Quiz</button></div></section>';
+  h += '<section class="card"><b class="small">Question navigator</b> <span class="muted small">(blue = answered, orange outline = marked)</span><div class="palette">';
+  s.qs.forEach(function (_, k) {
+    h += '<button class="pbtn' + (s.ans[k] !== null ? ' ans' : '') + (s.mark[k] ? ' mk' : '') + (k === s.i ? ' cur' : '') + '" data-a="jump" data-v="' + k + '" aria-label="Go to question ' + (k + 1) + '">' + (k + 1) + '</button>';
+  });
+  h += '</div></section>';
+  return h;
+}
+
+function reviewItem(q, i, a, showBm) {
+  var it = q.it;
+  var st = a === null ? 'un' : (q.opts[a].ok ? 'ok' : 'bad');
+  var stTxt = a === null ? '⚠ Unanswered' : (st === 'ok' ? '✅ Correct' : '❌ Incorrect');
+  var h = '<div class="review-item ' + st + '"><div class="qhead"><b>Q' + (i + 1) + '</b><span class="badge">' + esc(subjName(it.s)) + '</span><span class="badge">' + esc(chapName(it.s, it.ch)) + '</span><span class="badge d' + it.diff + '">' + DIFF[it.diff] + '</span><span class="small">' + stTxt + '</span>';
+  if (showBm) h += '<button class="star' + (S.bm.indexOf(it.id) >= 0 ? ' on' : '') + '" data-a="bm" data-v="' + it.id + '" aria-label="Bookmark">' + (S.bm.indexOf(it.id) >= 0 ? '★' : '☆') + '</button>';
+  h += '</div><p style="font-weight:600;margin:.5rem 0">' + esc(it.q) + '</p>';
+  q.opts.forEach(function (o, j) {
+    var cls = 'ropt' + (o.ok ? ' right' : (j === a ? ' wrong' : ''));
+    var tag = o.ok ? ' ✔ Correct answer' : '';
+    if (j === a) tag += ' ← Your answer';
+    h += '<div class="' + cls + '"><b>' + 'ABCD'.charAt(j) + '.</b> ' + esc(o.t) + '<span class="muted small">' + esc(tag) + '</span></div>';
+  });
+  h += '<div class="explain"><b>Explanation:</b> ' + esc(it.ex) + '</div></div>';
+  return h;
+}
+
+function viewResults() {
+  var s = session, r = s.result;
+  var h = '<h1>📊 Your Quiz Results</h1><section class="card"><div class="score-ring" style="--p:' + r.pct + '%"><div><span>' + r.pct + '%<small>' + esc(perfLabel(r.pct)) + '</small></span></div></div>';
+  h += '<p style="text-align:center" class="muted">' + esc(s.label) + (s.neg ? ' · negative marking on' : '') + '</p></section>';
+  h += '<div class="grid g4" style="margin-bottom:1rem">' + stat(r.total, 'Total Questions') + stat(r.correct, 'Correct') + stat(r.wrong, 'Incorrect') + stat(r.un, 'Unanswered') + stat(r.score + '/' + r.max, 'Final Score') + stat(r.pct + '%', 'Accuracy') + stat(fmt(r.time), 'Time Taken') + stat(r.total ? fmt(r.time / r.total) : '–', 'Avg per Question') + '</div>';
+  var keys = Object.keys(r.chap).sort();
+  h += '<section class="card"><h2>Chapter-wise Performance</h2><div class="tablewrap"><table><thead><tr><th>Subject</th><th>Chapter</th><th>Score</th><th style="min-width:120px">Accuracy</th></tr></thead><tbody>';
+  keys.forEach(function (k) {
+    var c = r.chap[k], p = pct(c.c, c.t);
+    h += '<tr><td>' + esc(subjName(c.s)) + '</td><td>' + esc(chapName(c.s, c.ch)) + '</td><td>' + c.c + '/' + c.t + '</td><td><div class="bar ' + barClass(p) + '"><i style="width:' + p + '%"></i></div></td></tr>';
+  });
+  h += '</tbody></table></div></section>';
+  h += '<div class="btn-row" style="margin-bottom:1rem">';
+  h += '<button class="btn primary" data-a="retryWrong"' + (r.wrong + r.un === 0 ? ' disabled' : '') + '>🔁 Practise Incorrect/Unanswered Again</button>';
+  h += '<button class="btn" data-a="nav" data-v="setup">Start Another Quiz</button><button class="btn" data-a="download">⬇ Download Report</button><button class="btn" data-a="nav" data-v="dashboard">Dashboard</button></div>';
+  var filters = [['all', 'All'], ['bad', 'Incorrect'], ['un', 'Unanswered'], ['mk', 'Marked']];
+  h += '<h2>Review All Answers</h2><div class="tabs">';
+  filters.forEach(function (f) { h += '<button class="chip' + (s.rf === f[0] ? ' on' : '') + '" data-a="rf" data-v="' + f[0] + '">' + f[1] + '</button>'; });
+  h += '</div>';
+  var shown = 0;
+  s.qs.forEach(function (q, i) {
+    var a = s.ans[i];
+    var st = a === null ? 'un' : (q.opts[a].ok ? 'ok' : 'bad');
+    if (s.rf === 'bad' && st !== 'bad') return;
+    if (s.rf === 'un' && st !== 'un') return;
+    if (s.rf === 'mk' && !s.mark[i]) return;
+    shown++;
+    h += reviewItem(q, i, a, true);
+  });
+  if (!shown) h += '<div class="empty card">No questions in this filter.</div>';
+  return h;
+}
+
+function viewRevision() {
+  var ids = revTab === 'wrong' ? wrongIds() : bmIds();
+  var h = '<h1>🔁 Revision Centre</h1><div class="tabs"><button class="chip' + (revTab === 'wrong' ? ' on' : '') + '" data-a="revTab" data-v="wrong">Incorrect Answers (' + wrongIds().length + ')</button><button class="chip' + (revTab === 'bm' ? ' on' : '') + '" data-a="revTab" data-v="bm">Bookmarks (' + bmIds().length + ')</button></div>';
+  if (!ids.length) {
+    h += '<div class="card empty">' + (revTab === 'wrong' ? 'No incorrect answers saved. Questions you answer wrongly are saved here automatically.' : 'No bookmarks yet. Tap the ☆ star on any question to save it.') + '</div>';
+    return h;
+  }
+  h += '<div class="btn-row" style="margin-bottom:1rem"><button class="btn primary" data-a="practiseRev">▶ Practise These Questions</button></div>';
+  ids.forEach(function (id) {
+    var it = BY_ID[id];
+    var right = it.opts[0];
+    h += '<div class="review-item"><div class="qhead"><span class="badge">' + esc(subjName(it.s)) + '</span><span class="badge">' + esc(chapName(it.s, it.ch)) + '</span><span class="badge d' + it.diff + '">' + DIFF[it.diff] + '</span>';
+    if (revTab === 'wrong') h += '<span class="small muted">Missed ' + S.wrong[id] + '×</span>';
+    h += '</div><p style="font-weight:600;margin:.5rem 0">' + esc(it.q) + '</p><div class="ropt right"><b>Answer:</b> ' + esc(right) + '</div><div class="explain"><b>Explanation:</b> ' + esc(it.ex) + '</div>';
+    h += '<div style="margin-top:.6rem"><button class="btn small danger" data-a="removeRev" data-v="' + id + '">Remove</button></div></div>';
+  });
+  return h;
+}
+
+function viewHistory() {
+  var tot = subjectStats(null);
+  var h = '<h1>📈 Performance & History</h1><div class="grid g4" style="margin-bottom:1rem">' + stat(S.hist.length, 'Quizzes Taken') + stat(tot.a ? tot.p + '%' : '–', 'Overall Accuracy') + stat(tot.a, 'Answers Attempted') + stat(tot.c, 'Correct Answers') + '</div>';
+  h += '<section class="card"><h2>Subject-wise Performance</h2>';
+  SUBJECTS.forEach(function (s) {
+    var st = subjectStats(s);
+    h += '<div style="margin-bottom:.7rem"><div class="small"><b>' + DATA[s].icon + ' ' + esc(DATA[s].name) + '</b> <span class="muted">· ' + (st.a ? st.p + '% (' + st.c + '/' + st.a + ')' : 'not attempted') + '</span></div><div class="bar ' + (st.a ? barClass(st.p) : '') + '"><i style="width:' + st.p + '%"></i></div></div>';
+  });
+  h += '</section>';
+  var cs = chapterStats();
+  var ks = Object.keys(cs).sort(function (a, b) { return cs[a].c / cs[a].a - cs[b].c / cs[b].a; });
+  h += '<section class="card"><h2>Chapter-wise Accuracy</h2>';
+  if (ks.length) {
+    h += '<div class="tablewrap"><table><thead><tr><th>Subject</th><th>Chapter</th><th>Correct</th><th style="min-width:120px">Accuracy</th></tr></thead><tbody>';
+    ks.forEach(function (k) {
+      var o = cs[k], p = pct(o.c, o.a);
+      h += '<tr><td>' + esc(subjName(o.s)) + '</td><td>' + esc(chapName(o.s, o.ch)) + '</td><td>' + o.c + '/' + o.a + '</td><td><div class="bar ' + barClass(p) + '"><i style="width:' + p + '%"></i></div></td></tr>';
+    });
+    h += '</tbody></table></div><p class="muted small">Weakest chapters are listed first.</p>';
+  } else h += '<p class="muted">Take a quiz to see chapter-wise accuracy.</p>';
+  h += '</section><section class="card"><h2>Quiz History</h2>';
+  if (S.hist.length) {
+    h += '<div class="tablewrap"><table><thead><tr><th>Date</th><th>Quiz</th><th>Mode</th><th>Score</th><th>Accuracy</th><th>Time</th></tr></thead><tbody>';
+    S.hist.forEach(function (r) {
+      h += '<tr><td>' + esc(new Date(r.date).toLocaleString()) + '</td><td>' + esc(r.label) + '</td><td>' + esc(r.mode) + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.pct + '%</td><td>' + fmt(r.time) + '</td></tr>';
+    });
+    h += '</tbody></table></div><div style="margin-top:.8rem"><button class="btn small danger" data-a="clearHist">Clear all progress</button></div>';
+  } else h += '<p class="muted">No quizzes completed yet.</p>';
+  h += '</section>';
+  return h;
+}
+
+/* ---------- Render ---------- */
+function render() {
+  var app = $('#app');
+  if (!app) return;
+  if ((current === 'quiz' || current === 'results') && !session) current = 'dashboard';
+  var fn = { dashboard: viewDashboard, setup: viewSetup, quiz: viewQuiz, results: viewResults, revision: viewRevision, history: viewHistory }[current] || viewDashboard;
+  app.innerHTML = fn();
+  var navKey = (current === 'quiz' || current === 'results') ? 'setup' : current;
+  var btns = document.querySelectorAll('#nav button');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i].getAttribute('data-v') === navKey);
+  if (current === 'setup') updateSetupInfo();
+  document.documentElement.setAttribute('data-theme', S.theme);
+  var tb = $('#themeBtn');
+  if (tb) tb.textContent = S.theme === 'dark' ? '☀️' : '🌙';
+}
+
+/* ---------- Quick starts ---------- */
+function startQuick(s) {
+  var items = shuffle(BANK.filter(function (it) { return it.s === s; })).slice(0, 10);
+  startSession(items, { mode: 'practice', time: 0, neg: false, label: DATA[s].name + ' – Quick Quiz' });
+}
+function startDaily() {
+  var items = shuffle(BANK.slice()).slice(0, S.target);
+  startSession(items, { mode: 'practice', time: 0, neg: false, label: 'Daily Practice' });
+}
+function startFullSemester() {
+  var items = [];
+  SUBJECTS.forEach(function (s) {
+    items = items.concat(shuffle(BANK.filter(function (it) { return it.s === s; })).slice(0, 10));
+  });
+  startSession(shuffle(items), { mode: 'exam', time: 60, neg: true, label: 'Full Semester Practice Test' });
+}
+function startWeak() {
+  var list = weakList().slice(0, 3);
+  if (!list.length) { toast('No weak topics yet. Take a few quizzes first!'); return; }
+  var items = BANK.filter(function (it) { return list.some(function (o) { return o.s === it.s && o.ch === it.ch; }); });
+  startSession(shuffle(items).slice(0, 20), { mode: 'practice', time: 0, neg: false, label: 'Weak Topics Practice' });
+}
+function startFromSetup() {
+  var p = pool();
+  if (!p.length) { toast('No questions match your selection.'); return; }
+  var items = cfg.order === 'random' ? shuffle(p.slice()) : p.slice();
+  var n = cfg.count > 0 ? Math.min(cfg.count, items.length) : items.length;
+  items = items.slice(0, n);
+  var time = cfg.time, neg = cfg.neg;
+  if (cfg.mode === 'exam') { neg = true; if (!time) time = Math.max(5, n); }
+  var modeName = { practice: 'Practice', selftest: 'Self-Test', exam: 'Exam' }[cfg.mode];
+  var label = (cfg.subject === 'all' ? 'All Subjects' : DATA[cfg.subject].name) + ' – ' + modeName;
+  startSession(items, { mode: cfg.mode, time: time, neg: neg, label: label });
+}
+
+/* ---------- Report download ---------- */
+function downloadReport() {
+  var s = session, r = s.result;
+  var L = [];
+  L.push('IMU B.Sc. Nautical Science – Self-Study Quiz Report');
+  L.push('Quiz: ' + s.label);
+  L.push('Date: ' + new Date().toLocaleString());
+  L.push('');
+  L.push('Total questions : ' + r.total);
+  L.push('Correct         : ' + r.correct);
+  L.push('Incorrect       : ' + r.wrong);
+  L.push('Unanswered      : ' + r.un);
+  L.push('Score           : ' + r.score + ' / ' + r.max + (s.neg ? ' (negative marking -' + NEG + ')' : ''));
+  L.push('Accuracy        : ' + r.pct + '% (' + perfLabel(r.pct) + ')');
+  L.push('Time taken      : ' + fmt(r.time));
+  L.push('');
+  L.push('Chapter-wise performance');
+  Object.keys(r.chap).sort().forEach(function (k) {
+    var c = r.chap[k];
+    L.push(' - ' + subjName(c.s) + ' / ' + chapName(c.s, c.ch) + ': ' + c.c + '/' + c.t);
+  });
+  L.push('');
+  L.push('Question review');
+  s.qs.forEach(function (q, i) {
+    var a = s.ans[i];
+    var right = q.opts.filter(function (o) { return o.ok; })[0].t;
+    L.push((i + 1) + '. ' + q.it.q);
+    L.push('   Your answer   : ' + (a === null ? '(unanswered)' : q.opts[a].t));
+    L.push('   Correct answer: ' + right);
+    L.push('   Explanation   : ' + q.it.ex);
+  });
+  try {
+    var blob = new Blob([L.join('\n')], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'quiz-report.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  } catch (e) { toast('Could not create the report on this browser.'); }
+}
+
+/* ---------- Actions ---------- */
+function toggleBm(id) {
+  var i = S.bm.indexOf(id);
+  if (i >= 0) { S.bm.splice(i, 1); toast('Bookmark removed'); }
+  else { S.bm.push(id); toast('Question bookmarked'); }
+  save();
+  render();
+}
+
+var actions = {
+  nav: function (v) { go(v); },
+  theme: function () { S.theme = S.theme === 'dark' ? 'light' : 'dark'; save(); render(); },
+  daily: startDaily,
+  fullsem: startFullSemester,
+  weak: startWeak,
+  quick: function (v) { startQuick(v); },
+  pickSubject: function (v) { cfg.subject = v; cfg.chapters = []; go('setup'); },
+  setSubject: function (v) { cfg.subject = v; cfg.chapters = []; render(); },
+  allChapters: function () { cfg.chapters = []; render(); },
+  toggleChapter: function (v) {
+    var n = parseInt(v, 10), i = cfg.chapters.indexOf(n);
+    if (i >= 0) cfg.chapters.splice(i, 1); else cfg.chapters.push(n);
+    render();
+  },
+  toggleDiff: function (v) {
+    var n = parseInt(v, 10), i = cfg.diffs.indexOf(n);
+    if (i >= 0) { if (cfg.diffs.length > 1) cfg.diffs.splice(i, 1); else toast('Select at least one difficulty level'); }
+    else cfg.diffs.push(n);
+    render();
+  },
+  startSetup: startFromSetup,
+  choose: function (v) {
+    if (!session || session.done) return;
+    var j = parseInt(v, 10);
+    if (session.locked[session.i]) return;
+    session.ans[session.i] = j;
+    if (session.mode === 'practice') session.locked[session.i] = true;
+    render();
+  },
+  prev: function () { if (session && session.i > 0) { session.i--; render(); } },
+  next: function () { if (session && session.i < session.qs.length - 1) { session.i++; render(); } },
+  clear: function () { if (session && !session.locked[session.i]) { session.ans[session.i] = null; render(); } },
+  mark: function () { if (session) { session.mark[session.i] = !session.mark[session.i]; render(); } },
+  jump: function (v) { if (session) { session.i = parseInt(v, 10); render(); } },
+  submit: function () {
+    if (!session || session.done) return;
+    var un = session.ans.filter(function (a) { return a === null; }).length;
+    if (un > 0 && !window.confirm('You have ' + un + ' unanswered question' + (un > 1 ? 's' : '') + '. Submit the quiz anyway?')) return;
+    finish();
+  },
+  bm: function (v) { toggleBm(v); },
+  rf: function (v) { if (session) { session.rf = v; render(); } },
+  retryWrong: function () {
+    if (!session) return;
+    var items = [];
+    session.qs.forEach(function (q, i) {
+      var a = session.ans[i];
+      if (a === null || !q.opts[a].ok) items.push(q.it);
+    });
+    startSession(items, { mode: 'practice', time: 0, neg: false, label: 'Retry – Incorrect Questions' });
+  },
+  download: downloadReport,
+  revTab: function (v) { revTab = v; render(); },
+  practiseRev: function () {
+    var ids = revTab === 'wrong' ? wrongIds() : bmIds();
+    var items = shuffle(ids.map(function (id) { return BY_ID[id]; })).slice(0, 50);
+    startSession(items, { mode: 'practice', time: 0, neg: false, label: revTab === 'wrong' ? 'Revision – Incorrect Answers' : 'Revision – Bookmarks' });
+  },
+  removeRev: function (v) {
+    if (revTab === 'wrong') delete S.wrong[v];
+    else { var i = S.bm.indexOf(v); if (i >= 0) S.bm.splice(i, 1); }
+    save();
+    render();
+  },
+  clearHist: function () {
+    if (!window.confirm('This will delete all quiz history, bookmarks and progress on this device. Continue?')) return;
+    var theme = S.theme;
+    S = defaults();
+    S.theme = theme;
+    save();
+    render();
+    toast('All progress cleared');
+  }
+};
+
+var changes = {
+  count: function (t) { cfg.count = parseInt(t.value, 10); updateSetupInfo(); },
+  time: function (t) { cfg.time = parseInt(t.value, 10); },
+  mode: function (t) { cfg.mode = t.value; updateSetupInfo(); },
+  order: function (t) { cfg.order = t.value; },
+  neg: function (t) { cfg.neg = !!t.checked; },
+  target: function (t) { S.target = parseInt(t.value, 10) || 10; save(); render(); }
+};
+
+document.addEventListener('click', function (e) {
+  var t = e.target;
+  while (t && t !== document && !(t.getAttribute && t.getAttribute('data-a'))) t = t.parentNode;
+  if (!t || t === document) return;
+  var a = t.getAttribute('data-a');
+  if (t.disabled) return;
+  if (actions[a]) actions[a](t.getAttribute('data-v'));
+});
+document.addEventListener('change', function (e) {
+  var t = e.target;
+  var c = t && t.getAttribute ? t.getAttribute('data-c') : null;
+  if (c && changes[c]) changes[c](t);
+});
+document.addEventListener('keydown', function (e) {
+  if (current !== 'quiz' || !session || session.done) return;
+  var tag = e.target && e.target.tagName;
+  if (tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if (e.key >= '1' && e.key <= '4') actions.choose(String(parseInt(e.key, 10) - 1));
+  else if (e.key === 'ArrowRight') actions.next();
+  else if (e.key === 'ArrowLeft') actions.prev();
+});
+
+/* ---------- Init ---------- */
+render();
+})();
+
+</script>
+</body>
+</html>

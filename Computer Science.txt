@@ -1,0 +1,937 @@
+IMU Chennai – B.Sc. Nautical Science
+Semester 1 – Computer Science: 100 Important Questions and Answers
+Course: B.Sc. Nautical Science
+University: Indian Maritime University (IMU), Chennai
+Year: First Year
+Semester: 1st Semester
+Subject: Computer Science
+Syllabus Area: Computer Fundamentals and Basic Applications
+These 100 questions and answers are designed to help you prepare for:
+    • Semester examinations.
+    • Internal assessments.
+    • Class tests.
+    • Viva examinations.
+    • Computer practical examinations.
+    • Basic computer applications used in the maritime industry.
+The questions progress from fundamental computer concepts to operating systems, MS Office, networking, cybersecurity and maritime applications.
+I've divided them into 10 sections, with 10 questions in each section.
+
+SECTION 1: INTRODUCTION TO COMPUTERS (Q1–Q10)
+Q1. What is a computer?
+Answer: A computer is an electronic device that accepts data as input, processes it according to instructions, stores it and produces meaningful information as output.
+A computer performs four basic operations:
+    1. Input.
+    2. Processing.
+    3. Storage.
+    4. Output.
+Example: A computer used on a ship can process navigation information, prepare reports, store documents and communicate information.
+Q2. What are the main characteristics of a computer?
+Answer: The main characteristics of a computer are:
+    1. Speed: Performs millions or billions of operations per second.
+    2. Accuracy: Produces accurate results when given correct data and instructions.
+    3. Storage: Stores large amounts of information.
+    4. Diligence: Performs repetitive tasks without getting tired.
+    5. Automation: Performs tasks automatically once instructed.
+    6. Versatility: Performs different types of tasks.
+    7. Reliability: Produces consistent results under proper operating conditions.
+Q3. What are the basic functions of a computer?
+Answer: A computer performs five basic functions:
+    • Input: Accepting data.
+    • Processing: Performing calculations and operations.
+    • Output: Displaying results.
+    • Storage: Saving information.
+    • Control: Coordinating all computer operations.
+Q4. What are the different types of computers?
+Answer: Computers can be classified according to their size, processing power and purpose.
+Based on size and processing power:
+    1. Supercomputer.
+    2. Mainframe computer.
+    3. Minicomputer.
+    4. Microcomputer.
+Based on data handling:
+    1. Analog computer.
+    2. Digital computer.
+    3. Hybrid computer.
+Q5. What is a supercomputer?
+Answer: A supercomputer is an extremely powerful computer designed to perform complex calculations at very high speeds.
+Applications include:
+    • Weather forecasting.
+    • Climate modelling.
+    • Scientific research.
+    • Space research.
+    • Oceanographic simulations.
+Q6. What is a microcomputer?
+Answer: A microcomputer is a small computer that uses a microprocessor as its central processing unit.
+Examples:
+    • Desktop computer.
+    • Laptop.
+    • Tablet.
+    • Personal computer.
+Q7. What is the difference between data and information?
+Answer:
+Data: Raw facts and figures that have not been processed.
+Information: Processed and organised data that has meaning.
+Example:
+    • Data: 10, 15, 20, 25.
+    • Information: The average of these four numbers is 17.5.
+Q8. What is an IPO cycle in computers?
+Answer: IPO stands for:
+    • I – Input.
+    • P – Processing.
+    • O – Output.
+It describes the basic working principle of a computer.
+Example:
+    1. Input: Entering two numbers.
+    2. Processing: Adding the numbers.
+    3. Output: Displaying the sum.
+Q9. Who is known as the Father of Computers?
+Answer: Charles Babbage is known as the Father of Computers.
+He designed the Difference Engine and Analytical Engine, which laid the foundation for modern computing.
+Q10. What are the advantages and disadvantages of computers?
+Answer:
+Advantages:
+    1. High speed.
+    2. Accuracy.
+    3. Large storage capacity.
+    4. Automation.
+    5. Easy communication.
+    6. Increased productivity.
+    7. Quick information processing.
+Disadvantages:
+    1. Security threats.
+    2. Dependence on electricity.
+    3. Privacy concerns.
+    4. Hardware failures.
+    5. Potential data loss.
+    6. Health problems from excessive usage.
+
+SECTION 2: COMPUTER HARDWARE AND COMPONENTS (Q11–Q20)
+Q11. What is computer hardware?
+Answer: Computer hardware refers to the physical components of a computer that can be seen and touched.
+Examples:
+    • Monitor.
+    • Keyboard.
+    • Mouse.
+    • CPU.
+    • Motherboard.
+    • RAM.
+    • Hard disk.
+    • Printer.
+Q12. What is computer software?
+Answer: Software is a collection of programs and instructions that tells a computer what to do.
+Examples:
+    • Windows.
+    • Linux.
+    • Microsoft Word.
+    • Microsoft Excel.
+    • Google Chrome.
+Q13. What is the difference between hardware and software?
+Answer:
+Hardware	Software
+Physical components	Programs and instructions
+Can be touched	Cannot be physically touched
+Can wear out physically	Can become corrupted or outdated
+Example: Keyboard	Example: MS Word
+Requires software to perform useful tasks	Requires hardware to run
+Q14. What is the CPU?
+Answer: CPU stands for Central Processing Unit.
+It is commonly called the brain of the computer because it executes instructions and processes data.
+The main components of a CPU are:
+    1. Arithmetic Logic Unit (ALU).
+    2. Control Unit (CU).
+    3. Registers.
+Q15. What is the Arithmetic Logic Unit (ALU)?
+Answer: ALU is a component of the CPU that performs arithmetic and logical operations.
+Arithmetic operations:
+    • Addition.
+    • Subtraction.
+    • Multiplication.
+    • Division.
+Logical operations:
+    • AND.
+    • OR.
+    • NOT.
+    • Comparisons.
+Q16. What is the Control Unit (CU)?
+Answer: The Control Unit manages and coordinates the operations of the computer.
+Its functions include:
+    1. Controlling instruction execution.
+    2. Managing data flow.
+    3. Coordinating CPU operations.
+    4. Controlling input and output operations.
+Q17. What is a motherboard?
+Answer: A motherboard is the main printed circuit board of a computer.
+It connects important components such as:
+    • CPU.
+    • RAM.
+    • Storage devices.
+    • Expansion cards.
+    • Input/output connectors.
+Q18. What is RAM?
+Answer: RAM stands for Random Access Memory.
+It is the primary memory used to temporarily store data and instructions that the CPU is currently using.
+Characteristics:
+    1. It is volatile memory.
+    2. Data is normally lost when power is switched off.
+    3. It provides fast access to working data.
+    4. It supports multitasking.
+Q19. What is ROM?
+Answer: ROM stands for Read Only Memory.
+It is non-volatile memory used to store firmware and other essential instructions.
+Characteristics:
+    1. Retains information without power.
+    2. Stores firmware.
+    3. Used during the computer startup process.
+Q20. Differentiate between RAM and ROM.
+Answer:
+RAM	ROM
+Random Access Memory	Read Only Memory
+Usually volatile	Non-volatile
+Temporarily stores working data	Stores firmware and essential instructions
+Supports running applications	Supports system startup and hardware functions
+Read and write operations	Traditionally mainly read operations
+
+SECTION 3: INPUT AND OUTPUT DEVICES (Q21–Q30)
+Q21. What is an input device?
+Answer: An input device is a hardware component used to enter data and instructions into a computer.
+Examples:
+    1. Keyboard.
+    2. Mouse.
+    3. Scanner.
+    4. Microphone.
+    5. Webcam.
+    6. Joystick.
+    7. Touchscreen.
+Q22. What is an output device?
+Answer: An output device is a hardware component that displays or produces processed information from a computer.
+Examples:
+    1. Monitor.
+    2. Printer.
+    3. Speaker.
+    4. Projector.
+    5. Plotter.
+Q23. What is a keyboard?
+Answer: A keyboard is an input device used to enter text, numbers and commands into a computer.
+Common types of keys include:
+    • Alphabet keys.
+    • Numeric keys.
+    • Function keys.
+    • Control keys.
+    • Navigation keys.
+Q24. What is a mouse?
+Answer: A mouse is a pointing input device used to control the cursor on a computer screen.
+Its main functions include:
+    1. Clicking.
+    2. Double-clicking.
+    3. Right-clicking.
+    4. Dragging.
+    5. Scrolling.
+Q25. What is a monitor?
+Answer: A monitor is an output device that displays information visually.
+Common types include:
+    • CRT.
+    • LCD.
+    • LED.
+    • OLED.
+Q26. What is a printer?
+Answer: A printer is an output device that produces hard copies of digital documents and images on paper or other media.
+Types of printers:
+    1. Inkjet printer.
+    2. Laser printer.
+    3. Dot matrix printer.
+Q27. What is a scanner?
+Answer: A scanner is an input device that converts physical documents, photographs and images into digital form.
+It is useful for digitising certificates, ship documents and printed reports.
+Q28. What is a touchscreen?
+Answer: A touchscreen is an input device that allows users to interact with a computer or electronic device by touching the display.
+Examples include smartphones, tablets and certain shipboard electronic systems.
+Q29. What is a plotter?
+Answer: A plotter is an output device used to produce large and precise drawings, maps and technical diagrams.
+It can be used for engineering drawings and specialised chart production.
+Q30. What is the difference between soft copy and hard copy?
+Answer:
+Soft copy: An electronic version of a document that can be viewed on a computer or digital device.
+Example: PDF file.
+Hard copy: A physical printed version of a document.
+Example: Printed ship inspection report.
+
+SECTION 4: COMPUTER MEMORY AND STORAGE DEVICES (Q31–Q40)
+Q31. What is computer memory?
+Answer: Computer memory is the storage area used to hold data, instructions and information required by a computer.
+It is broadly classified into:
+    1. Primary memory.
+    2. Secondary memory.
+Q32. What is primary memory?
+Answer: Primary memory is the memory directly accessible by the CPU.
+Examples:
+    • RAM.
+    • ROM.
+    • Cache memory.
+It is used to store data and instructions required during computer operations.
+Q33. What is secondary memory?
+Answer: Secondary memory is used for long-term storage of data and programs.
+Examples:
+    1. Hard Disk Drive (HDD).
+    2. Solid State Drive (SSD).
+    3. Pen drive.
+    4. Memory card.
+    5. CD.
+    6. DVD.
+Q34. What is cache memory?
+Answer: Cache memory is a small, high-speed memory located in or near the CPU.
+It stores frequently accessed data and instructions to improve processing speed.
+Q35. What is a hard disk?
+Answer: A Hard Disk Drive (HDD) is a secondary storage device that uses magnetic storage to store data.
+It can store:
+    • Operating systems.
+    • Applications.
+    • Documents.
+    • Photographs.
+    • Videos.
+Q36. What is an SSD?
+Answer: SSD stands for Solid State Drive.
+It is a storage device that uses flash memory to store data.
+Advantages:
+    1. Faster data access.
+    2. No moving mechanical parts.
+    3. Lower noise.
+    4. Better resistance to physical shock than conventional HDDs.
+Q37. What is a pen drive?
+Answer: A pen drive is a small portable storage device that uses flash memory and connects through a USB port.
+It is used to transfer and store files.
+Q38. What are the units of computer memory?
+Answer:
+Common units include:
+Unit	Value
+Bit	0 or 1
+Nibble	4 bits
+Byte	8 bits
+Kilobyte (KB)	1,024 bytes
+Megabyte (MB)	1,024 KB
+Gigabyte (GB)	1,024 MB
+Terabyte (TB)	1,024 GB
+Note: These are the traditional binary-based conversions commonly used in introductory computer studies.
+Q39. What is the difference between volatile and non-volatile memory?
+Answer:
+Volatile memory:
+    • Requires power to retain data.
+    • Data is normally lost when power is switched off.
+    • Example: RAM.
+Non-volatile memory:
+    • Retains data without power.
+    • Used for permanent or long-term storage.
+    • Examples: ROM, SSD and HDD.
+Q40. What is a backup?
+Answer: A backup is an additional copy of important data stored separately so that the information can be recovered if the original data is lost, damaged or corrupted.
+Examples:
+    • External hard drive backup.
+    • Cloud backup.
+    • Separate secure storage.
+Maritime application: Maintaining backups of important vessel records, reports and operational documents helps protect essential information.
+
+SECTION 5: OPERATING SYSTEMS AND COMPUTER SOFTWARE (Q41–Q50)
+Q41. What is an operating system?
+Answer: An operating system (OS) is system software that manages computer hardware and software resources and provides an interface for users and applications.
+Examples:
+    1. Microsoft Windows.
+    2. Linux.
+    3. macOS.
+    4. Android.
+    5. iOS.
+Q42. What are the main functions of an operating system?
+Answer:
+    1. Memory management.
+    2. Process management.
+    3. File management.
+    4. Device management.
+    5. Security management.
+    6. User interface management.
+    7. Resource allocation.
+Q43. What is the difference between system software and application software?
+Answer:
+System Software	Application Software
+Manages computer hardware and basic operations	Performs specific user tasks
+Essential for operating the computer	Used according to user requirements
+Example: Windows	Example: MS Word
+Runs and supports applications	Runs using system software
+Q44. What is a graphical user interface (GUI)?
+Answer: GUI stands for Graphical User Interface.
+It allows users to interact with a computer through graphical elements such as:
+    • Icons.
+    • Windows.
+    • Menus.
+    • Buttons.
+    • Pointers.
+Q45. What is a command-line interface (CLI)?
+Answer: CLI is a text-based interface in which users interact with a computer by typing commands.
+Examples:
+    • Windows Command Prompt.
+    • Linux Terminal.
+Q46. What is booting?
+Answer: Booting is the process of starting a computer and loading the operating system into memory.
+There are two main types:
+    1. Cold booting: Starting a computer from a powered-off state.
+    2. Warm booting: Restarting a computer without completely switching off its power.
+Q47. What is a file?
+Answer: A file is a collection of related data stored under a particular name on a storage device.
+Examples:
+    • Document file.
+    • Image file.
+    • Audio file.
+    • Video file.
+    • Spreadsheet file.
+Q48. What is a folder?
+Answer: A folder is a container used to organise and store files and other folders on a computer.
+It helps users manage documents systematically.
+Q49. What is a file extension?
+Answer: A file extension is the part of a filename that indicates its file type or format.
+Examples:
+Extension	File Type
+.docx	Word document
+.xlsx	Excel spreadsheet
+.pptx	PowerPoint presentation
+.pdf	Portable Document Format
+.jpg	Image
+.mp3	Audio
+.mp4	Video
+.txt	Text file
+Q50. What is antivirus software?
+Answer: Antivirus software is a security program designed to detect, prevent and remove malicious software.
+Examples:
+    • Microsoft Defender.
+    • Norton.
+    • McAfee.
+    • Bitdefender.
+It helps protect computers against viruses, spyware and other malware.
+
+SECTION 6: MICROSOFT OFFICE AND BASIC APPLICATIONS (Q51–Q60)
+Q51. What is Microsoft Office?
+Answer: Microsoft Office is a collection of productivity applications developed by Microsoft.
+It is commonly used for preparing documents, spreadsheets, presentations and other office-related work.
+Important applications include:
+    1. Microsoft Word.
+    2. Microsoft Excel.
+    3. Microsoft PowerPoint.
+    4. Microsoft Outlook.
+    5. Microsoft Access.
+Q52. What is Microsoft Word?
+Answer: Microsoft Word is a word-processing application used to create, edit, format and print documents.
+Applications include:
+    • Preparing reports.
+    • Writing letters.
+    • Creating assignments.
+    • Preparing notices.
+    • Creating certificates.
+    • Preparing official documents.
+Maritime application: A Deck Officer may use Word to prepare inspection reports, checklists and other documentation.
+Q53. What are the main features of MS Word?
+Answer:
+    1. Text formatting.
+    2. Font selection.
+    3. Paragraph alignment.
+    4. Spell checking.
+    5. Grammar checking.
+    6. Tables.
+    7. Page numbering.
+    8. Headers and footers.
+    9. Images and shapes.
+    10. Printing.
+Q54. What is Microsoft Excel?
+Answer: Microsoft Excel is a spreadsheet application used to organise, calculate, analyse and present data.
+It consists of rows, columns and cells.
+Applications include:
+    • Mathematical calculations.
+    • Data analysis.
+    • Preparing tables.
+    • Maintaining records.
+    • Creating charts.
+    • Budget preparation.
+Maritime application: Excel can be used to maintain fuel consumption records, inventory lists and maintenance schedules.
+Q55. What is a cell in MS Excel?
+Answer: A cell is the intersection of a row and a column in an Excel worksheet.
+Example:
+A1 represents the cell located at the intersection of column A and row 1.
+Q56. What is a formula in MS Excel?
+Answer: A formula is an expression used to perform calculations in Excel.
+Every formula begins with an equal sign (=).
+Example:
+text
+=A1+B1
+This adds the values in cells A1 and B1.
+Q57. What are some important Excel functions?
+Answer:
+Function	Purpose
+SUM()	Adds values
+AVERAGE()	Calculates average
+MAX()	Finds maximum value
+MIN()	Finds minimum value
+COUNT()	Counts numerical entries
+IF()	Performs logical tests
+PRODUCT()	Multiplies values
+ROUND()	Rounds a number
+Example:
+text
+=SUM(A1:A10)
+This calculates the total of values from A1 to A10.
+Q58. What is Microsoft PowerPoint?
+Answer: Microsoft PowerPoint is a presentation application used to create and display information through slides.
+Features include:
+    1. Slide creation.
+    2. Text formatting.
+    3. Images.
+    4. Charts.
+    5. Animations.
+    6. Transitions.
+    7. Audio and video.
+Maritime application: It can be used to prepare presentations on ship safety, navigation, pollution prevention and maritime regulations.
+Q59. What is Microsoft Access?
+Answer: Microsoft Access is a database management application used to create and manage databases.
+It helps users store, organise and retrieve structured information.
+Q60. Differentiate between MS Word, Excel and PowerPoint.
+Answer:
+MS Word	MS Excel	MS PowerPoint
+Word processing	Spreadsheet	Presentation
+Creates documents	Performs calculations	Creates slides
+Used for reports	Used for numerical data	Used for presentations
+.docx	.xlsx	.pptx
+
+SECTION 7: INTERNET, NETWORKING AND COMMUNICATION (Q61–Q70)
+Q61. What is the Internet?
+Answer: The Internet is a worldwide network of interconnected computer networks that communicate using standard protocols.
+It allows users to:
+    • Send emails.
+    • Access websites.
+    • Share information.
+    • Conduct video conferences.
+    • Transfer files.
+    • Access online services.
+Q62. What is a computer network?
+Answer: A computer network is a group of interconnected computers and devices that communicate and share resources.
+Examples:
+    • Office network.
+    • College computer laboratory network.
+    • Shipboard computer network.
+Q63. What are the different types of computer networks?
+Answer:
+    1. PAN: Personal Area Network.
+    2. LAN: Local Area Network.
+    3. MAN: Metropolitan Area Network.
+    4. WAN: Wide Area Network.
+Q64. What is LAN?
+Answer: LAN stands for Local Area Network.
+It connects computers and devices within a limited geographical area.
+Examples:
+    • College computer laboratory.
+    • Office building.
+    • Shipboard local network.
+Q65. What is WAN?
+Answer: WAN stands for Wide Area Network.
+It connects computers and networks across large geographical areas.
+Example: The Internet.
+Q66. What is a modem?
+Answer: A modem is a device that performs modulation and demodulation to enable communication over a transmission medium.
+It is used to establish Internet connectivity through supported communication systems.
+Q67. What is a router?
+Answer: A router is a networking device that forwards data packets between different networks.
+It is commonly used to connect a local network to the Internet.
+Q68. What is an IP address?
+Answer: IP stands for Internet Protocol.
+An IP address is a numerical address assigned to a device or network interface to identify it for communication over an IP network.
+There are two major versions:
+    1. IPv4.
+    2. IPv6.
+Q69. What is a web browser?
+Answer: A web browser is software used to access and display websites on the Internet.
+Examples:
+    • Google Chrome.
+    • Mozilla Firefox.
+    • Microsoft Edge.
+    • Safari.
+    • Opera.
+Q70. What is a search engine?
+Answer: A search engine is an online service that helps users find information on the Internet.
+Examples:
+    • Google.
+    • Bing.
+    • Yahoo.
+    • DuckDuckGo.
+
+SECTION 8: CYBERSECURITY AND COMPUTER SAFETY (Q71–Q80)
+Q71. What is cybersecurity?
+Answer: Cybersecurity is the practice of protecting computers, networks, systems and data from unauthorised access, attacks, damage and theft.
+It is particularly important in the maritime industry because ships increasingly depend on digital systems.
+Q72. What is a computer virus?
+Answer: A computer virus is a type of malicious software that attaches itself to legitimate files or programs and can spread when infected content is executed.
+It may damage files, disrupt operations or steal information.
+Q73. What is malware?
+Answer: Malware is short for malicious software.
+It refers to software designed to harm, disrupt, spy on or gain unauthorised access to computer systems.
+Types include:
+    1. Viruses.
+    2. Worms.
+    3. Trojans.
+    4. Ransomware.
+    5. Spyware.
+    6. Adware.
+Q74. What is phishing?
+Answer: Phishing is a cyberattack in which criminals use deceptive emails, messages or websites to trick people into revealing confidential information.
+Examples of information targeted include:
+    • Passwords.
+    • Banking information.
+    • Personal details.
+    • Login credentials.
+Q75. What is a firewall?
+Answer: A firewall is a network security system that monitors and controls incoming and outgoing network traffic according to predetermined security rules.
+It helps prevent unauthorised network access.
+Q76. What is a password?
+Answer: A password is a secret combination of characters used to authenticate a user's identity and protect access to a computer system or account.
+A strong password should:
+    1. Be sufficiently long.
+    2. Be difficult to guess.
+    3. Avoid personal information.
+    4. Be unique for each important account.
+Q77. What is two-factor authentication (2FA)?
+Answer: Two-factor authentication is a security method that requires two different forms of verification before granting access to an account.
+Example:
+    1. Password.
+    2. One-time verification code.
+Q78. What is ransomware?
+Answer: Ransomware is a type of malicious software that blocks access to files or systems, commonly by encrypting data, and demands payment for restoration.
+It can seriously affect organisations that depend on digital records.
+Q79. What is data privacy?
+Answer: Data privacy refers to the proper handling, protection and use of personal and confidential information.
+It ensures that information is accessed and used only by authorised individuals.
+Q80. Why is cybersecurity important on ships?
+Answer: Cybersecurity is important on ships because modern vessels use interconnected digital systems for navigation, communication, machinery monitoring and administrative operations.
+Cyber incidents can affect:
+    1. Navigation systems.
+    2. Communication systems.
+    3. Cargo management.
+    4. Engine monitoring.
+    5. Electronic records.
+    6. Operational safety.
+Crew members should follow company cybersecurity procedures and avoid connecting unauthorised devices to shipboard systems.
+
+SECTION 9: COMPUTER APPLICATIONS IN THE MARITIME INDUSTRY (Q81–Q90)
+This section is especially important for B.Sc. Nautical Science students because it connects Computer Science with your future profession as a Deck Officer.
+Q81. How are computers used in the maritime industry?
+Answer: Computers are used in modern ships for:
+    1. Navigation.
+    2. Communication.
+    3. Weather monitoring.
+    4. Cargo management.
+    5. Engine monitoring.
+    6. Ship administration.
+    7. Safety management.
+    8. Record keeping.
+Q82. What is ECDIS?
+Answer: ECDIS stands for Electronic Chart Display and Information System.
+It is a navigation information system that displays selected electronic navigational charts and integrates relevant navigational information.
+Its functions include:
+    • Displaying electronic charts.
+    • Showing the ship's position.
+    • Displaying planned routes.
+    • Supporting route monitoring.
+    • Providing navigational alarms and indications.
+ECDIS is an important system used by modern merchant ships.
+Q83. What is GPS?
+Answer: GPS stands for Global Positioning System.
+It is a satellite-based navigation system developed by the United States.
+It provides information such as:
+    1. Position.
+    2. Speed.
+    3. Time.
+    4. Direction of movement.
+GPS is widely used in maritime navigation.
+Q84. What is AIS?
+Answer: AIS stands for Automatic Identification System.
+It is a maritime communication and identification system that automatically exchanges information between suitably equipped vessels and relevant shore stations.
+Information may include:
+    • Ship identity.
+    • Position.
+    • Course.
+    • Speed.
+    • Navigation status.
+AIS assists in situational awareness and collision avoidance but does not replace proper lookout or radar-based navigation.
+Q85. What is Radar?
+Answer: RADAR stands for Radio Detection and Ranging.
+It is an electronic system that uses radio waves to detect objects and determine information such as their range and bearing.
+Maritime radar helps in:
+    1. Detecting nearby vessels.
+    2. Detecting land.
+    3. Monitoring navigational hazards.
+    4. Supporting collision avoidance.
+    5. Navigating in restricted visibility.
+Q86. What is a VDR?
+Answer: VDR stands for Voyage Data Recorder.
+It is a system fitted to applicable ships that records selected information relating to the ship's operation and navigation.
+It is sometimes described as the ship's black box.
+Recorded information can help investigators understand the circumstances surrounding a maritime accident.
+Q87. What is a BNWAS?
+Answer: BNWAS stands for Bridge Navigational Watch Alarm System.
+It monitors bridge activity and alerts the crew if the bridge watch officer becomes inactive for a specified period.
+Its purpose is to help maintain an effective navigational watch.
+Q88. What is a GMDSS?
+Answer: GMDSS stands for Global Maritime Distress and Safety System.
+It is an internationally recognised system for maritime distress alerting and safety communications.
+It uses various communication technologies to support:
+    1. Distress alerts.
+    2. Search and rescue coordination.
+    3. Maritime safety information.
+    4. General maritime communications.
+Q89. What is a shipboard computer network?
+Answer: A shipboard computer network is a system connecting computers and digital devices onboard a vessel to exchange information and share resources.
+It may support:
+    • Administrative work.
+    • Operational information.
+    • Maintenance records.
+    • Communication.
+    • Approved navigation-related applications.
+Q90. What is the importance of computers in modern navigation?
+Answer: Computers are important in modern navigation because they help officers process, display and analyse navigational information.
+They support:
+    1. Position monitoring.
+    2. Route planning.
+    3. Electronic chart display.
+    4. Radar information processing.
+    5. AIS information display.
+    6. Weather information access.
+    7. Voyage documentation.
+However, a navigating officer must understand the limitations of electronic equipment and maintain independent navigational checks.
+
+SECTION 10: COMPUTER SHORTCUTS, FILE MANAGEMENT AND PRACTICAL KNOWLEDGE (Q91–Q100)
+Q91. What is a keyboard shortcut?
+Answer: A keyboard shortcut is a combination of keys used to perform a computer operation quickly without navigating through menus.
+Examples:
+    • Ctrl + C = Copy.
+    • Ctrl + V = Paste.
+    • Ctrl + X = Cut.
+    • Ctrl + Z = Undo.
+    • Ctrl + S = Save.
+Q92. What is the shortcut key for copying and pasting?
+Answer:
+    • Copy: Ctrl + C.
+    • Paste: Ctrl + V.
+    • Cut: Ctrl + X.
+These shortcuts are commonly used in Windows applications.
+Q93. What is the shortcut key for saving a document?
+Answer:
+Ctrl+S\boxed{Ctrl+S}
+It saves the current document or file.
+Q94. What is the shortcut key for printing?
+Answer:
+Ctrl+P\boxed{Ctrl+P}
+It opens the print dialogue in most Windows applications.
+Q95. What is the shortcut key for undo and redo?
+Answer:
+    • Undo: Ctrl + Z.
+    • Redo: Ctrl + Y.
+These shortcuts help reverse or repeat certain operations.
+Q96. What is PDF?
+Answer: PDF stands for Portable Document Format.
+It is a file format developed by Adobe that preserves document layout across different devices and operating systems.
+PDF files are commonly used for:
+    • Reports.
+    • Certificates.
+    • Manuals.
+    • Official documents.
+    • Shipboard records.
+Q97. What is cloud computing?
+Answer: Cloud computing is the delivery of computing services such as storage, processing power and software over a network, usually the Internet.
+Examples:
+    • Google Drive.
+    • Microsoft OneDrive.
+    • Dropbox.
+    • Microsoft 365 cloud services.
+Q98. What is a database?
+Answer: A database is an organised collection of related data that can be stored, accessed, managed and updated efficiently.
+Examples:
+    • Student database.
+    • Employee database.
+    • Ship inventory database.
+    • Maintenance database.
+Q99. What is artificial intelligence (AI)?
+Answer: Artificial Intelligence is a field of computer science that focuses on developing computer systems capable of performing tasks that normally require human intelligence.
+Examples:
+    1. Speech recognition.
+    2. Image recognition.
+    3. Language processing.
+    4. Data analysis.
+    5. Automated decision-support systems.
+Maritime application: AI can support weather analysis, predictive maintenance, route optimisation and maritime data analysis.
+Q100. Explain the importance of Computer Science for a B.Sc. Nautical Science student.
+Answer: Computer Science is important for Nautical Science students because modern merchant ships depend heavily on digital technology.
+A Deck Officer should understand:
+    1. Basic computer operations.
+    2. Hardware and software.
+    3. Operating systems.
+    4. Word processing.
+    5. Spreadsheet calculations.
+    6. Internet and communication.
+    7. Data storage.
+    8. Cybersecurity.
+    9. Electronic navigation systems.
+    10. Digital ship documentation.
+Computer knowledge improves efficiency, communication, accuracy and safety in modern maritime operations.
+
+BONUS 1: 30 IMPORTANT COMPUTER SCIENCE ABBREVIATIONS
+These abbreviations are useful for semester examinations and viva examinations.
+No.	Abbreviation	Full Form
+1	CPU	Central Processing Unit
+2	ALU	Arithmetic Logic Unit
+3	CU	Control Unit
+4	RAM	Random Access Memory
+5	ROM	Read Only Memory
+6	HDD	Hard Disk Drive
+7	SSD	Solid State Drive
+8	USB	Universal Serial Bus
+9	OS	Operating System
+10	GUI	Graphical User Interface
+11	LAN	Local Area Network
+12	WAN	Wide Area Network
+13	MAN	Metropolitan Area Network
+14	PAN	Personal Area Network
+15	WWW	World Wide Web
+16	HTTP	Hypertext Transfer Protocol
+17	HTTPS	Hypertext Transfer Protocol Secure
+18	IP	Internet Protocol
+19	URL	Uniform Resource Locator
+20	PDF	Portable Document Format
+21	HTML	HyperText Markup Language
+22	ICT	Information and Communication Technology
+23	AI	Artificial Intelligence
+24	GPS	Global Positioning System
+25	AIS	Automatic Identification System
+26	ECDIS	Electronic Chart Display and Information System
+27	RADAR	Radio Detection and Ranging
+28	VDR	Voyage Data Recorder
+29	BNWAS	Bridge Navigational Watch Alarm System
+30	GMDSS	Global Maritime Distress and Safety System
+
+BONUS 2: 25 IMPORTANT COMPUTER KEYBOARD SHORTCUTS
+No.	Shortcut	Function
+1	Ctrl + A	Select All
+2	Ctrl + C	Copy
+3	Ctrl + V	Paste
+4	Ctrl + X	Cut
+5	Ctrl + Z	Undo
+6	Ctrl + Y	Redo
+7	Ctrl + S	Save
+8	Ctrl + P	Print
+9	Ctrl + N	New Document
+10	Ctrl + O	Open
+11	Ctrl + F	Find
+12	Ctrl + H	Find and Replace
+13	Ctrl + B	Bold
+14	Ctrl + I	Italic
+15	Ctrl + U	Underline
+16	Ctrl + E	Centre Align
+17	Ctrl + L	Left Align
+18	Ctrl + R	Right Align
+19	Ctrl + J	Justify
+20	Alt + F4	Close Active Window
+21	F2	Rename Selected Item in Windows
+22	F5	Refresh in Windows
+23	Ctrl + Shift + Esc	Open Task Manager
+24	Windows + D	Show Desktop
+25	Windows + E	Open File Explorer
+Note: Some shortcuts may behave differently depending on the operating system or application.
+
+BONUS 3: IMPORTANT DIFFERENCES FOR EXAMINATIONS
+These are common short-answer and comparison topics.
+1. Hardware vs Software
+Hardware	Software
+Physical parts	Programs
+Can be touched	Cannot be touched physically
+Example: Mouse	Example: Windows
+2. RAM vs ROM
+RAM	ROM
+Volatile	Non-volatile
+Temporary working memory	Stores firmware
+Supports running applications	Supports essential system functions
+3. Internet vs Intranet
+Internet	Intranet
+Public global network	Private organisational network
+Accessible through Internet connectivity	Restricted to authorised users
+Connects networks worldwide	Connects members of an organisation
+4. Input vs Output Devices
+Input Device	Output Device
+Enters data	Displays results
+Keyboard	Monitor
+Mouse	Printer
+Scanner	Speaker
+5. HDD vs SSD
+HDD	SSD
+Uses magnetic storage	Uses flash memory
+Has moving mechanical parts	Has no moving mechanical parts
+Generally slower	Generally faster
+Often cheaper per GB	Often more expensive per GB
+
+BONUS 4: 20 IMPORTANT COMPUTER SCIENCE VIVA QUESTIONS
+Learn these short answers because they are useful for oral examinations.
+No.	Question	Answer
+1	What is a computer?	An electronic data-processing device.
+2	Who is the Father of Computers?	Charles Babbage.
+3	What is CPU?	Central Processing Unit.
+4	What is ALU?	Arithmetic Logic Unit.
+5	What is RAM?	Random Access Memory.
+6	What is ROM?	Read Only Memory.
+7	What is hardware?	Physical components of a computer.
+8	What is software?	Programs and instructions.
+9	What is an operating system?	Software managing computer resources.
+10	What is MS Word?	Word-processing software.
+11	What is MS Excel?	Spreadsheet software.
+12	What is PowerPoint?	Presentation software.
+13	What is the Internet?	A global network of interconnected networks.
+14	What is LAN?	Local Area Network.
+15	What is a browser?	Software used to access websites.
+16	What is a virus?	Malicious code that infects files or programs.
+17	What is a firewall?	A system that controls network traffic.
+18	What is GPS?	Global Positioning System.
+19	What is ECDIS?	Electronic Chart Display and Information System.
+20	What is AIS?	Automatic Identification System.
+
+BONUS 5: Practical Computer Skills You Should Learn in Semester 1
+Apart from theoretical questions, practise these activities on an actual computer.
+No.	Practical Activity	What You Should Learn
+1	Create a folder	File management
+2	Create a Word document	Word processing
+3	Format a paragraph	Font and paragraph formatting
+4	Insert a table in Word	Table creation
+5	Insert page numbers	Document formatting
+6	Create an Excel worksheet	Spreadsheet basics
+7	Perform addition in Excel	Basic formulas
+8	Calculate averages in Excel	AVERAGE function
+9	Create a bar chart	Data visualisation
+10	Create a PowerPoint presentation	Presentation skills
+11	Save a document as PDF	File conversion
+12	Send an email with an attachment	Email communication
+13	Use a web browser	Internet browsing
+14	Create a backup	Data protection
+15	Identify phishing emails	Cybersecurity awareness
+
+HOW TO PREPARE FOR YOUR IMU SEMESTER 1 COMPUTER SCIENCE EXAMINATION
+I recommend studying the following topics in this order:
+Priority	Topic	Importance
+1	Introduction to Computers	Very High
+2	Hardware and Software	Very High
+3	CPU, RAM and ROM	Very High
+4	Input and Output Devices	High
+5	Computer Memory	High
+6	Operating Systems	Very High
+7	MS Word, Excel and PowerPoint	Very High
+8	Internet and Networking	High
+9	Cybersecurity	High
+10	Maritime Computer Applications	Very High
+My Advice for You as a Nautical Science Student
+Do not study Computer Science only as a theory subject. Try to understand how computers are used in the actual Merchant Navy.
+Pay particular attention to these five areas:
+    1. MS Excel: Learn formulas, calculations, tables and charts. These skills are useful for maintaining records and preparing reports.
+    2. MS Word: Learn to prepare professional documents, inspection reports and checklists.
+    3. Computer Networking: Understand LAN, WAN, IP addresses, routers and basic network security.
+    4. Cybersecurity: Understand phishing, malware, passwords and the importance of protecting shipboard computer systems.
+    5. Maritime Computer Systems: Learn the basic purposes of ECDIS, GPS, AIS, RADAR, VDR and GMDSS.
+Important examination note
+This is a specially prepared practice question bank based on the subject area you provided. It is not an official IMU Chennai question bank or a verified collection of previous-year questions. Your actual examination coverage may differ depending on your current batch's prescribed syllabus.
+Remember: As a future Deck Officer, you will work with computers and electronic systems almost every day onboard a merchant vessel. Developing strong computer fundamentals during your first year will give you a useful foundation for your professional career.
+

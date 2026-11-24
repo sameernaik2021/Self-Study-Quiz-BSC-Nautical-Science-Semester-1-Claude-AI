@@ -1,0 +1,527 @@
+IMU Chennai – B.Sc. Nautical Science
+Semester 1 – Mathematics: 100 Important Questions and Answers
+Subject: Mathematics – Basic Mathematical Concepts Used in Maritime Calculations
+Course: B.Sc. Nautical Science
+University: Indian Maritime University (IMU), Chennai
+Semester: First Year – Semester 1
+These 100 questions and answers are designed to help you prepare for your semester examinations, class tests, viva examinations and practical mathematical applications in the Merchant Navy.
+The questions start with basic mathematical concepts and gradually progress towards nautical calculations.
+I've divided them into 10 sections, with 10 questions in each section.
+
+SECTION 1: BASIC MATHEMATICS (Q1–Q10)
+Q1. What is Mathematics?
+Answer: Mathematics is the branch of science that deals with numbers, quantities, measurements, shapes, structures and calculations.
+In Nautical Science, mathematics is used for calculating ship speed, distance, time, navigation positions and cargo measurements.
+Q2. What are natural numbers?
+Answer: Natural numbers are counting numbers.
+Examples: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10...
+Q3. What are whole numbers?
+Answer: Whole numbers include zero and all positive natural numbers.
+Examples: 0, 1, 2, 3, 4, 5...
+Q4. What are integers?
+Answer: Integers are numbers that include positive numbers, negative numbers and zero.
+Examples: -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5.
+Q5. What are rational numbers?
+Answer: Rational numbers are numbers that can be expressed in the form:
+pq\frac{p}{q}
+Where p and q are integers and q ≠ 0.
+Examples:
+12,34,56\frac{1}{2},\frac{3}{4},\frac{5}{6}
+Q6. What are irrational numbers?
+Answer: Irrational numbers are numbers that cannot be expressed as a ratio of two integers.
+Examples:
+    • √2
+    • √3
+    • π
+Their decimal expansions are non-terminating and non-repeating.
+Q7. What are prime numbers?
+Answer: Prime numbers are natural numbers greater than 1 that have exactly two factors: 1 and themselves.
+Examples: 2, 3, 5, 7, 11, 13, 17.
+Q8. What are composite numbers?
+Answer: Composite numbers are natural numbers greater than 1 that have more than two factors.
+Examples: 4, 6, 8, 9, 10, 12.
+Q9. What is the place value of a digit?
+Answer: Place value is the value of a digit according to its position in a number.
+Example:
+In 5,432:
+    • 5 = 5,000
+    • 4 = 400
+    • 3 = 30
+    • 2 = 2
+Q10. What is BODMAS?
+Answer: BODMAS is a mathematical rule that determines the order in which mathematical operations are performed.
+    • B – Brackets
+    • O – Orders (powers and roots)
+    • D – Division
+    • M – Multiplication
+    • A – Addition
+    • S – Subtraction
+Example:
+10+5×210+5\times2
+First multiplication:
+10+10=2010+10=20
+Answer = 20
+
+SECTION 2: FRACTIONS, DECIMALS AND PERCENTAGES (Q11–Q20)
+Q11. What is a fraction?
+Answer: A fraction represents a part of a whole.
+It is written as:
+ab\frac{a}{b}
+Where:
+    • a = Numerator
+    • b = Denominator
+Example:
+34\frac{3}{4}
+Q12. What is a proper fraction?
+Answer: A proper fraction is a fraction whose numerator is smaller than its denominator.
+Example:
+25\frac{2}{5}
+Q13. What is an improper fraction?
+Answer: An improper fraction is a fraction whose numerator is greater than or equal to its denominator.
+Example:
+74\frac{7}{4}
+Q14. What is a mixed fraction?
+Answer: A mixed fraction contains a whole number and a proper fraction.
+Example:
+2122\frac{1}{2}
+Q15. Convert 0.75 into a fraction.
+Answer:
+0.75=751000.75=\frac{75}{100}
+Simplifying:
+34\boxed{\frac{3}{4}}
+Q16. Convert 3/5 into a decimal.
+Answer:
+3÷5=0.63\div5=0.6
+Answer = 0.6
+Q17. What is a percentage?
+Answer: Percentage means a number expressed as a fraction of 100.
+Symbol: %
+Example:
+25%=25100=0.2525\%=\frac{25}{100}=0.25
+Q18. Find 20% of 500.
+Answer:
+20100×500\frac{20}{100}\times500=100=100
+Answer = 100
+Q19. A ship has 200 tonnes of cargo. If 25% is unloaded, how much cargo is unloaded?
+Answer:
+25100×200\frac{25}{100}\times200=50=50
+Answer = 50 tonnes
+Q20. A tank contains 800 litres of water. If 10% is used, how much water remains?
+Answer:
+Water used:
+10100×800=80\frac{10}{100}\times800=80
+Remaining water:
+800−80=720800-80=720
+Answer = 720 litres
+
+SECTION 3: RATIO AND PROPORTION (Q21–Q30)
+Q21. What is a ratio?
+Answer: A ratio is a comparison between two quantities of the same kind by division.
+Example:
+2:32:3
+Q22. Simplify the ratio 20:40.
+Answer:
+Divide both numbers by 20.
+20:40=1:220:40=1:2
+Answer = 1:2
+Q23. What is proportion?
+Answer: Proportion is the equality of two ratios.
+Example:
+2:4=3:62:4=3:6
+Q24. Find the missing value: 2:4 = 5:x.
+Answer:
+24=5x\frac{2}{4}=\frac{5}{x}
+Cross multiplication:
+2x=202x=20x=10x=10
+Answer = 10
+Q25. Divide 100 in the ratio 2:3.
+Answer:
+Total parts:
+2+3=52+3=5
+First share:
+25×100=40\frac{2}{5}\times100=40
+Second share:
+35×100=60\frac{3}{5}\times100=60
+Answer = 40 and 60
+Q26. What is direct proportion?
+Answer: Two quantities are in direct proportion when an increase in one quantity produces a proportional increase in the other.
+Example:
+If ship speed remains constant, increasing travel time increases distance proportionally.
+Q27. What is inverse proportion?
+Answer: Two quantities are inversely proportional when an increase in one quantity produces a proportional decrease in the other.
+Example:
+For a fixed distance, increasing speed reduces travel time.
+Q28. A ship travels 100 nautical miles in 5 hours. How far will it travel in 10 hours at the same speed?
+Answer:
+Speed=1005=20 knots\text{Speed}=\frac{100}{5}=20\text{ knots}
+Distance:
+20×10=20020\times10=200
+Answer = 200 nautical miles
+Q29. If 5 workers complete a job in 12 days, how many days will 10 workers take, assuming equal working rates?
+Answer:
+This is inverse proportion.
+5×12=10×x5\times12=10\times x60=10x60=10xx=6x=6
+Answer = 6 days
+Q30. Why are ratios and proportions important in Nautical Science?
+Answer: They are useful in:
+    • Cargo distribution.
+    • Fuel calculations.
+    • Mixture calculations.
+    • Scale drawings.
+    • Comparing ship dimensions.
+    • Navigation-related mathematical problems.
+
+SECTION 4: ALGEBRA (Q31–Q40)
+Q31. What is algebra?
+Answer: Algebra is a branch of mathematics that uses letters and symbols to represent unknown quantities.
+Example:
+x+5=10x+5=10
+Q32. What is a variable?
+Answer: A variable is a symbol, usually a letter, representing an unknown or changeable quantity.
+Examples: x, y, z.
+Q33. What is a constant?
+Answer: A constant is a fixed value that does not change.
+Examples: 2, 5, 10, 100.
+Q34. Solve: x + 10 = 25.
+Answer:
+x=25−10x=25-10x=15\boxed{x=15}
+Q35. Solve: 3x = 21.
+Answer:
+x=213x=\frac{21}{3}x=7\boxed{x=7}
+Q36. Solve: 2x + 5 = 15.
+Answer:
+2x=15−52x=15-52x=102x=10x=5\boxed{x=5}
+Q37. Expand: (a + b)².
+Answer:
+(a+b)2=a2+2ab+b2(a+b)^2=a^2+2ab+b^2
+Q38. Expand: (a - b)².
+Answer:
+(a−b)2=a2−2ab+b2(a-b)^2=a^2-2ab+b^2
+Q39. Factorise: x² + 5x + 6.
+Answer:
+Find two numbers whose:
+    • Sum = 5
+    • Product = 6
+The numbers are 2 and 3.
+Therefore:
+(x+2)(x+3)\boxed{(x+2)(x+3)}
+Q40. What is a quadratic equation?
+Answer: A quadratic equation is an equation whose highest power of the variable is 2.
+General form:
+ax2+bx+c=0ax^2+bx+c=0
+Where a ≠ 0.
+Example:
+x2+5x+6=0x^2+5x+6=0
+
+SECTION 5: GEOMETRY AND MENSURATION (Q41–Q50)
+Q41. What is geometry?
+Answer: Geometry is the branch of mathematics that studies shapes, sizes, angles, lines and dimensions.
+Q42. What is a triangle?
+Answer: A triangle is a closed geometrical figure having three sides and three angles.
+The sum of its interior angles is:
+180∘180^\circ
+Q43. What is a right-angled triangle?
+Answer: A right-angled triangle is a triangle having one angle equal to 90°.
+Q44. State Pythagoras' theorem.
+Answer: In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.
+c2=a2+b2c^2=a^2+b^2
+Q45. Find the hypotenuse if the other two sides are 3 m and 4 m.
+Answer:
+c2=32+42c^2=3^2+4^2c2=9+16=25c^2=9+16=25c=25c=\sqrt{25}
+Answer = 5 metres
+Q46. What is the area of a rectangle?
+Answer:
+Area=Length×BreadthArea=Length\times Breadth
+Q47. Find the area of a rectangular deck measuring 50 m × 20 m.
+Answer:
+50×20=100050\times20=1000
+Answer = 1,000 m²
+Q48. What is the area of a triangle?
+Answer:
+Area=12×Base×HeightArea=\frac{1}{2}\times Base\times Height
+Q49. What is the circumference of a circle?
+Answer:
+C=2πrC=2\pi r
+Where r is the radius.
+Q50. What is the volume of a rectangular tank?
+Answer:
+Volume=Length×Breadth×HeightVolume=Length\times Breadth\times Height
+Example:
+Length = 5 m.
+Breadth = 4 m.
+Height = 3 m.
+V=5×4×3V=5\times4\times3
+Answer = 60 m³
+
+SECTION 6: TRIGONOMETRY (Q51–Q60)
+Trigonometry is particularly important for Nautical Science because it provides the mathematical foundation for navigation, angles, bearings and position calculations.
+Q51. What is trigonometry?
+Answer: Trigonometry is the branch of mathematics that studies the relationship between the sides and angles of triangles.
+Q52. What are the three basic trigonometric ratios?
+Answer:
+    1. Sine.
+    2. Cosine.
+    3. Tangent.
+Q53. Define sine.
+Answer:
+sin⁡θ=OppositeHypotenuse\sin\theta=\frac{Opposite}{Hypotenuse}
+Q54. Define cosine.
+Answer:
+cos⁡θ=AdjacentHypotenuse\cos\theta=\frac{Adjacent}{Hypotenuse}
+Q55. Define tangent.
+Answer:
+tan⁡θ=OppositeAdjacent\tan\theta=\frac{Opposite}{Adjacent}
+Q56. What is the value of sin 30°?
+Answer:
+sin⁡30∘=12\boxed{\sin30^\circ=\frac{1}{2}}
+Q57. What is the value of cos 60°?
+Answer:
+cos⁡60∘=12\boxed{\cos60^\circ=\frac{1}{2}}
+Q58. What is the value of tan 45°?
+Answer:
+tan⁡45∘=1\boxed{\tan45^\circ=1}
+Q59. State the fundamental trigonometric identity.
+Answer:
+sin⁡2θ+cos⁡2θ=1\boxed{\sin^2\theta+\cos^2\theta=1}
+Q60. Why is trigonometry important in navigation?
+Answer: Trigonometry helps in:
+    • Calculating angles.
+    • Understanding directions.
+    • Solving navigation triangles.
+    • Calculating distances.
+    • Understanding celestial navigation.
+    • Working with geographical positions.
+
+SECTION 7: LOGARITHMS AND EXPONENTS (Q61–Q70)
+Q61. What is an exponent?
+Answer: An exponent indicates how many times a number is multiplied by itself.
+Example:
+23=2×2×2=82^3=2\times2\times2=8
+Q62. What is a base?
+Answer: The base is the number that is raised to a power.
+In:
+535^3
+5 is the base and 3 is the exponent.
+Q63. What is a logarithm?
+Answer: A logarithm is the inverse operation of exponentiation.
+If:
+ax=ba^x=b
+Then:
+log⁡ab=x\log_a b=x
+Q64. Find log₁₀ 100.
+Answer:
+102=10010^2=100
+Therefore:
+log⁡10100=2\boxed{\log_{10}100=2}
+Q65. Find log₁₀ 1000.
+Answer:
+103=100010^3=1000
+Therefore:
+3\boxed{3}
+Q66. What is the value of 2⁴?
+Answer:
+24=2×2×2×22^4=2\times2\times2\times2
+Answer = 16
+Q67. What is the value of 10⁰?
+Answer:
+Any non-zero number raised to the power zero equals 1.
+100=1\boxed{10^0=1}
+Q68. What is the value of √144?
+Answer:
+144=12\sqrt{144}=12
+Q69. What is the value of ∛27?
+Answer:
+273=3\sqrt[3]{27}=3
+Q70. State the product law of logarithms.
+Answer:
+The logarithm of a product is equal to the sum of the logarithms.
+log⁡(ab)=log⁡a+log⁡b\boxed{\log(ab)=\log a+\log b}
+
+SECTION 8: COORDINATE GEOMETRY AND ANGLES (Q71–Q80)
+Q71. What is coordinate geometry?
+Answer: Coordinate geometry is the branch of mathematics that uses coordinates to represent points and study geometrical figures.
+Q72. What is a Cartesian coordinate system?
+Answer: It is a system that uses two perpendicular axes:
+    • X-axis (horizontal).
+    • Y-axis (vertical).
+Their intersection is called the origin.
+Q73. What are coordinates?
+Answer: Coordinates are numerical values used to identify the position of a point.
+Example:
+(3,4)(3,4)
+Q74. What is the origin?
+Answer: The origin is the point where the X-axis and Y-axis intersect.
+Its coordinates are:
+(0,0)(0,0)
+Q75. What are the four quadrants?
+Answer:
+The Cartesian plane is divided into four quadrants.
+Quadrant	X-coordinate	Y-coordinate
+First	Positive	Positive
+Second	Negative	Positive
+Third	Negative	Negative
+Fourth	Positive	Negative
+Q76. What is the distance formula?
+Answer:
+The distance between two points is calculated using:
+d=(x2−x1)2+(y2−y1)2d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+Q77. Find the distance between (0,0) and (3,4).
+Answer:
+d=(3−0)2+(4−0)2d=\sqrt{(3-0)^2+(4-0)^2}d=9+16d=\sqrt{9+16}d=5\boxed{d=5}
+Q78. What is an angle?
+Answer: An angle is formed when two rays meet at a common endpoint.
+Q79. What is a degree?
+Answer: A degree is a unit used to measure angles.
+A complete revolution equals:
+360∘360^\circ
+Q80. What is the relationship between degrees and minutes?
+Answer:
+1∘=60′1^\circ=60'
+One degree equals 60 minutes of arc.
+
+SECTION 9: NAUTICAL MATHEMATICS AND MARITIME CALCULATIONS (Q81–Q90)
+This section is especially important because it connects mathematics directly with your future work as a Deck Officer.
+Q81. What is a nautical mile?
+Answer: A nautical mile is a unit of distance used in maritime and aviation navigation.
+1 NM=1852 metres\boxed{1\,NM=1852\,metres}
+Q82. What is a knot?
+Answer: A knot is a unit of speed equal to one nautical mile per hour.
+1 knot=1 NM/hour\boxed{1\,knot=1\,NM/hour}
+Q83. What is the formula for calculating ship speed?
+Answer:
+Speed=DistanceTimeSpeed=\frac{Distance}{Time}
+Q84. A ship travels 150 nautical miles in 10 hours. Calculate its speed.
+Answer:
+Speed=15010Speed=\frac{150}{10}15 knots\boxed{15\ knots}
+Q85. A ship travels at 12 knots for 5 hours. Calculate the distance travelled.
+Answer:
+Distance=Speed×TimeDistance=Speed\times Time=12×5=12\times560 NM\boxed{60\,NM}
+Q86. A ship has to travel 240 nautical miles at 12 knots. Calculate the time required.
+Answer:
+Time=DistanceSpeedTime=\frac{Distance}{Speed}=24012=\frac{240}{12}20 hours\boxed{20\ hours}
+Q87. What is latitude?
+Answer: Latitude is the angular distance of a position north or south of the Equator.
+It ranges from:
+    • 0° at the Equator.
+    • 90° North at the North Pole.
+    • 90° South at the South Pole.
+Q88. What is longitude?
+Answer: Longitude is the angular distance of a position east or west of the Prime Meridian.
+It ranges from 0° to 180° East or West.
+Q89. How many nautical miles are there in one minute of latitude?
+Answer:
+One minute of latitude is approximately equal to one nautical mile.
+1′=1 NM\boxed{1'=1\,NM}
+This relationship is fundamental to nautical chart work.
+Q90. What is the relationship between nautical miles and kilometres?
+Answer:
+1 NM=1.852 km1\,NM=1.852\,km
+Example:
+Convert 20 nautical miles into kilometres.
+20×1.85220\times1.85237.04 km\boxed{37.04\,km}
+
+SECTION 10: MIXED MATHEMATICAL AND APPLICATION-BASED QUESTIONS (Q91–Q100)
+These questions combine mathematical knowledge with practical maritime situations.
+Q91. A ship travels 300 nautical miles in 15 hours. Find its average speed.
+Answer:
+Speed=30015Speed=\frac{300}{15}20 knots\boxed{20\ knots}
+Q92. A ship travels at 18 knots. How far will it travel in 8 hours?
+Answer:
+Distance=18×8Distance=18\times8144 NM\boxed{144\,NM}
+Q93. A ship has a speed of 15 knots and needs to travel 450 nautical miles. Calculate the journey time.
+Answer:
+Time=45015Time=\frac{450}{15}30 hours\boxed{30\ hours}
+Q94. Convert 25 nautical miles into kilometres.
+Answer:
+25×1.85225\times1.85246.3 km\boxed{46.3\,km}
+Q95. Convert 100 kilometres into nautical miles.
+Answer:
+NM=1001.852NM=\frac{100}{1.852}53.996 NM\boxed{53.996\,NM}
+Approximately 54 nautical miles.
+Q96. A rectangular cargo hold is 20 m long, 10 m wide and 5 m high. Calculate its volume.
+Answer:
+Volume=L×B×HVolume=L\times B\times H=20×10×5=20\times10\times51000 m3\boxed{1000\,m^3}
+Q97. A ship has 500 tonnes of cargo. If 40% of the cargo is unloaded, how much cargo remains?
+Answer:
+Cargo unloaded:
+40100×500=200\frac{40}{100}\times500=200
+Cargo remaining:
+500−200500-200300 tonnes\boxed{300\ tonnes}
+Q98. A ship travels 90 nautical miles in 6 hours and then 120 nautical miles in 8 hours. Calculate the average speed for the entire journey.
+Answer:
+Total distance:
+90+120=210 NM90+120=210\,NM
+Total time:
+6+8=14 hours6+8=14\,hours
+Average speed:
+21014\frac{210}{14}15 knots\boxed{15\ knots}
+Q99. A ship's tank has a capacity of 2,000 litres and is filled to 75%. How much liquid does it contain?
+Answer:
+75100×2000\frac{75}{100}\times20001500 litres\boxed{1500\ litres}
+Q100. A ship travels 180 nautical miles at 15 knots. If it departs at 0800 hours, what time will it arrive, assuming constant speed and no delays?
+Answer:
+First calculate the time:
+Time=18015Time=\frac{180}{15}Time=12 hoursTime=12\ hours
+Departure time = 0800 hours.
+Arrival time:
+0800+12 hours=2000 hours0800+12\ hours=2000\ hours
+Final Answer: 2000 hours (8:00 PM).
+
+BONUS: 20 IMPORTANT MATHEMATICAL FORMULAS FOR NAUTICAL SCIENCE
+Keep this formula sheet in your notebook.
+No.	Formula	Application
+1	Speed = Distance / Time	Ship speed
+2	Distance = Speed × Time	Distance travelled
+3	Time = Distance / Speed	Journey time
+4	Percentage = (Part / Whole) × 100	Cargo calculations
+5	Area = Length × Breadth	Deck area
+6	Volume = L × B × H	Tank volume
+7	Triangle Area = ½ × Base × Height	Geometry
+8	Circle Area = πr²	Circular areas
+9	Circumference = 2πr	Circular measurements
+10	Pythagoras: c² = a² + b²	Right triangles
+11	sin θ = Opposite / Hypotenuse	Trigonometry
+12	cos θ = Adjacent / Hypotenuse	Trigonometry
+13	tan θ = Opposite / Adjacent	Trigonometry
+14	Force = Mass × Acceleration	Mechanics
+15	Pressure = Force / Area	Pressure
+16	Density = Mass / Volume	Fluid calculations
+17	Work = Force × Displacement	Mechanics
+18	Power = Work / Time	Power calculations
+19	Acceleration = (v-u) / t	Motion
+20	Distance between points = √[(x₂-x₁)² + (y₂-y₁)²]	Coordinate geometry
+
+BONUS: Important Nautical Mathematical Conversions
+Unit	Conversion
+1 nautical mile	1,852 metres
+1 nautical mile	1.852 kilometres
+1 knot	1 nautical mile/hour
+1 kilometre	1,000 metres
+1 metre	100 centimetres
+1 hour	60 minutes
+1 minute	60 seconds
+1 degree	60 minutes of arc
+1 minute of latitude	Approximately 1 nautical mile
+1 tonne (metric)	1,000 kilograms
+1 cubic metre	1,000 litres
+1 litre	0.001 cubic metre
+
+How to Prepare for Your IMU Mathematics Examination
+My recommendation is to study these 100 questions in the following order:
+Priority	Topics	Importance
+1	Basic Mathematics	High
+2	Fractions and Percentages	High
+3	Ratio and Proportion	High
+4	Algebra	High
+5	Geometry	High
+6	Trigonometry	Very High
+7	Logarithms	Medium
+8	Coordinate Geometry	High
+9	Nautical Calculations	Very High
+10	Application-Based Problems	Very High
+A note about the examination: These are 100 practice questions prepared for your first-semester learning. They are not an official IMU question bank or confirmed previous-year questions. Your exact examination syllabus and topic weightage should be checked against your current batch's Mathematics syllabus.
+My suggestion for you
+Don't just memorise the answers. Understand how each formula works and practise solving numerical problems yourself.
+In Nautical Science, Mathematics is not just an examination subject. It becomes an important working skill when you eventually serve as a Deck Officer.
+Your next step should be to master Trigonometry, Logarithms, Coordinate Geometry and Nautical Calculations because these provide an important foundation for the navigation subjects you will study in subsequent semesters.
+

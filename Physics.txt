@@ -1,0 +1,736 @@
+IMU Chennai – B.Sc. Nautical Science
+Semester 1 – Physics: 100 Important Questions and Answers
+Course: B.Sc. Nautical Science
+University: Indian Maritime University (IMU), Chennai
+Year: First Year
+Semester: 1st Semester
+Subject: Physics
+Topics: Mechanics, Force, Motion, Pressure, Gravity and Fluid Mechanics.
+These 100 questions and answers are designed to help you prepare for:
+    • Semester examinations.
+    • Internal assessments.
+    • Class tests.
+    • Viva examinations.
+    • Practical applications in the Merchant Navy.
+The questions progress from basic concepts to numerical problems and maritime applications.
+I've divided the questions into 10 sections, with 10 questions in each section.
+
+SECTION 1: BASIC CONCEPTS OF PHYSICS (Q1–Q10)
+Q1. What is Physics?
+Answer: Physics is the branch of science that deals with the study of matter, energy, force, motion and their interactions.
+In Nautical Science, Physics helps us understand how ships float, move, maintain stability and operate in water.
+Q2. What are the main branches of Physics?
+Answer: Some major branches of Physics are:
+    1. Mechanics.
+    2. Thermodynamics.
+    3. Optics.
+    4. Electromagnetism.
+    5. Acoustics.
+    6. Atomic Physics.
+    7. Nuclear Physics.
+    8. Fluid Mechanics.
+Q3. What is a physical quantity?
+Answer: A physical quantity is a property that can be measured and expressed using a numerical value and a unit.
+Examples:
+    • Length.
+    • Mass.
+    • Time.
+    • Temperature.
+    • Speed.
+    • Force.
+    • Pressure.
+Q4. What is a fundamental quantity?
+Answer: A fundamental quantity is an independent physical quantity that is not defined in terms of other physical quantities.
+The seven SI fundamental quantities are:
+Quantity	SI Unit
+Length	Metre (m)
+Mass	Kilogram (kg)
+Time	Second (s)
+Electric current	Ampere (A)
+Temperature	Kelvin (K)
+Amount of substance	Mole (mol)
+Luminous intensity	Candela (cd)
+Q5. What is a derived quantity?
+Answer: A derived quantity is a physical quantity obtained by combining fundamental quantities mathematically.
+Examples:
+    • Speed = Distance / Time.
+    • Acceleration = Velocity / Time.
+    • Force = Mass × Acceleration.
+    • Pressure = Force / Area.
+Q6. What is the SI system?
+Answer: SI stands for International System of Units.
+It is the internationally accepted system of measurement used in science, engineering and many technical fields.
+Q7. What is the difference between scalar and vector quantities?
+Answer:
+Scalar quantity: A physical quantity that has magnitude only.
+Examples:
+    • Mass.
+    • Time.
+    • Distance.
+    • Speed.
+    • Temperature.
+    • Energy.
+Vector quantity: A physical quantity that has both magnitude and direction.
+Examples:
+    • Force.
+    • Velocity.
+    • Displacement.
+    • Acceleration.
+    • Momentum.
+Q8. What is magnitude?
+Answer: Magnitude is the numerical size or value of a physical quantity, without considering its direction.
+Example: A force of 50 Newtons has a magnitude of 50 N.
+Q9. What is a unit?
+Answer: A unit is a standard reference used to measure a physical quantity.
+Examples:
+    • Metre for length.
+    • Kilogram for mass.
+    • Second for time.
+    • Newton for force.
+    • Pascal for pressure.
+Q10. Why is Physics important in Nautical Science?
+Answer: Physics is important because it helps Deck Officers understand:
+    1. How ships float.
+    2. How ships move through water.
+    3. How forces affect ships.
+    4. How water pressure changes with depth.
+    5. How gravity affects ship stability.
+    6. How waves affect ships.
+    7. How buoyancy works.
+    8. How ships experience resistance in water.
+
+SECTION 2: MECHANICS (Q11–Q20)
+Q11. What is Mechanics?
+Answer: Mechanics is the branch of Physics that deals with the behaviour of bodies under the action of forces and their motion.
+It is particularly important in understanding the movement and stability of ships.
+Q12. What are the main branches of Mechanics?
+Answer: Mechanics is broadly divided into three branches:
+    1. Statics: Study of bodies at rest or in equilibrium.
+    2. Kinematics: Study of motion without considering the forces causing it.
+    3. Dynamics: Study of motion and the forces responsible for it.
+Q13. What is rest?
+Answer: A body is said to be at rest when its position does not change with time relative to a specified reference point.
+Example: A ship secured alongside a berth may be considered at rest relative to the berth.
+Q14. What is motion?
+Answer: A body is said to be in motion when its position changes with time relative to a reference point.
+Example: A cargo ship travelling from Chennai to Singapore is in motion relative to the Earth.
+Q15. What is distance?
+Answer: Distance is the total length of the actual path travelled by an object.
+It is a scalar quantity.
+SI unit: Metre (m).
+Q16. What is displacement?
+Answer: Displacement is the shortest straight-line change in position from the initial point to the final point, including direction.
+It is a vector quantity.
+SI unit: Metre (m).
+Q17. Differentiate between distance and displacement.
+Answer:
+Distance	Displacement
+Total path travelled	Shortest straight-line change in position
+Scalar quantity	Vector quantity
+Has magnitude only	Has magnitude and direction
+Always non-negative	Can be positive, negative or zero in one-dimensional motion
+Q18. What is speed?
+Answer: Speed is the distance travelled per unit time.
+Formula:
+Speed=DistanceTimeSpeed=\frac{Distance}{Time}
+SI unit: Metre per second (m/s).
+Q19. What is velocity?
+Answer: Velocity is the rate of change of displacement with respect to time.
+Velocity=DisplacementTimeVelocity=\frac{Displacement}{Time}
+SI unit: Metre per second (m/s).
+Q20. What is acceleration?
+Answer: Acceleration is the rate of change of velocity with respect to time.
+Formula:
+a=v−uta=\frac{v-u}{t}
+Where:
+    • a = Acceleration.
+    • v = Final velocity.
+    • u = Initial velocity.
+    • t = Time.
+SI unit: m/s².
+
+SECTION 3: MOTION AND EQUATIONS OF MOTION (Q21–Q30)
+Q21. What is uniform motion?
+Answer: Uniform motion occurs when an object travels equal distances in equal intervals of time.
+Example: A ship travelling at a constant speed of 10 knots under ideal conditions.
+Q22. What is non-uniform motion?
+Answer: Non-uniform motion occurs when an object travels unequal distances in equal intervals of time or when its velocity changes.
+Example: A ship increasing its speed while leaving a harbour.
+Q23. What is uniform acceleration?
+Answer: Uniform acceleration occurs when the velocity of an object changes by equal amounts in equal intervals of time.
+Q24. What is retardation?
+Answer: Retardation is negative acceleration, meaning that the velocity decreases in a chosen direction.
+Example: A ship slowing down while approaching a port.
+Q25. What are the three equations of uniformly accelerated motion?
+Answer:
+The three equations are:
+First equation:
+v=u+atv=u+at
+Second equation:
+s=ut+12at2s=ut+\frac{1}{2}at^2
+Third equation:
+v2=u2+2asv^2=u^2+2as
+Where:
+    • u = Initial velocity.
+    • v = Final velocity.
+    • a = Acceleration.
+    • t = Time.
+    • s = Displacement.
+Q26. A ship increases its velocity from 5 m/s to 15 m/s in 10 seconds. Calculate its acceleration.
+Answer:
+Given:
+u = 5 m/s.
+v = 15 m/s.
+t = 10 seconds.
+Formula:
+a=v−uta=\frac{v-u}{t}a=15−510a=\frac{15-5}{10}a=1 m/s2\boxed{a=1\,m/s^2}
+Q27. A body starts from rest and accelerates at 2 m/s² for 5 seconds. Calculate its final velocity.
+Answer:
+Given:
+u = 0.
+a = 2 m/s².
+t = 5 seconds.
+Formula:
+v=u+atv=u+atv=0+(2×5)v=0+(2\times5)v=10 m/s\boxed{v=10\,m/s}
+Q28. A vehicle moves with an initial velocity of 10 m/s and accelerates at 2 m/s² for 5 seconds. Calculate the distance travelled.
+Answer:
+Given:
+u = 10 m/s.
+a = 2 m/s².
+t = 5 seconds.
+Formula:
+s=ut+12at2s=ut+\frac12at^2s=(10×5)+12(2)(5)2s=(10\times5)+\frac12(2)(5)^2s=50+25s=50+25s=75 m\boxed{s=75\,m}
+Q29. What is free fall?
+Answer: Free fall is the motion of an object under the influence of gravity alone, neglecting air resistance.
+The acceleration of a freely falling body near Earth's surface is approximately:
+g=9.81 m/s2g=9.81\,m/s^2
+Q30. What is terminal velocity?
+Answer: Terminal velocity is the constant maximum speed reached by an object falling through a fluid when the net force becomes zero.
+At terminal velocity:
+Weight = Drag force + Buoyant force.
+
+SECTION 4: FORCE AND NEWTON'S LAWS OF MOTION (Q31–Q40)
+Q31. What is force?
+Answer: Force is an external influence that can change or tend to change the state of rest or motion of an object or deform it.
+SI unit: Newton (N).
+Q32. What are the different types of forces?
+Answer:
+Some common types of forces are:
+    1. Gravitational force.
+    2. Frictional force.
+    3. Normal force.
+    4. Tension force.
+    5. Magnetic force.
+    6. Electrostatic force.
+    7. Buoyant force.
+    8. Applied force.
+Q33. State Newton's First Law of Motion.
+Answer: Newton's First Law states that an object remains at rest or continues in uniform straight-line motion unless acted upon by an unbalanced external force.
+It is also known as the Law of Inertia.
+Maritime example: A ship does not automatically stop moving when its propulsion is reduced or stopped. Its motion continues because of inertia, although water resistance gradually slows it down.
+Q34. What is inertia?
+Answer: Inertia is the tendency of a body to resist any change in its state of rest or uniform motion.
+Greater mass generally means greater inertia.
+Q35. State Newton's Second Law of Motion.
+Answer: Newton's Second Law states that the rate of change of momentum of a body is proportional to the applied net force and occurs in the direction of that force.
+For constant mass:
+F=ma\boxed{F=ma}
+Where:
+    • F = Force.
+    • m = Mass.
+    • a = Acceleration.
+Q36. A body of mass 10 kg accelerates at 3 m/s². Calculate the force.
+Answer:
+Given:
+m = 10 kg.
+a = 3 m/s².
+Formula:
+F=maF=maF=10×3F=10\times3F=30 N\boxed{F=30\,N}
+Q37. State Newton's Third Law of Motion.
+Answer: Newton's Third Law states:
+"For every action, there is an equal and opposite reaction."
+Maritime example: A ship's propeller accelerates water backwards, and the resulting reaction produces forward thrust on the ship.
+Q38. What is momentum?
+Answer: Momentum is the product of the mass and velocity of a moving body.
+Formula:
+p=mvp=mv
+SI unit:
+kg m/skg\,m/s
+Q39. What is impulse?
+Answer: Impulse is the product of force and the time interval for which the force acts.
+Formula:
+Impulse=F×tImpulse=F\times t
+It is equal to the change in momentum.
+SI unit: Newton-second (Ns).
+Q40. What is friction?
+Answer: Friction is a force that opposes relative motion or the tendency of relative motion between surfaces in contact.
+Types include:
+    1. Static friction.
+    2. Sliding friction.
+    3. Rolling friction.
+    4. Fluid friction.
+Maritime example: Water resistance acting against a ship's movement is a form of fluid resistance.
+
+SECTION 5: WORK, ENERGY AND POWER (Q41–Q50)
+Q41. What is work?
+Answer: Work is done when a force produces displacement.
+For a constant force acting in the direction of displacement:
+W=F×sW=F\times s
+SI unit: Joule (J).
+Q42. When is work said to be zero?
+Answer: Work is zero when:
+    1. There is no displacement.
+    2. The applied force is perpendicular to the displacement.
+Mathematically:
+W=Fscos⁡θW=Fs\cos\theta
+Q43. What is energy?
+Answer: Energy is the capacity of a body or system to do work.
+SI unit: Joule (J).
+Q44. What is kinetic energy?
+Answer: Kinetic energy is the energy possessed by an object due to its motion.
+Formula:
+KE=12mv2KE=\frac12mv^2
+Q45. A body of mass 10 kg moves at 5 m/s. Calculate its kinetic energy.
+Answer:
+KE=12mv2KE=\frac12mv^2=12×10×52=\frac12\times10\times5^2=5×25=5\times25KE=125 J\boxed{KE=125\,J}
+Q46. What is potential energy?
+Answer: Potential energy is the energy possessed by an object due to its position or configuration.
+Gravitational potential energy near Earth's surface is:
+PE=mghPE=mgh
+Where:
+    • m = Mass.
+    • g = Acceleration due to gravity.
+    • h = Height.
+Q47. A 5 kg object is raised to a height of 10 metres. Calculate its potential energy. Take g = 9.8 m/s².
+Answer:
+PE=mghPE=mgh=5×9.8×10=5\times9.8\times10PE=490 J\boxed{PE=490\,J}
+Q48. State the law of conservation of energy.
+Answer: Energy can neither be created nor destroyed. It can only be transformed from one form into another.
+The total energy of an isolated system remains constant.
+Q49. What is power?
+Answer: Power is the rate of doing work or transferring energy.
+Formula:
+P=WtP=\frac{W}{t}
+SI unit: Watt (W).
+Q50. A machine performs 1,000 Joules of work in 10 seconds. Calculate its power.
+Answer:
+P=100010P=\frac{1000}{10}P=100 W\boxed{P=100\,W}
+
+SECTION 6: GRAVITY AND GRAVITATION (Q51–Q60)
+Q51. What is gravity?
+Answer: Gravity is the attractive force between objects having mass.
+On Earth, gravity attracts objects towards the Earth's centre.
+Q52. What is gravitation?
+Answer: Gravitation is the universal attractive force acting between any two objects having mass.
+Q53. State Newton's Universal Law of Gravitation.
+Answer: Every two objects in the universe attract each other with a force directly proportional to the product of their masses and inversely proportional to the square of the distance between their centres.
+Formula:
+F=Gm1m2r2F=G\frac{m_1m_2}{r^2}
+Where:
+    • F = Gravitational force.
+    • G = Universal gravitational constant.
+    • m₁ and m₂ = Masses.
+    • r = Distance between their centres.
+Q54. What is the universal gravitational constant?
+Answer: The universal gravitational constant is represented by G.
+Its approximate value is:
+G=6.674×10−11 Nm2/kg2\boxed{G=6.674\times10^{-11}\,Nm^2/kg^2}
+Q55. What is acceleration due to gravity?
+Answer: Acceleration due to gravity is the acceleration experienced by a freely falling object due to gravitational attraction.
+Near Earth's surface:
+g=9.81 m/s2\boxed{g=9.81\,m/s^2}
+Q56. What is the difference between mass and weight?
+Answer:
+Mass	Weight
+Amount of matter in a body	Gravitational force acting on a body
+SI unit is kg	SI unit is Newton
+Remains constant for a given body	Can change with gravitational field
+Scalar quantity	Vector quantity
+Q57. What is weight?
+Answer: Weight is the gravitational force acting on an object.
+Formula:
+W=mgW=mg
+Where:
+    • W = Weight.
+    • m = Mass.
+    • g = Acceleration due to gravity.
+Q58. Calculate the weight of a 50 kg person on Earth. Take g = 9.8 m/s².
+Answer:
+W=mgW=mgW=50×9.8W=50\times9.8W=490 N\boxed{W=490\,N}
+Q59. Why is gravity important for ships?
+Answer: Gravity is important because it affects:
+    1. The weight of a ship.
+    2. The centre of gravity.
+    3. Cargo distribution.
+    4. Ship stability.
+    5. The ship's tendency to return towards an upright position.
+Q60. What is the centre of gravity?
+Answer: The centre of gravity is the point through which the resultant gravitational force (weight) of a body acts.
+In ship stability, the position of the centre of gravity is extremely important.
+
+SECTION 7: PRESSURE AND ITS APPLICATIONS (Q61–Q70)
+Q61. What is pressure?
+Answer: Pressure is the normal force acting per unit area.
+Formula:
+P=FA\boxed{P=\frac{F}{A}}
+SI unit: Pascal (Pa).
+Q62. Define one Pascal.
+Answer: One Pascal is the pressure produced when a normal force of one Newton acts uniformly over an area of one square metre.
+1 Pa=1 N/m21\,Pa=1\,N/m^2
+Q63. What are the factors affecting pressure?
+Answer: For a given normal force:
+    1. Applied force.
+    2. Area over which the force acts.
+Pressure increases when force increases and decreases when area increases.
+Q64. A force of 200 N acts on an area of 4 m². Calculate the pressure.
+Answer:
+P=FAP=\frac{F}{A}P=2004P=\frac{200}{4}P=50 Pa\boxed{P=50\,Pa}
+Q65. What is atmospheric pressure?
+Answer: Atmospheric pressure is the pressure exerted by the weight of the Earth's atmosphere.
+Standard atmospheric pressure at sea level is approximately:
+101325 Pa\boxed{101325\,Pa}
+It is also approximately 1.01325 bar.
+Q66. What is hydrostatic pressure?
+Answer: Hydrostatic pressure is the pressure exerted by a fluid at rest due to the weight of the fluid above a given point.
+Formula:
+P=ρgh\boxed{P=\rho gh}
+Where:
+    • ρ = Fluid density.
+    • g = Acceleration due to gravity.
+    • h = Depth below the fluid surface.
+Q67. Why does water pressure increase with depth?
+Answer: Water pressure increases with depth because the amount and weight of water above a point increase as the point becomes deeper.
+Q68. Calculate the gauge pressure at a depth of 10 metres in freshwater. Take density = 1,000 kg/m³ and g = 9.81 m/s².
+Answer:
+Given:
+ρ=1000 kg/m3\rho=1000\,kg/m^3g=9.81 m/s2g=9.81\,m/s^2h=10 mh=10\,m
+Formula:
+P=ρghP=\rho ghP=1000×9.81×10P=1000\times9.81\times10P=98100 Pa\boxed{P=98100\,Pa}
+Therefore, the gauge pressure is 98.1 kPa.
+Q69. What is the difference between gauge pressure and absolute pressure?
+Answer:
+Gauge pressure: Pressure measured relative to atmospheric pressure.
+Absolute pressure: Total pressure measured relative to a perfect vacuum.
+Relationship:
+Pabsolute=Patmospheric+PgaugeP_{absolute}=P_{atmospheric}+P_{gauge}
+Q70. What is a manometer?
+Answer: A manometer is an instrument used to measure fluid pressure by balancing it against the pressure exerted by a column of liquid.
+It is commonly used in engineering and fluid systems.
+
+SECTION 8: FLUID MECHANICS (Q71–Q80)
+Q71. What is Fluid Mechanics?
+Answer: Fluid Mechanics is the branch of Physics that deals with the behaviour of fluids, including liquids and gases, both at rest and in motion.
+It is very important in Nautical Science because ships operate in water.
+Q72. What is a fluid?
+Answer: A fluid is a substance that continuously deforms under an applied shear stress, however small that stress may be.
+Liquids and gases are fluids.
+Examples:
+    • Water.
+    • Oil.
+    • Air.
+    • Seawater.
+Q73. What are the main branches of Fluid Mechanics?
+Answer:
+    1. Fluid Statics: Study of fluids at rest.
+    2. Fluid Kinematics: Study of fluid motion without considering the forces causing it.
+    3. Fluid Dynamics: Study of fluids in motion and the forces associated with their motion.
+Q74. What is density?
+Answer: Density is the mass per unit volume of a substance.
+Formula:
+ρ=mV\boxed{\rho=\frac{m}{V}}
+SI unit:
+kg/m3kg/m^3
+Q75. What is the approximate density of freshwater and seawater?
+Answer:
+Typical approximate values are:
+    • Freshwater: 1,000 kg/m³.
+    • Seawater: Approximately 1,025 kg/m³.
+Actual seawater density varies with temperature, salinity and pressure.
+Q76. What is viscosity?
+Answer: Viscosity is the property of a fluid that represents its resistance to flow or internal deformation.
+Example:
+Honey has higher viscosity than water.
+Q77. What is surface tension?
+Answer: Surface tension is the property of a liquid surface that makes it behave as though it were under tension due to cohesive intermolecular forces.
+Its SI unit is N/m.
+Q78. What is laminar flow?
+Answer: Laminar flow is a type of fluid flow in which fluid particles move in relatively smooth, orderly layers with little mixing between adjacent layers.
+Q79. What is turbulent flow?
+Answer: Turbulent flow is a type of fluid flow characterised by irregular fluctuations, mixing and eddies.
+Example: Water flowing rapidly and irregularly around obstacles.
+Q80. What is the difference between laminar and turbulent flow?
+Answer:
+Laminar Flow	Turbulent Flow
+Smooth and orderly	Irregular and fluctuating
+Little mixing between layers	Significant mixing
+Usually occurs at lower Reynolds numbers	Usually occurs at higher Reynolds numbers
+Less momentum exchange between layers	Greater momentum exchange
+
+SECTION 9: BUOYANCY, ARCHIMEDES' PRINCIPLE AND FLUID LAWS (Q81–Q90)
+This section is particularly important for Nautical Science because it explains the scientific principles behind why ships float.
+Q81. What is buoyancy?
+Answer: Buoyancy is the upward force exerted by a fluid on a body partially or completely immersed in it.
+This force is called the buoyant force or upthrust.
+Q82. What is Archimedes' Principle?
+Answer: Archimedes' Principle states:
+"An object wholly or partially immersed in a fluid experiences an upward buoyant force equal to the weight of the fluid displaced by the object."
+Mathematically:
+FB=ρgVF_B=\rho gV
+Where:
+    • Fᵦ = Buoyant force.
+    • ρ = Fluid density.
+    • g = Acceleration due to gravity.
+    • V = Volume of displaced fluid.
+Q83. Why does a steel ship float even though steel is denser than water?
+Answer: A steel ship floats because its hollow hull displaces a large volume of water.
+The displaced water produces an upward buoyant force.
+When the ship floats in equilibrium:
+Buoyant Force=Weight of Ship\boxed{Buoyant\ Force=Weight\ of\ Ship}
+The average density of the ship, including its enclosed air spaces, is less than the density of the surrounding water.
+Q84. What is displacement in relation to ships?
+Answer: Ship displacement is the weight of water displaced by a floating ship.
+For a floating vessel in equilibrium, displacement equals the vessel's total weight.
+It is generally expressed in tonnes.
+Q85. What is the difference between freshwater and seawater buoyancy?
+Answer: Seawater is generally denser than freshwater.
+Therefore, for the same displaced volume, seawater produces a greater buoyant force.
+A ship generally floats at a smaller draught in seawater than in freshwater when its weight remains unchanged.
+Q86. What is the principle of flotation?
+Answer: The principle of flotation states that a floating body displaces a quantity of fluid whose weight is equal to the weight of the floating body.
+Q87. State Pascal's Law.
+Answer: Pascal's Law states that pressure applied to an enclosed fluid is transmitted equally and undiminished in all directions throughout the fluid and to the walls of its container.
+Applications:
+    • Hydraulic lifts.
+    • Hydraulic brakes.
+    • Hydraulic steering systems.
+Q88. State Bernoulli's Principle.
+Answer: Bernoulli's Principle states that for steady, incompressible and non-viscous flow along a streamline, the total mechanical energy per unit volume remains constant.
+The equation is:
+P+12ρv2+ρgh=ConstantP+\frac12\rho v^2+\rho gh=Constant
+Where:
+    • P = Pressure.
+    • ρ = Fluid density.
+    • v = Fluid velocity.
+    • g = Acceleration due to gravity.
+    • h = Height.
+Q89. What is the continuity equation?
+Answer: The continuity equation is based on the conservation of mass in fluid flow.
+For steady incompressible flow:
+A1v1=A2v2\boxed{A_1v_1=A_2v_2}
+Where:
+    • A₁ and A₂ = Cross-sectional areas.
+    • v₁ and v₂ = Fluid velocities.
+Q90. What is the Reynolds number?
+Answer: Reynolds number is a dimensionless quantity used to predict the flow characteristics of a fluid.
+Formula:
+Re=ρvDμRe=\frac{\rho vD}{\mu}
+Where:
+    • ρ = Fluid density.
+    • v = Characteristic velocity.
+    • D = Characteristic length or pipe diameter.
+    • μ = Dynamic viscosity.
+It helps distinguish between laminar, transitional and turbulent flow in suitable flow conditions.
+
+SECTION 10: MARITIME PHYSICS AND APPLICATION-BASED NUMERICALS (Q91–Q100)
+These questions connect your Physics knowledge with actual ship operations.
+Q91. Why does a ship experience resistance when moving through water?
+Answer: A ship experiences resistance because of its interaction with the surrounding water and air.
+Important components include:
+    1. Frictional resistance.
+    2. Wave-making resistance.
+    3. Form or pressure resistance.
+    4. Air resistance.
+This resistance opposes the ship's forward movement.
+Q92. What is buoyant force?
+Answer: Buoyant force is the upward force exerted by a fluid on an immersed or floating body.
+It is equal to the weight of the fluid displaced by the body.
+Q93. A floating object displaces 2 m³ of freshwater. Calculate the buoyant force. Take density = 1,000 kg/m³ and g = 9.81 m/s².
+Answer:
+Formula:
+FB=ρgVF_B=\rho gV
+Given:
+    • ρ = 1,000 kg/m³.
+    • g = 9.81 m/s².
+    • V = 2 m³.
+Substituting:
+FB=1000×9.81×2F_B=1000\times9.81\times2FB=19,620 N\boxed{F_B=19,620\,N}
+Q94. A ship has a mass of 10,000 tonnes. Calculate its weight. Take g = 9.81 m/s².
+Answer:
+First convert tonnes into kilograms.
+10,000×1000=10,000,000 kg10,000\times1000=10,000,000\,kg
+Formula:
+W=mgW=mgW=10,000,000×9.81W=10,000,000\times9.81W=98,100,000 N\boxed{W=98,100,000\,N}
+Q95. A tank contains 5 m³ of freshwater. Calculate its mass if the density is 1,000 kg/m³.
+Answer:
+Formula:
+m=ρVm=\rho Vm=1000×5m=1000\times5m=5000 kg\boxed{m=5000\,kg}
+Q96. A ship travels at a velocity of 10 m/s. Convert this speed into km/h.
+Answer:
+Conversion formula:
+1 m/s=3.6 km/h1\,m/s=3.6\,km/h
+Therefore:
+10×3.610\times3.636 km/h\boxed{36\,km/h}
+Q97. A ship experiences a net force of 50,000 N and has a mass of 100,000 kg. Calculate its acceleration.
+Answer:
+Formula:
+F=maF=ma
+Rearranging:
+a=Fma=\frac{F}{m}a=50,000100,000a=\frac{50,000}{100,000}a=0.5 m/s2\boxed{a=0.5\,m/s^2}
+Q98. Calculate the pressure at a depth of 20 metres in seawater. Take seawater density as 1,025 kg/m³ and g = 9.81 m/s².
+Answer:
+Formula:
+P=ρghP=\rho gh
+Substituting:
+P=1025×9.81×20P=1025\times9.81\times20P=201,105 PaP=201,105\,PaP=201.105 kPa\boxed{P=201.105\,kPa}
+This is the gauge pressure, excluding atmospheric pressure.
+Q99. A ship displaces 10,000 m³ of seawater. Calculate the mass of displaced seawater if its density is 1,025 kg/m³.
+Answer:
+Formula:
+m=ρVm=\rho Vm=1025×10,000m=1025\times10,000m=10,250,000 kg\boxed{m=10,250,000\,kg}
+Or:
+10,250 tonnes\boxed{10,250\ tonnes}
+Q100. Explain scientifically why a ship does not sink when it carries heavy cargo.
+Answer:
+A ship does not sink simply because it carries heavy cargo because its hull displaces water and experiences an upward buoyant force.
+According to Archimedes' Principle, the buoyant force equals the weight of the displaced water.
+When cargo is loaded:
+    1. The total weight of the ship increases.
+    2. The ship moves deeper into the water.
+    3. It displaces more water.
+    4. The buoyant force increases.
+    5. A new floating equilibrium may be established.
+However, the ship must remain within its permitted loading limits and maintain adequate stability and freeboard.
+Overloading can cause dangerous loss of freeboard, excessive draught and stability problems.
+
+BONUS 1: 30 IMPORTANT PHYSICS FORMULAS
+These formulas are particularly useful for your Semester 1 examinations.
+No.	Formula	Application
+1	Speed = Distance / Time	Speed
+2	Velocity = Displacement / Time	Velocity
+3	a = (v-u)/t	Acceleration
+4	v = u + at	First equation of motion
+5	s = ut + ½at²	Second equation of motion
+6	v² = u² + 2as	Third equation of motion
+7	F = ma	Newton's Second Law
+8	p = mv	Momentum
+9	Impulse = Ft	Impulse
+10	W = Fs cos θ	Work
+11	KE = ½mv²	Kinetic energy
+12	PE = mgh	Potential energy
+13	P = W/t	Power
+14	Weight = mg	Weight
+15	F = Gm₁m₂/r²	Gravitation
+16	P = F/A	Pressure
+17	P = ρgh	Hydrostatic pressure
+18	ρ = m/V	Density
+19	m = ρV	Mass of fluid
+20	Fᵦ = ρgV	Buoyant force
+21	A₁v₁ = A₂v₂	Continuity equation
+22	P + ½ρv² + ρgh = Constant	Bernoulli's equation
+23	Re = ρvD/μ	Reynolds number
+24	η = Useful output/Input × 100	Efficiency
+25	g = GM/R²	Gravity at Earth's surface
+26	F = kx	Hooke's Law
+27	f = μN	Limiting friction
+28	τ = rF sin θ	Torque
+29	v = fλ	Wave velocity
+30	Density = Mass/Volume	Density
+Note: Some formulas in this list are introductory extensions that may be taught in greater detail in later subjects. Use the versions and notation specified by your lecturer.
+
+BONUS 2: Important Physics Units for Examinations
+Physical Quantity	SI Unit	Symbol
+Length	Metre	m
+Mass	Kilogram	kg
+Time	Second	s
+Speed	Metre/second	m/s
+Acceleration	Metre/second²	m/s²
+Force	Newton	N
+Work	Joule	J
+Energy	Joule	J
+Power	Watt	W
+Pressure	Pascal	Pa
+Density	Kilogram/metre³	kg/m³
+Momentum	Kilogram metre/second	kg m/s
+Impulse	Newton-second	Ns
+Gravitational acceleration	Metre/second²	m/s²
+Viscosity (dynamic)	Pascal-second	Pa·s
+Surface tension	Newton/metre	N/m
+Frequency	Hertz	Hz
+Volume	Cubic metre	m³
+
+BONUS 3: 20 Very Important Viva Questions
+These are short questions that you should be able to answer confidently without looking at your notebook.
+No.	Question	Short Answer
+1	What is Physics?	Study of matter, energy and their interactions.
+2	What is force?	An influence that changes or tends to change motion or shape.
+3	What is the SI unit of force?	Newton.
+4	What is acceleration?	Rate of change of velocity.
+5	What is inertia?	Resistance to a change in motion.
+6	What is momentum?	Mass × Velocity.
+7	What is work?	Force × displacement in the force direction.
+8	What is energy?	Capacity to do work.
+9	What is power?	Rate of doing work.
+10	What is gravity?	Attractive force between masses.
+11	What is the value of g on Earth?	Approximately 9.81 m/s².
+12	What is pressure?	Force per unit area.
+13	What is the SI unit of pressure?	Pascal.
+14	What is density?	Mass per unit volume.
+15	What is viscosity?	Resistance of a fluid to flow.
+16	What is buoyancy?	Upward force exerted by a fluid.
+17	Who gave Archimedes' Principle?	Archimedes.
+18	Why does a ship float?	Because of buoyancy and displacement of water.
+19	What is fluid mechanics?	Study of fluids at rest and in motion.
+20	What is Bernoulli's Principle?	Relates pressure, velocity and elevation in ideal fluid flow.
+
+BONUS 4: How to Prepare Physics for Your IMU Semester 1 Examination
+I recommend dividing your preparation into three levels.
+Level 1 – Understand the Theory
+First, understand these topics:
+    1. Basic Physics.
+    2. Mechanics.
+    3. Motion.
+    4. Newton's Laws.
+    5. Force.
+    6. Work, Energy and Power.
+    7. Gravity.
+    8. Pressure.
+    9. Fluid Mechanics.
+    10. Buoyancy.
+Level 2 – Practise Numerical Problems
+Give special attention to:
+    • Equations of motion.
+    • Newton's Second Law.
+    • Work and energy.
+    • Power.
+    • Weight and gravity.
+    • Pressure calculations.
+    • Density calculations.
+    • Hydrostatic pressure.
+    • Buoyant force.
+    • Mass and volume calculations.
+Level 3 – Understand Maritime Applications
+Try to connect every concept with a ship.
+Physics Concept	Maritime Application
+Newton's First Law	Ship's inertia
+Newton's Second Law	Ship acceleration
+Newton's Third Law	Propeller thrust
+Friction	Resistance to ship movement
+Gravity	Ship's weight
+Centre of Gravity	Ship stability
+Pressure	Underwater hull pressure
+Density	Seawater and freshwater
+Buoyancy	Why ships float
+Archimedes' Principle	Ship displacement
+Fluid Mechanics	Water flow around the hull
+Bernoulli's Principle	Fluid-flow applications
+
+My Advice as You Begin Your Nautical Science Journey
+As a first-year B.Sc. Nautical Science student, I would recommend giving extra attention to these five Physics topics:
+    1. Newton's Laws of Motion – Understand all three laws with examples.
+    2. Pressure – Practise pressure calculations and understand hydrostatic pressure.
+    3. Density – Learn the relationship between mass, volume and density.
+    4. Archimedes' Principle – Understand why a steel ship floats.
+    5. Fluid Mechanics – Understand buoyancy, viscosity, fluid flow and Bernoulli's Principle.
+These concepts will also help you when you study Ship Stability, Ship Construction, Marine Engineering and other maritime subjects.
+Important examination note: These 100 questions are an educational practice question bank, not an official IMU Chennai question paper or verified previous-year question bank. Check your current admission batch's official Physics syllabus and your faculty's prescribed topics for exact examination coverage.
+

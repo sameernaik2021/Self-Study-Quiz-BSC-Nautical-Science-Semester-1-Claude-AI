@@ -1,0 +1,767 @@
+IMU Chennai – B.Sc. Nautical Science
+Semester 1 – Ship Construction: 100 Important Questions and Answers
+Course: B.Sc. Nautical Science
+University: Indian Maritime University (IMU), Chennai
+Year: First Year
+Semester: 1st Semester
+Subject: Ship Construction
+Syllabus: Basic ship structure, parts of a ship, hull, deck and compartments.
+These 100 questions and answers are prepared to help you understand the fundamentals of ship construction and prepare for:
+    • Semester examinations.
+    • Internal assessments.
+    • Class tests.
+    • Viva examinations.
+    • Practical examinations.
+    • Basic Merchant Navy knowledge.
+The questions are divided into 10 sections, with 10 questions in each section.
+
+SECTION 1: INTRODUCTION TO SHIPS AND SHIP CONSTRUCTION (Q1–Q10)
+Q1. What is a ship?
+Answer: A ship is a large watercraft designed to travel on seas, oceans and other navigable waters to transport passengers, cargo or perform specialised operations.
+Ships are used for:
+    1. Cargo transportation.
+    2. Passenger transportation.
+    3. Fishing.
+    4. Naval operations.
+    5. Offshore operations.
+    6. Research and exploration.
+Q2. What is ship construction?
+Answer: Ship construction is the process of designing, building and assembling a vessel using different materials, structural components and engineering techniques.
+It involves:
+    • Designing the hull.
+    • Constructing the keel.
+    • Installing frames and bulkheads.
+    • Building decks.
+    • Installing machinery.
+    • Constructing accommodation.
+    • Installing navigation and safety equipment.
+Q3. What are the main types of ships?
+Answer: Ships are classified according to their purpose and the type of cargo they carry.
+Important types include:
+    1. Bulk Carrier: Carries unpackaged bulk cargo such as coal, iron ore and grain.
+    2. Container Ship: Carries cargo in standardised shipping containers.
+    3. Oil Tanker: Carries petroleum and oil products.
+    4. Chemical Tanker: Carries liquid chemical cargoes.
+    5. LNG Carrier: Transports liquefied natural gas.
+    6. LPG Carrier: Transports liquefied petroleum gas.
+    7. Passenger Ship: Carries passengers.
+    8. Ro-Ro Ship: Carries wheeled cargo such as cars and trucks.
+    9. General Cargo Ship: Carries different types of packaged cargo.
+    10. Reefer Ship: Carries temperature-controlled cargo.
+Q4. What are the main parts of a ship?
+Answer: The major parts of a ship include:
+    1. Bow.
+    2. Stern.
+    3. Hull.
+    4. Keel.
+    5. Deck.
+    6. Bridge.
+    7. Engine room.
+    8. Accommodation.
+    9. Cargo holds.
+    10. Bulkheads.
+    11. Rudder.
+    12. Propeller.
+Each component performs a specific function in the operation and structural integrity of the vessel.
+Q5. What is the difference between a ship and a boat?
+Answer:
+Ship	Boat
+Generally larger	Generally smaller
+Designed for longer voyages	Often used for shorter journeys
+Usually has larger cargo or passenger capacity	Usually has smaller capacity
+May operate across oceans	Often operates in coastal or inland waters
+The distinction is not absolute; some vessels called boats can be quite large.
+Q6. What are the main materials used in ship construction?
+Answer: Common materials include:
+    1. Steel: Most common material for large commercial ship hulls.
+    2. Aluminium: Used in high-speed vessels and some superstructures.
+    3. Wood: Used in traditional and smaller vessels.
+    4. Fibreglass Reinforced Plastic (FRP): Used in smaller boats and specialised vessels.
+    5. Composite materials: Used in selected modern marine structures.
+Steel is widely used because of its strength, durability and suitability for large structures.
+Q7. What is a merchant ship?
+Answer: A merchant ship is a commercial vessel used to transport cargo or passengers for business purposes.
+Examples:
+    • Container ships.
+    • Oil tankers.
+    • Bulk carriers.
+    • LNG carriers.
+    • Passenger vessels.
+Q8. What is a commercial vessel?
+Answer: A commercial vessel is a ship or boat used for commercial activities, including transportation, fishing, offshore support and other maritime services.
+Q9. What is the purpose of ship construction?
+Answer: The purpose of ship construction is to produce a vessel capable of operating safely and efficiently in its intended marine environment.
+Important objectives include:
+    1. Structural strength.
+    2. Watertight integrity.
+    3. Stability.
+    4. Buoyancy.
+    5. Cargo-carrying capacity.
+    6. Operational efficiency.
+    7. Safety of crew and passengers.
+Q10. What are the basic requirements of a seaworthy ship?
+Answer: A seaworthy ship should have:
+    1. Adequate structural strength.
+    2. Sufficient stability.
+    3. Adequate freeboard.
+    4. Proper watertight integrity.
+    5. Suitable propulsion machinery.
+    6. Reliable steering equipment.
+    7. Proper navigation equipment.
+    8. Required lifesaving equipment.
+    9. Required firefighting equipment.
+    10. Compliance with applicable maritime regulations.
+
+SECTION 2: BASIC SHIP TERMINOLOGY AND DIRECTIONS (Q11–Q20)
+This section is extremely important because nautical officers use these terms every day onboard ships.
+Q11. What is the bow of a ship?
+Answer: The bow is the forward or front end of a ship.
+Functions:
+    • Provides the forward shape of the vessel.
+    • Helps the ship move through water.
+    • Influences resistance and seakeeping characteristics.
+Q12. What is the stern of a ship?
+Answer: The stern is the after or rear end of a ship.
+It commonly contains or supports:
+    • Propeller arrangement.
+    • Rudder arrangement.
+    • Steering gear connections.
+    • Aftermost structural sections.
+Q13. What is the port side?
+Answer: Port side is the left-hand side of a ship when a person faces forward towards the bow.
+Important: Port side navigation light is RED.
+Q14. What is the starboard side?
+Answer: Starboard side is the right-hand side of a ship when a person faces forward towards the bow.
+Important: Starboard side navigation light is GREEN.
+Q15. What is the amidships?
+Answer: Amidships refers to the middle portion of a ship, approximately halfway between the forward and aft perpendiculars.
+It is also commonly used to describe the central region of the vessel.
+Q16. What is the fore?
+Answer: Fore refers to the forward part of a ship, towards the bow.
+Example: Forecastle refers to the raised forward portion of the upper deck on certain ships.
+Q17. What is aft?
+Answer: Aft refers to the rearward direction of a ship, towards the stern.
+Example: The engine room may be situated aft on many merchant ships.
+Q18. What is the beam of a ship?
+Answer: Beam is the maximum breadth or width of a ship.
+It is generally measured at the widest part of the vessel.
+Example: If a ship has a beam of 32 metres, its maximum breadth is approximately 32 metres.
+Q19. What is the length of a ship?
+Answer: Length refers to the longitudinal measurement of a vessel.
+Important length measurements include:
+    1. Length Overall (LOA).
+    2. Length Between Perpendiculars (LBP).
+    3. Registered Length.
+Q20. What is the draught of a ship?
+Answer: Draught is the vertical distance between the bottom of the keel and the waterline.
+It indicates how deeply the vessel is immersed in water.
+Example: If a ship has a draught of 10 metres, the vertical distance from the keel to the waterline is 10 metres.
+
+SECTION 3: SHIP DIMENSIONS AND PRINCIPAL PARTICULARS (Q21–Q30)
+Q21. What is Length Overall (LOA)?
+Answer: Length Overall is the maximum longitudinal length of a ship measured from the foremost point of the bow to the aftermost point of the stern.
+It represents the ship's maximum overall length.
+Q22. What is Length Between Perpendiculars (LBP)?
+Answer: Length Between Perpendiculars is the distance between the forward perpendicular and after perpendicular.
+It is an important measurement used in ship design and hydrostatic calculations.
+Q23. What is the difference between LOA and LBP?
+Answer:
+LOA	LBP
+Length Overall	Length Between Perpendiculars
+Maximum overall length	Distance between two defined perpendiculars
+Includes extreme forward and aft points	Does not necessarily extend to the extreme ends
+Usually greater than LBP	Usually shorter than LOA
+Q24. What is the moulded breadth of a ship?
+Answer: Moulded breadth is the maximum breadth of a ship measured between the moulded lines of the frames, generally at the specified section.
+It excludes the thickness of the shell plating.
+Q25. What is the moulded depth of a ship?
+Answer: Moulded depth is the vertical distance measured from the top of the keel or relevant moulded baseline to the top of the deck beam at the side, according to the applicable measurement convention.
+It is an important dimension used in ship design.
+Q26. What is freeboard?
+Answer: Freeboard is the vertical distance measured from the waterline to the upper edge of the applicable freeboard deck at the ship's side.
+It represents the height of the ship's side above the water.
+Freeboard is important for:
+    • Safety.
+    • Reserve buoyancy.
+    • Protection against waves.
+    • Compliance with load line requirements.
+Q27. What is the waterline?
+Answer: The waterline is the line where the surface of the water intersects the hull of a floating ship.
+It changes depending on the loading condition and the density of water.
+Q28. What is the keel-to-deck distance?
+Answer: It refers generally to the vertical distance between the keel or baseline and a specified deck level.
+Depending on the measurement convention, this may relate to the ship's moulded depth.
+Q29. What is displacement?
+Answer: Displacement is the total weight of water displaced by a floating vessel.
+According to Archimedes' principle, it is equal to the weight of the ship and everything onboard when the ship is floating in equilibrium.
+It is commonly expressed in tonnes.
+Q30. What is deadweight (DWT)?
+Answer: Deadweight is the total weight a ship can carry when loaded to its permissible maximum displacement at a specified condition.
+It includes:
+    1. Cargo.
+    2. Fuel.
+    3. Fresh water.
+    4. Ballast water.
+    5. Lubricating oil.
+    6. Stores.
+    7. Crew and passengers with their effects.
+Important: Deadweight is not the same as the ship's lightweight.
+
+SECTION 4: HULL AND STRUCTURAL COMPONENTS (Q31–Q40)
+Q31. What is the hull of a ship?
+Answer: The hull is the main body or outer structure of a ship.
+It provides:
+    • Buoyancy.
+    • Structural strength.
+    • Space for cargo and machinery.
+    • Protection against water ingress.
+    • Support for the vessel's other structures.
+The hull is one of the most important components of a ship.
+Q32. What are the main parts of a ship's hull?
+Answer: Major structural parts include:
+    1. Keel.
+    2. Shell plating.
+    3. Frames.
+    4. Floors.
+    5. Longitudinals.
+    6. Bulkheads.
+    7. Decks.
+    8. Transverse members.
+    9. Stiffeners.
+These components work together to provide strength and rigidity.
+Q33. What is a keel?
+Answer: The keel is the principal longitudinal structural member along the bottom of a ship.
+It forms an important part of the ship's structural foundation.
+Functions:
+    1. Provides longitudinal strength.
+    2. Supports bottom structure.
+    3. Connects important structural elements.
+    4. Contributes to the overall integrity of the hull.
+Q34. What is shell plating?
+Answer: Shell plating consists of the steel plates forming the outer surface of a ship's hull.
+It separates the internal spaces of the vessel from the surrounding water.
+Functions:
+    • Maintains watertight integrity.
+    • Contributes to hull strength.
+    • Protects internal spaces.
+Q35. What are frames in a ship?
+Answer: Frames are transverse structural members fitted inside the hull.
+They support the shell plating and help maintain the shape of the vessel.
+They also contribute to the transverse strength of the ship.
+Q36. What are longitudinal stiffeners?
+Answer: Longitudinal stiffeners are structural members running along the length of a ship.
+They support plating and contribute to the longitudinal strength of the hull.
+Q37. What is a floor in ship construction?
+Answer: A floor is a transverse structural member fitted in the bottom structure of a ship.
+It connects important bottom structural members and provides support to the bottom plating.
+Floors may be solid or bracket types, depending on the design.
+Q38. What is a girder?
+Answer: A girder is a major structural member used to support loads and distribute stresses throughout the ship's structure.
+It may be arranged longitudinally or transversely.
+Examples:
+    • Centre girder.
+    • Side girder.
+    • Deck girder.
+Q39. What is the double bottom of a ship?
+Answer: A double bottom is a construction arrangement in which an inner bottom is fitted above the outer bottom shell.
+The space between them forms tanks or other designated spaces.
+Functions:
+    1. Provides additional protection against bottom damage.
+    2. Can accommodate ballast water.
+    3. Can accommodate fuel oil or freshwater in suitably designed tanks.
+    4. Contributes to structural strength.
+Q40. What is a bilge?
+Answer: The bilge is the lower curved region of a ship's hull where the bottom transitions into the side shell.
+It is also used to describe the lowest internal area of the ship where bilge water may collect.
+Bilge wells are provided to collect liquid for removal through appropriate systems.
+
+SECTION 5: DECKS AND SUPERSTRUCTURE (Q41–Q50)
+Q41. What is a deck?
+Answer: A deck is a horizontal structural platform extending across a ship or a substantial part of it.
+It separates different levels and provides structural support.
+Functions:
+    • Provides working space.
+    • Supports cargo and equipment.
+    • Separates internal compartments.
+    • Contributes to the strength of the ship.
+Q42. What is the main deck?
+Answer: The main deck is the principal continuous deck of a ship, generally forming an important part of the ship's structure and enclosure.
+It is commonly used for cargo operations, access and other shipboard activities depending on the vessel's design.
+Q43. What is the upper deck?
+Answer: The upper deck is the uppermost complete deck exposed to weather and sea, subject to the ship's design and applicable regulatory definitions.
+It provides protection to the spaces below.
+Q44. What is a forecastle deck?
+Answer: The forecastle deck is the raised deck at the forward end of a ship.
+It is generally located above the main deck in the bow region.
+It may accommodate equipment such as:
+    • Anchoring equipment.
+    • Mooring equipment.
+    • Windlass.
+    • Chain pipes.
+Q45. What is a poop deck?
+Answer: A poop deck is a raised deck situated at the extreme aft portion of a ship.
+It is found on certain vessel designs and is positioned above the upper deck.
+Q46. What is a bridge deck?
+Answer: A bridge deck is a deck associated with the ship's navigation bridge structure.
+The navigation bridge is the location from which the ship is normally navigated and controlled.
+Q47. What is a tween deck?
+Answer: A tween deck is an intermediate deck situated between the main deck and the bottom of a cargo hold or between two other decks.
+It is commonly found in certain general cargo ships.
+It provides additional cargo stowage space.
+Q48. What is a weather deck?
+Answer: A weather deck is a deck exposed to weather and sea.
+It is designed with suitable arrangements to resist environmental conditions and drain water safely.
+Q49. What is a superstructure?
+Answer: A superstructure is a structure built above the upper deck, extending from side to side or nearly from side to side, according to the applicable definition.
+Examples include:
+    • Bridge structure.
+    • Accommodation block.
+    • Deckhouses.
+It provides space for navigation, accommodation and ship operations.
+Q50. What is a deckhouse?
+Answer: A deckhouse is an enclosed structure situated on a ship's deck that does not extend from side to side.
+It may contain:
+    • Offices.
+    • Accommodation.
+    • Workshops.
+    • Equipment rooms.
+
+SECTION 6: BULKHEADS AND SHIP COMPARTMENTS (Q51–Q60)
+Q51. What is a bulkhead?
+Answer: A bulkhead is a vertical partition fitted inside a ship to divide it into separate compartments.
+Functions:
+    1. Divides internal spaces.
+    2. Provides structural strength.
+    3. Helps prevent flooding from spreading.
+    4. Separates machinery and cargo spaces.
+    5. Provides fire protection when suitably constructed.
+Q52. What are the different types of bulkheads?
+Answer: Important types include:
+    1. Transverse bulkhead.
+    2. Longitudinal bulkhead.
+    3. Watertight bulkhead.
+    4. Non-watertight bulkhead.
+    5. Fire-resisting bulkhead.
+    6. Collision bulkhead.
+Q53. What is a transverse bulkhead?
+Answer: A transverse bulkhead is a vertical partition running across the breadth of a ship.
+It divides the vessel into separate compartments along its length.
+It contributes to structural strength and compartmentation.
+Q54. What is a longitudinal bulkhead?
+Answer: A longitudinal bulkhead is a vertical partition running along the length of a ship.
+It divides the vessel into port and starboard sections or separates different longitudinal spaces.
+Q55. What is a watertight bulkhead?
+Answer: A watertight bulkhead is a bulkhead constructed to prevent the passage of water under specified conditions.
+It helps limit flooding and maintain the vessel's watertight subdivision.
+Q56. What is a collision bulkhead?
+Answer: A collision bulkhead is a watertight transverse bulkhead fitted near the forward end of a ship.
+Its purpose is to limit flooding in the event of damage to the bow.
+It is an important safety feature.
+Q57. What is a compartment?
+Answer: A compartment is an enclosed space within a ship separated from other spaces by bulkheads, decks or other structural boundaries.
+Examples:
+    1. Engine room.
+    2. Cargo hold.
+    3. Pump room.
+    4. Accommodation.
+    5. Store room.
+    6. Ballast tank.
+Q58. What is a cargo hold?
+Answer: A cargo hold is an enclosed space inside a ship designed to carry cargo.
+Cargo holds are commonly found on bulk carriers and general cargo ships.
+They are designed according to the cargo requirements of the vessel.
+Q59. What is an engine room?
+Answer: The engine room is a machinery space that contains the main propulsion machinery and associated auxiliary equipment.
+It may contain:
+    • Main engine.
+    • Generators.
+    • Pumps.
+    • Compressors.
+    • Purifiers.
+    • Auxiliary machinery.
+Q60. What is an accommodation space?
+Answer: Accommodation space refers to the areas provided for the living and welfare of the ship's crew and passengers.
+It includes:
+    1. Cabins.
+    2. Mess rooms.
+    3. Recreation rooms.
+    4. Galley.
+    5. Sanitary facilities.
+    6. Offices.
+
+SECTION 7: SHIP EQUIPMENT AND MACHINERY-RELATED STRUCTURES (Q61–Q70)
+Q61. What is a rudder?
+Answer: A rudder is a movable underwater steering surface fitted generally at the stern of a ship.
+It controls the direction of the vessel by changing the direction of water flow around it.
+Q62. What is a propeller?
+Answer: A propeller is a rotating device consisting of blades that produces thrust by accelerating water backwards.
+This thrust moves the ship forward or astern, depending on the propulsion arrangement and operating condition.
+Q63. What is a propeller shaft?
+Answer: A propeller shaft is a rotating shaft that transmits mechanical power from the propulsion machinery to the propeller.
+It is an important part of the propulsion system.
+Q64. What is a stern tube?
+Answer: A stern tube is a structural arrangement fitted at the stern through which the propeller shaft passes through the hull.
+It contains bearings and sealing arrangements that support the shaft and help prevent water ingress.
+Q65. What is an anchor?
+Answer: An anchor is a heavy device connected to a ship by an anchor chain or cable and used to hold the ship in position by engaging with the seabed.
+It is used when anchoring in suitable locations.
+Q66. What is an anchor chain?
+Answer: An anchor chain is a heavy chain connecting the anchor to the ship.
+It provides the connection needed for anchoring and contributes to the holding arrangement.
+Q67. What is a windlass?
+Answer: A windlass is a mechanical device used to raise and lower the anchor and handle the anchor chain.
+It is generally located on the forecastle deck.
+Q68. What is a mooring winch?
+Answer: A mooring winch is a mechanical device used to handle mooring ropes or wires when securing a ship alongside a berth or another suitable structure.
+It assists in controlling the tension and movement of mooring lines.
+Q69. What is a bollard?
+Answer: A bollard is a strong vertical post fitted on a ship or quay.
+It is used to secure mooring ropes or lines.
+Q70. What is a bulwark?
+Answer: A bulwark is a vertical protective structure fitted along the exposed edges of a deck.
+Functions:
+    1. Provides protection to crew members.
+    2. Helps prevent people and loose objects from falling overboard.
+    3. Provides some protection against spray and waves.
+
+SECTION 8: SHIP TANKS AND OTHER IMPORTANT STRUCTURAL FEATURES (Q71–Q80)
+Q71. What is a ballast tank?
+Answer: A ballast tank is a tank designed to carry ballast water.
+Ballast water is used to control:
+    1. Ship stability.
+    2. Draught.
+    3. Trim.
+    4. List.
+    5. Structural loading conditions.
+Ballast tanks are commonly located in the double bottom, sides or other designated areas.
+Q72. What is a fuel oil tank?
+Answer: A fuel oil tank is a tank designed to store fuel used by the ship's engines and auxiliary machinery.
+Different types of fuel storage arrangements may be provided depending on the vessel.
+Q73. What is a freshwater tank?
+Answer: A freshwater tank is a tank designed to store freshwater for the ship's crew and operational requirements.
+Q74. What is a peak tank?
+Answer: A peak tank is a tank located at the extreme forward or aft part of a ship.
+There are two main types:
+    1. Forepeak tank.
+    2. Afterpeak tank.
+They are commonly used for ballast water and may contribute to controlling trim.
+Q75. What is a forepeak tank?
+Answer: A forepeak tank is a tank located at the forward end of a ship, generally ahead of the collision bulkhead.
+It is commonly used as a ballast tank.
+Q76. What is an afterpeak tank?
+Answer: An afterpeak tank is a tank located at the aft end of a ship.
+It may be used for ballast water and trim adjustment.
+Q77. What is a cofferdam?
+Answer: A cofferdam is an empty separation space provided between certain tanks or compartments.
+Its purpose is to provide separation and reduce the risk of leakage or contamination between adjacent spaces.
+Q78. What is a hatch?
+Answer: A hatch is an opening in a deck that provides access to a compartment or cargo hold.
+Hatches on cargo ships are generally fitted with covers to protect cargo from water and weather.
+Q79. What is a hatch cover?
+Answer: A hatch cover is a protective covering fitted over a cargo hold opening.
+Functions:
+    1. Protects cargo from seawater.
+    2. Helps maintain weathertight integrity.
+    3. Protects the cargo hold.
+    4. Supports safe cargo operations when designed for the required loads.
+Q80. What is a bilge pump?
+Answer: A bilge pump is a pump used to remove accumulated water from the bilges of a ship.
+It is an important part of the vessel's pumping and drainage arrangements.
+
+SECTION 9: SHIP STRENGTH, STABILITY AND SAFETY (Q81–Q90)
+Q81. What is longitudinal strength?
+Answer: Longitudinal strength is the ability of a ship's structure to resist bending stresses along its length.
+A ship experiences longitudinal bending due to the distribution of its weight and buoyancy.
+Two important conditions are:
+    • Hogging.
+    • Sagging.
+Q82. What is hogging?
+Answer: Hogging is a condition in which a ship bends upwards at the middle relative to its ends.
+In a simplified bending model:
+    • The middle portion bends upwards.
+    • The bow and stern bend downwards relative to the middle.
+It commonly occurs when the buoyancy distribution is greater around the middle than the ends.
+Q83. What is sagging?
+Answer: Sagging is a condition in which a ship bends downwards at the middle relative to its ends.
+In a simplified bending model:
+    • The middle portion bends downwards.
+    • The ends bend upwards relative to the middle.
+It commonly occurs when the weight distribution is greater around the middle than the ends.
+Q84. What is transverse strength?
+Answer: Transverse strength is the ability of a ship's structure to resist forces acting across its breadth.
+Frames, transverse bulkheads, floors and beams contribute to transverse strength.
+Q85. What is torsional strength?
+Answer: Torsional strength is the ability of a ship's structure to resist twisting forces.
+It is particularly important for large vessels exposed to uneven wave loading.
+Q86. What is ship stability?
+Answer: Ship stability is the ability of a vessel to return towards its original upright position after being disturbed by external forces, provided it remains within its stability limits.
+It is important for safe navigation and cargo operations.
+Q87. What is buoyancy?
+Answer: Buoyancy is the upward force exerted by a fluid on a body immersed in it.
+According to Archimedes' principle, the buoyant force is equal to the weight of the fluid displaced by the body.
+Q88. What is watertight integrity?
+Answer: Watertight integrity is the condition in which the ship's designated watertight boundaries and closures prevent the unwanted passage of water.
+It is maintained through:
+    • Watertight bulkheads.
+    • Watertight doors.
+    • Properly secured openings.
+    • Suitable seals.
+    • Regular inspections and maintenance.
+Q89. What is the Plimsoll mark?
+Answer: The Plimsoll mark is a marking on the side of a ship that indicates the maximum permissible loading limits under different conditions.
+It helps ensure that the vessel is not loaded beyond its permitted draught.
+It is also called the Load Line Mark.
+Q90. What is the purpose of the Load Line Convention?
+Answer: The International Convention on Load Lines, 1966, as amended, establishes requirements for assigning load lines and determining the minimum permissible freeboard of ships.
+Its objectives include:
+    1. Protecting ships from overloading.
+    2. Ensuring adequate freeboard.
+    3. Providing reserve buoyancy.
+    4. Improving safety at sea.
+    5. Reducing risks associated with excessive loading.
+
+SECTION 10: SHIP CONSTRUCTION METHODS, INSPECTION AND IMPORTANT TERMS (Q91–Q100)
+Q91. What is shipyard?
+Answer: A shipyard is a specialised facility where ships are constructed, repaired, converted and maintained.
+Major activities include:
+    1. Steel cutting.
+    2. Welding.
+    3. Hull construction.
+    4. Machinery installation.
+    5. Painting.
+    6. Inspection.
+    7. Sea trials.
+Q92. What is shipbuilding?
+Answer: Shipbuilding is the process of constructing a ship according to approved designs, technical specifications and applicable safety requirements.
+It includes structural fabrication, assembly, equipment installation and testing.
+Q93. What is welding in ship construction?
+Answer: Welding is a joining process in which two or more metal parts are permanently joined using heat, pressure or both.
+It is widely used in shipbuilding to join steel plates and structural members.
+Common welding methods include:
+    1. Shielded Metal Arc Welding (SMAW).
+    2. Gas Metal Arc Welding (GMAW).
+    3. Submerged Arc Welding (SAW).
+    4. Flux-Cored Arc Welding (FCAW).
+Q94. What is riveting?
+Answer: Riveting is a mechanical joining process in which a rivet is used to connect two or more metal components.
+It was widely used in traditional shipbuilding.
+Modern steel ship construction mainly uses welding.
+Q95. What is corrosion?
+Answer: Corrosion is the gradual deterioration of a material due to chemical or electrochemical reactions with its environment.
+Ships are particularly vulnerable because they operate in a marine environment containing salt water.
+Prevention methods include:
+    1. Protective painting.
+    2. Coatings.
+    3. Cathodic protection.
+    4. Sacrificial anodes.
+    5. Regular inspections.
+Q96. What is dry docking?
+Answer: Dry docking is the process of placing a ship in a dry dock so that its underwater hull and other parts can be inspected, repaired and maintained.
+Activities include:
+    • Hull inspection.
+    • Cleaning.
+    • Painting.
+    • Propeller inspection.
+    • Rudder inspection.
+    • Sea chest inspection.
+    • Underwater equipment maintenance.
+Q97. What is a sea trial?
+Answer: A sea trial is a series of tests conducted on a ship at sea to verify its performance and operational capabilities.
+Tests may include:
+    1. Speed trials.
+    2. Steering tests.
+    3. Manoeuvring tests.
+    4. Propulsion tests.
+    5. Navigation equipment checks.
+    6. Machinery performance tests.
+Q98. What is a classification society?
+Answer: A classification society is an independent organisation that develops technical standards and provides classification services for ships and offshore structures.
+It assesses whether a ship's structure and machinery meet applicable classification requirements.
+Examples:
+    • Lloyd's Register.
+    • DNV.
+    • American Bureau of Shipping (ABS).
+    • Bureau Veritas (BV).
+    • Indian Register of Shipping (IRS).
+Q99. What is the role of the International Maritime Organization (IMO) in ship construction?
+Answer: The International Maritime Organization (IMO) is a specialised agency of the United Nations responsible for developing international regulations relating to maritime safety, security and prevention of marine pollution.
+Its important conventions and instruments include:
+    1. SOLAS – International Convention for the Safety of Life at Sea.
+    2. MARPOL – International Convention for the Prevention of Pollution from Ships.
+    3. Load Line Convention.
+    4. International Tonnage Convention.
+These instruments establish important requirements affecting ship construction, equipment and operation.
+Q100. Why is Ship Construction important for a B.Sc. Nautical Science student?
+Answer: Ship Construction is important because a Deck Officer must understand the physical structure and design of the vessel on which they work.
+This knowledge helps officers:
+    1. Understand different parts of a ship.
+    2. Identify structural components.
+    3. Understand watertight compartments.
+    4. Recognise the importance of bulkheads.
+    5. Understand hull damage.
+    6. Understand loading conditions.
+    7. Maintain watertight integrity.
+    8. Understand ship stability.
+    9. Identify different tanks and compartments.
+    10. Communicate effectively with engineers and other crew members.
+A good understanding of ship construction helps a Deck Officer contribute to the safe operation and maintenance of a merchant vessel.
+
+BONUS 1: 50 IMPORTANT SHIP CONSTRUCTION ABBREVIATIONS
+These abbreviations are particularly useful for semester examinations and viva.
+No.	Abbreviation	Full Form
+1	LOA	Length Overall
+2	LBP	Length Between Perpendiculars
+3	DWT	Deadweight
+4	GT	Gross Tonnage
+5	NT	Net Tonnage
+6	SWL	Safe Working Load
+7	FW	Fresh Water
+8	BW	Ballast Water
+9	FO	Fuel Oil
+10	DO	Diesel Oil
+11	MDO	Marine Diesel Oil
+12	MGO	Marine Gas Oil
+13	ME	Main Engine
+14	AE	Auxiliary Engine
+15	ER	Engine Room
+16	E/R	Engine Room
+17	FWD	Forward
+18	AFT	After
+19	P	Port
+20	S	Starboard
+21	WT	Watertight
+22	W/T	Watertight
+23	FRP	Fibreglass Reinforced Plastic
+24	IMO	International Maritime Organization
+25	SOLAS	Safety of Life at Sea
+26	MARPOL	Marine Pollution
+27	IACS	International Association of Classification Societies
+28	IRS	Indian Register of Shipping
+29	ABS	American Bureau of Shipping
+30	LR	Lloyd's Register
+31	DNV	Det Norske Veritas (historical name; now DNV)
+32	BV	Bureau Veritas
+33	GM	Metacentric Height
+34	KG	Keel to Centre of Gravity
+35	KB	Keel to Centre of Buoyancy
+36	KM	Keel to Metacentre
+37	TPC	Tonnes per Centimetre Immersion
+38	LCF	Longitudinal Centre of Flotation
+39	LCB	Longitudinal Centre of Buoyancy
+40	LCG	Longitudinal Centre of Gravity
+41	VDR	Voyage Data Recorder
+42	GMDSS	Global Maritime Distress and Safety System
+43	ECDIS	Electronic Chart Display and Information System
+44	AIS	Automatic Identification System
+45	GPS	Global Positioning System
+46	P&I	Protection and Indemnity
+47	HFO	Heavy Fuel Oil
+48	OWS	Oil Water Separator
+49	IOPP	International Oil Pollution Prevention
+50	ILLC	International Load Line Convention
+
+BONUS 2: 30 IMPORTANT SHIP PARTS YOU MUST IDENTIFY
+As a first-year Nautical Science student, you should be able to identify these components on a ship diagram or during a ship visit.
+No.	Ship Part	Meaning / Function
+1	Bow	Forward end of ship
+2	Stern	After end of ship
+3	Port	Left side facing forward
+4	Starboard	Right side facing forward
+5	Keel	Main longitudinal bottom structural member
+6	Hull	Main body of ship
+7	Deck	Horizontal structural platform
+8	Bridge	Navigation and control area
+9	Rudder	Steering component
+10	Propeller	Produces propulsion thrust
+11	Anchor	Holds ship in position
+12	Windlass	Handles anchor and chain
+13	Mooring Winch	Handles mooring lines
+14	Bollard	Secures mooring ropes
+15	Bulwark	Protective deck-edge structure
+16	Hatch	Opening into cargo hold
+17	Hatch Cover	Covers cargo hold opening
+18	Bulkhead	Vertical partition
+19	Frame	Transverse hull support
+20	Girder	Major structural support
+21	Shell Plating	Outer hull plates
+22	Double Bottom	Space between outer and inner bottom
+23	Bilge	Lower curved hull region / internal collection area
+24	Forecastle	Raised forward structure
+25	Poop Deck	Raised after deck
+26	Engine Room	Main machinery space
+27	Cargo Hold	Cargo storage compartment
+28	Forepeak Tank	Forward tank
+29	Afterpeak Tank	Aft tank
+30	Cofferdam	Separation space between designated compartments
+
+BONUS 3: 25 IMPORTANT SHIP CONSTRUCTION VIVA QUESTIONS
+These questions are particularly useful for oral examinations.
+No.	Question	Short Answer
+1	What is the front of a ship called?	Bow
+2	What is the rear of a ship called?	Stern
+3	What is the left side of a ship called?	Port
+4	What is the right side of a ship called?	Starboard
+5	What is the main structural member at the bottom?	Keel
+6	What is the outer body of a ship called?	Hull
+7	What is the width of a ship called?	Beam
+8	What is the depth below the waterline called?	Draught
+9	What is the vertical height above the waterline called?	Freeboard
+10	What is the front raised deck called?	Forecastle deck
+11	What is the rear raised deck called?	Poop deck
+12	What is a vertical partition called?	Bulkhead
+13	What is a watertight partition called?	Watertight bulkhead
+14	What is the forward watertight bulkhead called?	Collision bulkhead
+15	What is the ship's steering component?	Rudder
+16	What produces thrust?	Propeller
+17	What is the ship's black box called?	VDR
+18	What is the ship's forward tank called?	Forepeak tank
+19	What is the ship's aft tank called?	Afterpeak tank
+20	What is the purpose of ballast water?	Stability and draught control
+21	What is DWT?	Deadweight
+22	What is LOA?	Length Overall
+23	What is LBP?	Length Between Perpendiculars
+24	What is the ship's raised forward structure called?	Forecastle
+25	What is the organisation responsible for international maritime regulations?	IMO
+
+BONUS 4: IMPORTANT DIAGRAMS TO PRACTISE
+For Ship Construction, understanding diagrams is just as important as memorising definitions.
+I strongly recommend practising these 10 diagrams in your notebook:
+    1. General arrangement of a merchant ship.
+    2. Side view of a ship showing bow, stern, keel and decks.
+    3. Cross-section of a ship showing port, starboard and beam.
+    4. Basic ship hull structure.
+    5. Ship showing transverse and longitudinal bulkheads.
+    6. Double-bottom construction.
+    7. Forepeak and afterpeak tanks.
+    8. Different types of ship decks.
+    9. Plimsoll mark and load line markings.
+    10. Ship showing engine room, cargo holds and accommodation.
+
+BONUS 5: HOW TO PREPARE FOR YOUR IMU SEMESTER 1 SHIP CONSTRUCTION EXAMINATION
+Study the following topics in order:
+Priority	Topic	Importance
+1	Parts of a Ship	Very High
+2	Ship Terminology	Very High
+3	Ship Dimensions	Very High
+4	Hull Construction	Very High
+5	Keel, Frames and Shell Plating	Very High
+6	Decks and Superstructure	High
+7	Bulkheads and Compartments	Very High
+8	Tanks and Ship Equipment	High
+9	Ship Strength and Stability	Very High
+10	Shipbuilding and Classification Societies	High
+My Advice as a First-Year Nautical Science Student
+Ship Construction is one of the subjects where you should focus on visual understanding rather than memorisation alone.
+I recommend the following:
+    • Learn all the parts of a ship and their locations.
+    • Practise drawing a basic merchant ship.
+    • Understand the difference between port and starboard.
+    • Memorise the definitions of LOA, LBP, beam, draught and freeboard.
+    • Understand the functions of the keel, frames, bulkheads and decks.
+    • Learn the purpose of double bottoms, ballast tanks and cofferdams.
+    • Understand hogging and sagging with diagrams.
+    • Learn the basic construction and purpose of the collision bulkhead.
+    • Connect every theoretical topic with an actual merchant ship.
+Important: This is a specially prepared study question bank based on the syllabus topics you provided. It is not an official IMU Chennai question bank or a verified collection of previous-year examination questions. Some technical definitions are simplified for first-year learning; use your prescribed IMU notes and textbooks for examination-specific wording.
+Remember: A good Deck Officer must know their ship inside and out. Understanding ship construction will help you recognise structural components, understand compartmentation, appreciate watertight integrity and contribute to the safe operation of a merchant vessel.
+
